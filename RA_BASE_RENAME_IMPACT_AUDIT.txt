@@ -1,0 +1,321 @@
+
+============================================================
+SEARCH: software/compiler
+============================================================
+F:\RA_01\RA-RUST-4D_OG_CORE_FORENSIC_AUDIT.md:267: New RA verified structure: 72 `.rs` files across `ra-common` (5), `ra-persistence` (8), `ra-memory` (16 + 7 test files), `ra-gateway` (4), `ra-runtime` (5), `ra-syss` (hub 13 + 6), `ra-bootstrap` (8), `software/src/main.rs`. `software/compiler`, `software/ide`, `software/debugger`, `software/cli` are **empty placeholder directories**.
+F:\RA_01\RA-RUST-4D_OG_CORE_FORENSIC_AUDIT.md:273: | CompilerBackend + .rbc | — | ?? MISSING (compiler dir empty) | `software/compiler/` empty |
+F:\RA_01\RA-RUST-4D_OG_CORE_FORENSIC_AUDIT.md:294: | CompilerBackend | AST ? `Instruction[]` + pool | `software/compiler/` | ? empty | full front-end + backend | later (7L compiler) | `CB` |
+
+============================================================
+SEARCH: software\\compiler
+============================================================
+NO MATCH
+
+============================================================
+SEARCH: compiler/
+============================================================
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:1619: Objects do not exist** (prose only). **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE: none exist.** |
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:1669: F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md             716 | G2 | HIGH | **Binary formats** (.rab/.raf/.rap) `EncodingNotSpecified` | serializer/deserializer.rs | no bytecode/frozen/package persistence possible; blocks compiler/runtime
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:1694: F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md             770 8. **Phase 7L ? Compiler/interpreter foundation.** Lexer/parser/AST on ra-common primitives ? `.ra` ? `.rab` pipeline. *Why:* nothing language-related exists; the entire
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:3629: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  1619                                                              Objects do not exist** (prose only). **Compiler/Runtime/VM/Execution Manager/RA
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:3644: serializer/deserializer.rs | no bytecode/frozen/package persistence possible; blocks compiler/runtime
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:3657: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  1694 F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md             770 8. **Phase 7L ? Compiler/interpreter foundation.** Lexer/parser/AST on
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:5831: F:\RA_01\docs\architecture.md                                                                  219 coupling, no compiler/runtime/memory payloads.
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:5899: (only future-Hub prose). **Active Objects do not exist** (prose only). **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE: none
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:5964: F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md                                                   625 | `ra-syss` never ? frontend/ide/runtime/compiler/bootstrap/memory/database | forbidden | ? | PASS | manifest (only persistence) |
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:5970: F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md                                                   676 | Compiler/Runtime/VM/Exec Mgr | ? | ? | ? | ? | ? | ? | **NONE** |
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:5975: persistence possible; blocks compiler/runtime artifacts | **spec + codec phase** |
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:6004: F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md                                                   770 8. **Phase 7L ? Compiler/interpreter foundation.** Lexer/parser/AST on ra-common primitives ? `.ra` ? `.rab` pipeline. *Why:* nothing
+F:\RA_01\RA_ENGINEERING_HANDOFF_CHECKLIST.md:63: - SySS must not absorb compiler/runtime/VM responsibilities.
+F:\RA_01\RA_ENGINEERING_HANDOFF_CHECKLIST.md:239: Do not implement Compiler/Runtime/VM before the Gateway contract is frozen.
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:13579: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  1619                                                              Objects do not exist** (prose only). **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE:
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:13594: serializer/deserializer.rs | no bytecode/frozen/package persistence possible; blocks compiler/runtime
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:13603: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  1694 F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md             770 8. **Phase 7L ? Compiler/interpreter foundation.** Lexer/parser/AST on ra-common primitives ? `.ra`
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:13669: Objects do not exist** (prose only). **Compiler/Runtime/VM/Execution Manager/RA
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:13679: persistence possible; blocks compiler/runtime
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:13689: 8. **Phase 7L ? Compiler/interpreter foundation.** Lexer/parser/AST on
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14068: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  5831 F:\RA_01\docs\architecture.md                                                                  219 coupling, no compiler/runtime/memory payloads.
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14083: (prose only). **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE: none
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14115: frontend/ide/runtime/compiler/bootstrap/memory/database | forbidden | ? | PASS | manifest (only persistence) |
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14116: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  5970 F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md                                                   676 | Compiler/Runtime/VM/Exec Mgr | ? | ? | ? | ? | ? | ? |
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14120: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  5975                                                                                                    persistence possible; blocks compiler/runtime artifacts |
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14142: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  6004 F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md                                                   770 8. **Phase 7L ? Compiler/interpreter foundation.**
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14247: F:\RA_01\RA_ENGINEERING_HANDOFF_CHECKLIST.md                                                    63 - SySS must not absorb compiler/runtime/VM responsibilities.
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14252: F:\RA_01\RA_ENGINEERING_HANDOFF_CHECKLIST.md                                                   239 Do not implement Compiler/Runtime/VM before the Gateway contract is frozen.
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:15353: F:\RA_01\docs\architecture.md                                                                  219 coupling, no compiler/runtime/memory payloads.
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:15369: prose). **Active Objects do not exist** (prose only). **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE: none exist.** |
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:15412: F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md                                                   625 | `ra-syss` never ? frontend/ide/runtime/compiler/bootstrap/memory/database | forbidden | ? | PASS | manifest (only persistence) |
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:15413: F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md                                                   676 | Compiler/Runtime/VM/Exec Mgr | ? | ? | ? | ? | ? | ? | **NONE** |
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:15417: compiler/runtime artifacts | **spec + codec phase** |
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:15432: F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md                                                   770 8. **Phase 7L ? Compiler/interpreter foundation.** Lexer/parser/AST on ra-common primitives ? `.ra` ? `.rab` pipeline. *Why:* nothing language-related exists;
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:25193: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md           1619                                                              Objects do not exist** (prose only). **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE: none exist.** |
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:25216: **Compiler/Runtime/VM/Execution Manager/RA
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:25280: **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE: none
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:25308: F:\RA_01\RA_ENGINEERING_HANDOFF_CHECKLIST.md            239 Do not implement Compiler/Runtime/VM before the Gateway contract is frozen.
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:25354: **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE:
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:25375: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt            13669                                                                                                    Objects do not exist** (prose only). **Compiler/Runtime/VM/Execution Manager/RA
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:25433: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt            14083                                                                                                    (prose only). **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE: none
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:25469: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt            14252 F:\RA_01\RA_ENGINEERING_HANDOFF_CHECKLIST.md                                                   239 Do not implement Compiler/Runtime/VM before the Gateway contract is frozen.
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:25581: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt            15369                                                                                                    prose). **Active Objects do not exist** (prose only). **Compiler/Runtime/VM/Execution Manager/RA
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:25643: (prose only). **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE: none exist.** |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:12948: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  1619                                                              Objects do not exist** (prose only). **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE:
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:12963: serializer/deserializer.rs | no bytecode/frozen/package persistence possible; blocks compiler/runtime
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:12972: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  1694 F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md             770 8. **Phase 7L ? Compiler/interpreter foundation.** Lexer/parser/AST on ra-common primitives ? `.ra`
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13038: Objects do not exist** (prose only). **Compiler/Runtime/VM/Execution Manager/RA
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13048: persistence possible; blocks compiler/runtime
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13058: 8. **Phase 7L ? Compiler/interpreter foundation.** Lexer/parser/AST on
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13437: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  5831 F:\RA_01\docs\architecture.md                                                                  219 coupling, no compiler/runtime/memory payloads.
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13452: (prose only). **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE: none
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13484: frontend/ide/runtime/compiler/bootstrap/memory/database | forbidden | ? | PASS | manifest (only persistence) |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13485: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  5970 F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md                                                   676 | Compiler/Runtime/VM/Exec Mgr | ? | ? | ? | ? | ? | ? |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13489: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  5975                                                                                                    persistence possible; blocks compiler/runtime artifacts |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13511: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  6004 F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md                                                   770 8. **Phase 7L ? Compiler/interpreter foundation.**
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13616: F:\RA_01\RA_ENGINEERING_HANDOFF_CHECKLIST.md                                                    63 - SySS must not absorb compiler/runtime/VM responsibilities.
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13621: F:\RA_01\RA_ENGINEERING_HANDOFF_CHECKLIST.md                                                   239 Do not implement Compiler/Runtime/VM before the Gateway contract is frozen.
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14090: Objects do not exist** (prose only). **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE:
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14106: persistence possible; blocks compiler/runtime
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14122: 8. **Phase 7L ? Compiler/interpreter foundation.** Lexer/parser/AST on ra-common primitives ? `.ra`
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14222: **Compiler/Runtime/VM/Execution Manager/RA
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14233: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   13679                                                                                                    persistence possible; blocks compiler/runtime
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14247: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   13689                                                                                                    8. **Phase 7L ? Compiler/interpreter foundation.**
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14656: 219 coupling, no compiler/runtime/memory payloads.
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14673: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   14083                                                                                                    (prose only). **Compiler/Runtime/VM/Execution Manager/RA
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14707: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   14115                                                                                                    frontend/ide/runtime/compiler/bootstrap/memory/database |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14710: 676 | Compiler/Runtime/VM/Exec Mgr | ? | ? | ? | ? | ? | ? |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14714: persistence possible; blocks compiler/runtime artifacts |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14744: 770 8. **Phase 7L ? Compiler/interpreter foundation.**
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14869: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   14247 F:\RA_01\RA_ENGINEERING_HANDOFF_CHECKLIST.md                                                    63 - SySS must not absorb compiler/runtime/VM responsibilities.
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14879: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   14252 F:\RA_01\RA_ENGINEERING_HANDOFF_CHECKLIST.md                                                   239 Do not implement Compiler/Runtime/VM before the Gateway
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:16871: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   15353 F:\RA_01\docs\architecture.md                                                                  219 coupling, no compiler/runtime/memory payloads.
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:16902: **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE: none exist.** |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:16960: frontend/ide/runtime/compiler/bootstrap/memory/database | forbidden | ? | PASS | manifest (only persistence) |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:16961: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   15413 F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md                                                   676 | Compiler/Runtime/VM/Exec Mgr | ? | ? | ? | ? | ? | ? |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:16967: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   15417                                                                                                    compiler/runtime artifacts | **spec + codec phase** |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:16991: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   15432 F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md                                                   770 8. **Phase 7L ? Compiler/interpreter foundation.**
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:17552: **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE: none exist.** |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:17581: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   25216                                                             **Compiler/Runtime/VM/Execution Manager/RA
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:17647: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   25280                                                             **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE: none
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:17687: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   25308 F:\RA_01\RA_ENGINEERING_HANDOFF_CHECKLIST.md            239 Do not implement Compiler/Runtime/VM before the Gateway contract is frozen.
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:17759: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   25354                                                             **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE:
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:17784: Objects do not exist** (prose only). **Compiler/Runtime/VM/Execution Manager/RA
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:17848: (prose only). **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE: none
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:17884: Do not implement Compiler/Runtime/VM before the Gateway contract is frozen.
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:17996: prose). **Active Objects do not exist** (prose only). **Compiler/Runtime/VM/Execution Manager/RA
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:18099: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   25643                                                             (prose only). **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE: none exist.** |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:18957: F:\RA_01\docs\architecture.md                                                                  219 coupling, no compiler/runtime/memory payloads.
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:18973: prose). **Active Objects do not exist** (prose only). **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE: none exist.** |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:19016: F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md                                                   625 | `ra-syss` never ? frontend/ide/runtime/compiler/bootstrap/memory/database | forbidden | ? | PASS | manifest (only persistence) |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:19017: F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md                                                   676 | Compiler/Runtime/VM/Exec Mgr | ? | ? | ? | ? | ? | ? | **NONE** |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:19021: compiler/runtime artifacts | **spec + codec phase** |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:19036: F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md                                                   770 8. **Phase 7L ? Compiler/interpreter foundation.** Lexer/parser/AST on ra-common primitives ? `.ra` ? `.rab` pipeline. *Why:* nothing language-related exists;
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:19257: F:\RA_01\RA_ENGINEERING_HANDOFF_CHECKLIST.md            239 Do not implement Compiler/Runtime/VM before the Gateway contract is frozen.
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:19360: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt            14252 F:\RA_01\RA_ENGINEERING_HANDOFF_CHECKLIST.md                                                   239 Do not implement Compiler/Runtime/VM before the Gateway contract is frozen.
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:19515: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt            25308 F:\RA_01\RA_ENGINEERING_HANDOFF_CHECKLIST.md            239 Do not implement Compiler/Runtime/VM before the Gateway contract is frozen.
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:19599: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt            25469 F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt            14252 F:\RA_01\RA_ENGINEERING_HANDOFF_CHECKLIST.md                                                   239 Do not implement Compiler/Runtime/VM
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:19772: F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt      13621 F:\RA_01\RA_ENGINEERING_HANDOFF_CHECKLIST.md                                                   239 Do not implement Compiler/Runtime/VM before the Gateway contract is frozen.
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:19899: Do not implement Compiler/Runtime/VM before the Gateway
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:20058: F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt      17687 F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   25308 F:\RA_01\RA_ENGINEERING_HANDOFF_CHECKLIST.md            239 Do not implement Compiler/Runtime/VM
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:20142: F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt      17884                                                                                                    Do not implement Compiler/Runtime/VM before the Gateway contract is frozen.
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:20655: F:\RA_01\docs\architecture.md                       219 coupling, no compiler/runtime/memory payloads.
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:20693: only). **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE: none exist.** |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:20749: F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md        625 | `ra-syss` never ? frontend/ide/runtime/compiler/bootstrap/memory/database | forbidden | ? | PASS | manifest (only persistence) |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:20757: F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md        676 | Compiler/Runtime/VM/Exec Mgr | ? | ? | ? | ? | ? | ? | **NONE** |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:20761: F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md        716 | G2 | HIGH | **Binary formats** (.rab/.raf/.rap) `EncodingNotSpecified` | serializer/deserializer.rs | no bytecode/frozen/package persistence possible; blocks compiler/runtime artifacts | **spec + codec
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:20773: F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md        770 8. **Phase 7L ? Compiler/interpreter foundation.** Lexer/parser/AST on ra-common primitives ? `.ra` ? `.rab` pipeline. *Why:* nothing language-related exists; the entire persistence+memory stack is built
+F:\RA_01\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:16: | `docs/architecture.md` | Layer rules 1–6; the gateway attach point ("The future RA Core Gateway attaches behind the backbone"); `ra-syss` must never depend on runtime/compiler/memory (rule 3). |
+F:\RA_01\RA-RUST-4D_OG_CORE_FORENSIC_AUDIT.md:27: | **Compiler front** | `src/compiler/` | `core/io/*`, `internal/*`, `oop/*` (class/method/constructor parsers + AST nodes), `common/pf.py`, `common/property_engine.py` | IO blocks, OOP declaration parsing, PF/property engine |
+F:\RA_01\RA-RUST-4D_OG_CORE_FORENSIC_AUDIT.md:111: **16. Compiler/runtime boundary** — Phase H.
+F:\RA_01\RA-RUST-4D_OG_CORE_FORENSIC_AUDIT.md:273: | CompilerBackend + .rbc | — | ?? MISSING (compiler dir empty) | `software/compiler/` empty |
+F:\RA_01\RA-RUST-4D_OG_CORE_FORENSIC_AUDIT.md:294: | CompilerBackend | AST ? `Instruction[]` + pool | `software/compiler/` | ? empty | full front-end + backend | later (7L compiler) | `CB` |
+F:\RA_01\RA-RUST-4D_OG_CORE_FORENSIC_AUDIT.md:355: 8. **OG compiler/runtime boundary:** Phase H — `CompilerBackend` (AST?Instructions) ? VME; `.rbc` binary artifact.
+F:\RA_01\RA-RUST-4D_OG_CORE_FORENSIC_AUDIT.md:358: 11. **Missing OG functionality:** interpreter, compiler/front-end, VM execution, ISA, `.rbc` codec, GPC orchestration, tooling (debugger/IDE/LSP/CLI), stdlib.
+F:\RA_01\RA_7J2_SOURCE_EXTRACTION.txt:220: RA IR = compiler/internal working representation.REI = final RA-specific executable representation stored in Program Space.
+F:\RA_01\RA_7J2_SOURCE_EXTRACTION.txt:226: RA IR = compiler/internal working representation.REI = final RA-specific executable representation stored in Program Space.
+F:\RA_01\RA_7J2_SOURCE_EXTRACTION.txt:231: RA IR = compiler/internal working representation.REI = final RA-specific executable representation stored in Program Space.
+F:\RA_01\RA_7J2_SOURCE_EXTRACTION.txt:235: .\docs\RA_Program_Space_V1.docx:28: RA IR = compiler/internal working representation.REI = final RA-specific executable representation stored in Program Space.
+F:\RA_01\RA_7J2_SOURCE_EXTRACTION.txt:244: RA IR = compiler/internal working representation.REI = final RA-specific executable representation stored in Program Space.
+F:\RA_01\RA_7J2_SOURCE_EXTRACTION.txt:845: RA/+-- software/?   +-- common/?   +-- compiler/?   +-- runtime/?   +-- memory/?   +-- persistence/?   +-- cli/?   +-- ide/?   +-- debugger/+-- libraries/+-- documentation/+-- specifications/+-- examples/+-- tests/Responsibilities:common = shared utilities, logging, configuration, constants, errors.compiler = lexer, parser, semantic analysis, REI generation.runtime = execution manager, runtime loader, interpreter.memory = PS, AS, ES, WS, RS.persistence = LPM, PSS, SySS.ide = editor/workspace/project explorer/debugger UI.cli = terminal.debugger = debugging services.
+F:\RA_01\RA_7J2_SOURCE_EXTRACTION.txt:848: .\docs\The One\RA_Master_Architecture_Constitution_V1.docx:7: RA/+-- software/?   +-- common/?   +-- compiler/?   +-- runtime/?   +-- memory/?   +-- persistence/?   +-- cli/?   +-- ide/?   +-- debugger/+-- libraries/+-- documentation/+-- specifications/+-- examples/+-- tests/Responsibilities:common = shared utilities, logging, configuration, constants, errors.compiler = lexer, parser, semantic analysis, REI generation.runtime = execution manager, runtime loader, interpreter.memory = PS, AS, ES, WS, RS.persistence = LPM, PSS, SySS.ide = editor/workspace/project explorer/debugger UI.cli = terminal.debugger = debugging services.
+F:\RA_01\RA_7J2_SOURCE_EXTRACTION.txt:857: RA/+-- software/?   +-- common/?   +-- compiler/?   +-- runtime/?   +-- memory/?   +-- persistence/?   +-- cli/?   +-- ide/?   +-- debugger/+-- libraries/+-- documentation/+-- specifications/+-- examples/+-- tests/Responsibilities:common = shared utilities, logging, configuration, constants, errors.compiler = lexer, parser, semantic analysis, REI generation.runtime = execution manager, runtime loader, interpreter.memory = PS, AS, ES, WS, RS.persistence = LPM, PSS, SySS.ide = editor/workspace/project explorer/debugger UI.cli = terminal.debugger = debugging services.
+F:\RA_01\RA_7J2_SOURCE_EXTRACTION.txt:863: RA/+-- software/?   +-- common/?   +-- compiler/?   +-- runtime/?   +-- memory/?   +-- persistence/?   +-- cli/?   +-- ide/?   +-- debugger/+-- libraries/+-- documentation/+-- specifications/+-- examples/+-- tests/Responsibilities:common = shared utilities, logging, configuration, constants, errors.compiler = lexer, parser, semantic analysis, REI generation.runtime = execution manager, runtime loader, interpreter.memory = PS, AS, ES, WS, RS.persistence = LPM, PSS, SySS.ide = editor/workspace/project explorer/debugger UI.cli = terminal.debugger = debugging services.
+F:\RA_01\RA_7J2_SOURCE_EXTRACTION.txt:985: | `docs/architecture.md` | Layer rules 1?6; the gateway attach point ("The future RA Core Gateway attaches behind the backbone"); `ra-syss` must never depend on runtime/compiler/memory (rule 3). |
+F:\RA_01\RA_7J2_SOURCE_EXTRACTION.txt:987: .\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:16: | `docs/architecture.md` | Layer rules 1?6; the gateway attach point ("The future RA Core Gateway attaches behind the backbone"); `ra-syss` must never depend on runtime/compiler/memory (rule 3). |
+F:\RA_01\RA_7J2_SOURCE_EXTRACTION.txt:996: | `docs/architecture.md` | Layer rules 1?6; the gateway attach point ("The future RA Core Gateway attaches behind the backbone"); `ra-syss` must never depend on runtime/compiler/memory (rule 3). |
+F:\RA_01\RA_7J2_SOURCE_EXTRACTION.txt:1002: | `docs/architecture.md` | Layer rules 1?6; the gateway attach point ("The future RA Core Gateway attaches behind the backbone"); `ra-syss` must never depend on runtime/compiler/memory (rule 3). |
+F:\RA_01\docs\architecture.md:245: coupling, no compiler/runtime/memory payloads.
+F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md:24: | 10 | **INFO** | **FSS does not exist as a component** (verified again); `Syss` is the file/storage boundary. **Database does not exist** (only future-Hub prose). **Active Objects do not exist** (prose only). **Compiler/Runtime/VM/Execution Manager/RA Core/Frontend/IDE: none exist.** |
+F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md:625: | `ra-syss` never ? frontend/ide/runtime/compiler/bootstrap/memory/database | forbidden | ? | PASS | manifest (only persistence) |
+F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md:676: | Compiler/Runtime/VM/Exec Mgr | ? | ? | ? | ? | ? | ? | **NONE** |
+F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md:716: | G2 | HIGH | **Binary formats** (.rab/.raf/.rap) `EncodingNotSpecified` | serializer/deserializer.rs | no bytecode/frozen/package persistence possible; blocks compiler/runtime artifacts | **spec + codec phase** |
+F:\RA_01\docs\RA_Forensic_Audit_Report_V1.md:770: 8. **Phase 7L — Compiler/interpreter foundation.** Lexer/parser/AST on ra-common primitives ? `.ra` ? `.rab` pipeline. *Why:* nothing language-related exists; the entire persistence+memory stack is built to serve programs that do not exist yet.
+
+============================================================
+SEARCH: compiler\\
+============================================================
+NO MATCH
+
+============================================================
+SEARCH: compiler::
+============================================================
+NO MATCH
+
+============================================================
+SEARCH: compiler\.
+============================================================
+NO MATCH
+
+============================================================
+SEARCH: ra_compiler
+============================================================
+NO MATCH
+
+============================================================
+SEARCH: ra-compiler
+============================================================
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:1549: F:\RA_01\docs\architecture.md                             42 | 2 | The `software` binary (future Frontend / Bootstrap entry) must **never** directly depend on `ra-persistence`, `ra-memory`, `ra-runtime` or `ra-compiler`. |
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:3616: directly depend on `ra-persistence`, `ra-memory`, `ra-runtime` or `ra-compiler`. |
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:5821: `ra-runtime` or `ra-compiler`. |
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:5822: F:\RA_01\docs\architecture.md                                                                   43 | 3 | `ra-syss` must **never** depend on `ra-frontend`, `ra-ide`, `ra-runtime` or `ra-compiler` (nor on `ra-bootstrap`, `ra-memory`,
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:6167: F:\RA_01\scripts\check-architecture.sh                                                          58   [software]="ra-persistence ra-memory ra-runtime ra-compiler ra-ide ra-database"
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:6168: F:\RA_01\scripts\check-architecture.sh                                                          60   [ra-bootstrap]="ra-persistence ra-memory ra-runtime ra-compiler ra-ide ra-database"
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:6169: F:\RA_01\scripts\check-architecture.sh                                                          62   [ra-syss]="ra-bootstrap ra-memory ra-runtime ra-compiler ra-ide ra-database ra-frontend"
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:6170: F:\RA_01\scripts\check-architecture.sh                                                          64   [ra-persistence]="ra-memory ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:6171: F:\RA_01\scripts\check-architecture.sh                                                          66   [ra-memory]="ra-persistence ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md:6172: F:\RA_01\scripts\check-architecture.sh                                                          68   [ra-common]="ra-persistence ra-memory ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:209: [software]="ra-persistence ra-memory ra-runtime ra-compiler ra-ide ra-database"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:211: [ra-bootstrap]="ra-persistence ra-memory ra-runtime ra-compiler ra-ide ra-database"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:213: [ra-syss]="ra-bootstrap ra-memory ra-runtime ra-compiler ra-ide ra-database ra-frontend"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:215: [ra-persistence]="ra-memory ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:217: [ra-memory]="ra-persistence ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:219: [ra-common]="ra-persistence ra-memory ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:13566: `ra-persistence`, `ra-memory`, `ra-runtime` or `ra-compiler`. |
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:13659: `ra-runtime` or `ra-compiler`. |
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14060: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  5821                                                                                                    `ra-runtime` or `ra-compiler`. |
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14063: `ra-ide`, `ra-runtime` or `ra-compiler` (nor on `ra-bootstrap`, `ra-memory`,
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14224: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  6167 F:\RA_01\scripts\check-architecture.sh                                                          58   [software]="ra-persistence ra-memory ra-runtime ra-compiler
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14227: ra-compiler ra-ide ra-database"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14228: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  6169 F:\RA_01\scripts\check-architecture.sh                                                          62   [ra-syss]="ra-bootstrap ra-memory ra-runtime ra-compiler
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14231: ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14233: ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14235: ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14519: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                     209   [software]="ra-persistence ra-memory ra-runtime ra-compiler ra-ide ra-database"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14520: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                     211   [ra-bootstrap]="ra-persistence ra-memory ra-runtime ra-compiler ra-ide ra-database"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14521: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                     213   [ra-syss]="ra-bootstrap ra-memory ra-runtime ra-compiler ra-ide ra-database ra-frontend"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14522: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                     215   [ra-persistence]="ra-memory ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14523: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                     217   [ra-memory]="ra-persistence ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:14524: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                     219   [ra-common]="ra-persistence ra-memory ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:15343: F:\RA_01\docs\architecture.md                                                                   42 | 2 | The `software` binary (future Frontend / Bootstrap entry) must **never** directly depend on `ra-persistence`, `ra-memory`, `ra-runtime` or `ra-compiler`. |
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:15344: F:\RA_01\docs\architecture.md                                                                   43 | 3 | `ra-syss` must **never** depend on `ra-frontend`, `ra-ide`, `ra-runtime` or `ra-compiler` (nor on `ra-bootstrap`, `ra-memory`, `ra-database`). |
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:15558: F:\RA_01\scripts\check-architecture.sh                                                          58   [software]="ra-persistence ra-memory ra-runtime ra-compiler ra-ide ra-database"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:15559: F:\RA_01\scripts\check-architecture.sh                                                          60   [ra-bootstrap]="ra-persistence ra-memory ra-runtime ra-compiler ra-ide ra-database"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:15560: F:\RA_01\scripts\check-architecture.sh                                                          62   [ra-syss]="ra-bootstrap ra-memory ra-runtime ra-compiler ra-ide ra-database ra-frontend"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:15561: F:\RA_01\scripts\check-architecture.sh                                                          64   [ra-persistence]="ra-memory ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:15562: F:\RA_01\scripts\check-architecture.sh                                                          66   [ra-memory]="ra-persistence ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:15563: F:\RA_01\scripts\check-architecture.sh                                                          68   [ra-common]="ra-persistence ra-memory ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt:25169: === EXISTING RA-COMPILER SOURCE ===
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:12935: `ra-persistence`, `ra-memory`, `ra-runtime` or `ra-compiler`. |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13028: `ra-runtime` or `ra-compiler`. |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13429: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  5821                                                                                                    `ra-runtime` or `ra-compiler`. |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13432: `ra-ide`, `ra-runtime` or `ra-compiler` (nor on `ra-bootstrap`, `ra-memory`,
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13593: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  6167 F:\RA_01\scripts\check-architecture.sh                                                          58   [software]="ra-persistence ra-memory ra-runtime ra-compiler
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13596: ra-compiler ra-ide ra-database"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13597: F:\RA_01\RA_FULL_PROJECT_AUDIT_2026-08-14.md                                                  6169 F:\RA_01\scripts\check-architecture.sh                                                          62   [ra-syss]="ra-bootstrap ra-memory ra-runtime ra-compiler
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13600: ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13602: ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13604: ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13888: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                     209   [software]="ra-persistence ra-memory ra-runtime ra-compiler ra-ide ra-database"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13889: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                     211   [ra-bootstrap]="ra-persistence ra-memory ra-runtime ra-compiler ra-ide ra-database"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13890: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                     213   [ra-syss]="ra-bootstrap ra-memory ra-runtime ra-compiler ra-ide ra-database ra-frontend"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13891: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                     215   [ra-persistence]="ra-memory ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13892: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                     217   [ra-memory]="ra-persistence ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:13893: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                     219   [ra-common]="ra-persistence ra-memory ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14075: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   13566                                                                                                    `ra-persistence`, `ra-memory`, `ra-runtime` or `ra-compiler`.
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14211: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   13659                                                                                                    `ra-runtime` or `ra-compiler`. |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14648: `ra-runtime` or `ra-compiler`. |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14649: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   14063                                                                                                    `ra-ide`, `ra-runtime` or `ra-compiler` (nor on
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14830: 58   [software]="ra-persistence ra-memory ra-runtime ra-compiler
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14833: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   14227                                                                                                    ra-compiler ra-ide ra-database"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14836: 62   [ra-syss]="ra-bootstrap ra-memory ra-runtime ra-compiler
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14839: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   14231                                                                                                    ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14843: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   14233                                                                                                    ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:14845: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   14235                                                                                                    ra-runtime ra-compiler ra-ide ra-database ra-frontend
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:15323: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   14519 F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                     209   [software]="ra-persistence ra-memory ra-runtime ra-compiler
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:15326: ra-compiler ra-ide ra-database"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:15327: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   14521 F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                     213   [ra-syss]="ra-bootstrap ra-memory ra-runtime ra-compiler
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:15330: ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:15332: ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:15334: ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:16852: entry) must **never** directly depend on `ra-persistence`, `ra-memory`, `ra-runtime` or `ra-compiler`. |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:16854: `ra-ide`, `ra-runtime` or `ra-compiler` (nor on `ra-bootstrap`, `ra-memory`, `ra-database`). |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:17075: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   15558 F:\RA_01\scripts\check-architecture.sh                                                          58   [software]="ra-persistence ra-memory ra-runtime ra-compiler
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:17078: ra-compiler ra-ide ra-database"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:17079: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   15560 F:\RA_01\scripts\check-architecture.sh                                                          62   [ra-syss]="ra-bootstrap ra-memory ra-runtime ra-compiler
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:17082: ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:17084: ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:17086: ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:17532: F:\RA_01\RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt                                                   25169 === EXISTING RA-COMPILER SOURCE ===
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:18947: F:\RA_01\docs\architecture.md                                                                   42 | 2 | The `software` binary (future Frontend / Bootstrap entry) must **never** directly depend on `ra-persistence`, `ra-memory`, `ra-runtime` or `ra-compiler`. |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:18948: F:\RA_01\docs\architecture.md                                                                   43 | 3 | `ra-syss` must **never** depend on `ra-frontend`, `ra-ide`, `ra-runtime` or `ra-compiler` (nor on `ra-bootstrap`, `ra-memory`, `ra-database`). |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:19162: F:\RA_01\scripts\check-architecture.sh                                                          58   [software]="ra-persistence ra-memory ra-runtime ra-compiler ra-ide ra-database"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:19163: F:\RA_01\scripts\check-architecture.sh                                                          60   [ra-bootstrap]="ra-persistence ra-memory ra-runtime ra-compiler ra-ide ra-database"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:19164: F:\RA_01\scripts\check-architecture.sh                                                          62   [ra-syss]="ra-bootstrap ra-memory ra-runtime ra-compiler ra-ide ra-database ra-frontend"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:19165: F:\RA_01\scripts\check-architecture.sh                                                          64   [ra-persistence]="ra-memory ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:19166: F:\RA_01\scripts\check-architecture.sh                                                          66   [ra-memory]="ra-persistence ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:19167: F:\RA_01\scripts\check-architecture.sh                                                          68   [ra-common]="ra-persistence ra-memory ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:20554: [software]="ra-persistence ra-memory ra-runtime ra-compiler ra-ide ra-database"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:20556: [ra-bootstrap]="ra-persistence ra-memory ra-runtime ra-compiler ra-ide ra-database"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:20558: [ra-syss]="ra-bootstrap ra-memory ra-runtime ra-compiler ra-ide ra-database ra-frontend"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:20560: [ra-persistence]="ra-memory ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:20562: [ra-memory]="ra-persistence ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:20564: [ra-common]="ra-persistence ra-memory ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:20643: F:\RA_01\docs\architecture.md                        42 | 2 | The `software` binary (future Frontend / Bootstrap entry) must **never** directly depend on `ra-persistence`, `ra-memory`, `ra-runtime` or `ra-compiler`. |
+F:\RA_01\RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt:20644: F:\RA_01\docs\architecture.md                        43 | 3 | `ra-syss` must **never** depend on `ra-frontend`, `ra-ide`, `ra-runtime` or `ra-compiler` (nor on `ra-bootstrap`, `ra-memory`, `ra-database`). |
+F:\RA_01\docs\architecture.md:42: | 2 | The `software` binary (future Frontend / Bootstrap entry) must **never** directly depend on `ra-persistence`, `ra-memory`, `ra-runtime` or `ra-compiler`. |
+F:\RA_01\docs\architecture.md:43: | 3 | `ra-syss` must **never** depend on `ra-frontend`, `ra-ide`, `ra-runtime` or `ra-compiler` (nor on `ra-bootstrap`, `ra-memory`, `ra-database`). |
+F:\RA_01\scripts\check-architecture.sh:62: [software]="ra-persistence ra-memory ra-runtime ra-compiler ra-ide ra-database"
+F:\RA_01\scripts\check-architecture.sh:64: [ra-bootstrap]="ra-persistence ra-memory ra-runtime ra-compiler ra-ide ra-database"
+F:\RA_01\scripts\check-architecture.sh:66: [ra-syss]="ra-bootstrap ra-memory ra-runtime ra-compiler ra-ide ra-database ra-frontend"
+F:\RA_01\scripts\check-architecture.sh:68: [ra-persistence]="ra-memory ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\scripts\check-architecture.sh:70: [ra-memory]="ra-persistence ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\scripts\check-architecture.sh:76: [ra-runtime]="ra-memory ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\scripts\check-architecture.sh:85: [ra-memory-gateway-adapter]="ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+F:\RA_01\scripts\check-architecture.sh:88: [ra-common]="ra-persistence ra-memory ra-syss ra-bootstrap ra-runtime ra-compiler ra-ide ra-database ra-frontend software"
+
+CARGO: F:\RA_01\Cargo.toml
+F:\RA_01\Cargo.toml:5: # persistence, syss, bootstrap, memory, runtime, compiler, interpreter, ide,
+
+CARGO: F:\RA_01\software\Cargo.toml
+F:\RA_01\software\Cargo.toml:7: ra-bootstrap = { path = "bootstrap" }
+
+CARGO: F:\RA_01\software\common\Cargo.toml
+
+CARGO: F:\RA_01\software\memory\Cargo.toml
+F:\RA_01\software\memory\Cargo.toml:14: ra-common = { path = "../common" }
+
+CARGO: F:\RA_01\software\runtime\Cargo.toml
+F:\RA_01\software\runtime\Cargo.toml:14: ra-common = { path = "../common" }
+F:\RA_01\software\runtime\Cargo.toml:15: ra-gateway = { path = "../gateway" }
+F:\RA_01\software\runtime\Cargo.toml:16: ra-memory-gateway = { path = "../memory-gateway" }
+
+CARGO: F:\RA_01\software\persistence\Cargo.toml
+F:\RA_01\software\persistence\Cargo.toml:14: ra-common = { path = "../common" }
+
+CARGO: F:\RA_01\software\syss\Cargo.toml
+F:\RA_01\software\syss\Cargo.toml:14: ra-gateway = { path = "../gateway" }
+F:\RA_01\software\syss\Cargo.toml:15: ra-persistence = { path = "../persistence" }
+
+CARGO: F:\RA_01\software\bootstrap\Cargo.toml
+F:\RA_01\software\bootstrap\Cargo.toml:14: ra-syss = { path = "../syss" }
+
+CARGO: F:\RA_01\software\gateway\Cargo.toml
+
+CARGO: F:\RA_01\software\memory-gateway\Cargo.toml
+F:\RA_01\software\memory-gateway\Cargo.toml:14: ra-common = { path = "../common" }
+
+CARGO: F:\RA_01\software\memory-gateway-adapter\Cargo.toml
+F:\RA_01\software\memory-gateway-adapter\Cargo.toml:14: ra-memory = { path = "../memory" }
+F:\RA_01\software\memory-gateway-adapter\Cargo.toml:15: ra-memory-gateway = { path = "../memory-gateway" }
+F:\RA_01\software\memory-gateway-adapter\Cargo.toml:18: ra-common = { path = "../common" }
+
+EXISTING SOFTWARE/COMPILER FILES:
+

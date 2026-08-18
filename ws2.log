@@ -1,0 +1,617 @@
+
+running 10 tests
+test validator::tests::validate_passes_in_a_clean_environment ... ok
+test progress::tests::events_are_distinct ... ok
+test progress::tests::events_have_messages ... ok
+test progress::tests::emit_accepts_every_event ... ok
+test shutdown::tests::run_shuts_the_platform_down_cleanly ... ok
+test launcher::tests::launch_initializes_the_platform ... ok
+test bootstrap::tests::start_returns_a_bootstrap_handle ... ok
+test launcher::tests::shutdown_delegates_to_the_platform ... ok
+test startup::tests::run_launches_the_platform ... ok
+test bootstrap::tests::shutdown_completes_cleanly ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.36s
+
+
+running 35 tests
+test diagnostics::tests::collecting_reporter_accumulates ... ok
+test diagnostics::tests::diagnostic_builder ... ok
+test diagnostics::tests::label_constructors ... ok
+test error::tests::from_string_and_str ... ok
+test error::tests::display_includes_kind_and_message ... ok
+test diagnostics::tests::terminal_reporter_renders_excerpt ... ok
+test diagnostics::tests::terminal_reporter_renders_multiline_span ... ok
+test error::tests::constructors_set_kind_and_message ... ok
+test error::tests::error_kind_as_str ... ok
+test error::tests::implements_std_error ... ok
+test diagnostics::tests::severity_display ... ok
+test diagnostics::tests::terminal_reporter_handles_missing_file ... ok
+test error::tests::result_alias_works ... ok
+test source::tests::crlf_lines_are_normalized ... ok
+test source::tests::empty_file_has_one_line ... ok
+test source::tests::line_col_resolution ... ok
+test source::tests::line_indexing ... ok
+test source::tests::line_text_strips_terminators ... ok
+test source::tests::slice_returns_covered_text ... ok
+test source::tests::source_map_registers_and_looks_up ... ok
+test source::tests::source_types_are_send_and_sync ... ok
+test span::tests::line_col_display ... ok
+test span::tests::source_pos_arithmetic ... ok
+test span::tests::source_pos_conversions ... ok
+test span::tests::span_construction_and_accessors ... ok
+test span::tests::span_contains_and_merge ... ok
+test span::tests::span_display_and_range_conversion ... ok
+test span::tests::span_new_panics_on_reversed - should panic ... ok
+test span::tests::span_try_new_rejects_reversed ... ok
+test span::tests::span_types_are_send_and_sync ... ok
+test symbol::tests::identifier_accessors_and_traits ... ok
+test symbol::tests::identifier_validation ... ok
+test symbol::tests::intern_identifier_roundtrip ... ok
+test symbol::tests::symbol_table_interns_deduplicates ... ok
+test symbol::tests::symbols_are_ordered_and_hashed ... ok
+
+test result: ok. 35 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.05s
+
+
+running 3 tests
+test identifier_validation ... ok
+test symbol_interning_semantics ... ok
+test end_to_end_diagnostic_flow ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.12s
+
+
+running 123 tests
+test active_space::tests::active_space_types_are_send_and_sync ... ok
+test address::tests::address_is_send_and_sync ... ok
+test active_space::tests::scope_and_cell_ids_display ... ok
+test active_space::tests::mini_log_records_transitions_in_order ... ok
+test active_space::tests::destroy_releases_all_storage ... ok
+test active_space::tests::cell_reads_and_closes_are_checked ... ok
+test active_space::tests::close_releases_top_cell_and_reuses_it ... ok
+test active_space::tests::active_path_yields_live_chain_in_order ... ok
+test active_space::tests::call_builds_sequential_chain ... ok
+test active_space::tests::mini_log_overwrites_oldest_when_full ... ok
+test active_space::tests::grid_scales_then_creates_new_block ... ok
+test active_space::tests::new_registers_active_space ... ok
+test address::tests::addresses_are_equality_compared_by_parts ... ok
+test address::tests::addresses_hash_and_display ... ok
+test address::tests::from_parts_and_accessors ... ok
+test entity_space::tests::allocate_hands_out_sequential_cells ... ok
+test entity_space::tests::bind_value_list_embeds_metadata_in_the_cell_record ... ok
+test entity_space::tests::bound_list_metadata_round_trips_through_the_record ... ok
+test entity_space::tests::bound_list_resolves_to_a_working_view ... ok
+test entity_space::tests::cells_iterates_live_cells_in_order ... ok
+test entity_space::tests::destroy_releases_all_storage ... ok
+test entity_space::tests::destroy_value_list_releases_extended_content_too ... ok
+test entity_space::tests::destroy_value_list_releases_storage_and_keeps_cell_alive ... ok
+test entity_space::tests::double_destroy_value_list_is_detected ... ok
+test entity_space::tests::duplicate_bind_is_rejected ... ok
+test entity_space::tests::entity_cell_ids_display_and_order ... ok
+test entity_space::tests::entity_space_types_are_send_and_sync ... ok
+test entity_space::tests::foreign_space_list_cannot_be_bound ... ok
+test entity_space::tests::forgetting_list_teardown_is_a_detectable_leak ... ok
+test entity_space::tests::grid_grows_with_new_blocks_without_moving_cells ... ok
+test entity_space::tests::live_cells_start_with_unbound_list_metadata ... ok
+test entity_space::tests::new_registers_entity_space ... ok
+test entity_space::tests::release_after_destroy_completes_a_clean_lifecycle ... ok
+test entity_space::tests::release_makes_cell_reusable ... ok
+test entity_space::tests::release_validates_liveness ... ok
+test entity_space::tests::reused_cells_delay_growth ... ok
+test entity_space::tests::unbound_and_non_live_cells_fail_resolution ... ok
+test error::tests::display_messages_are_descriptive ... ok
+test error::tests::errors_are_std_errors_and_comparable ... ok
+test global_entity::tests::allocate_global_binds_cells_and_returns_indices_in_order ... ok
+test global_entity::tests::destroy_module_releases_cells_lists_and_directories ... ok
+test global_entity::tests::destroy_rejects_while_groups_are_loaded_and_leaks_detectably ... ok
+test global_entity::tests::extended_values_reach_globals_through_the_resolved_list ... ok
+test global_entity::tests::global_entity_area_is_send_and_sync ... ok
+test global_entity::tests::global_slots_are_bounds_checked_and_extended_handles_rejected ... ok
+test global_entity::tests::group_directory_grows_on_demand ... ok
+test global_entity::tests::load_module_creates_a_group_and_rejects_duplicates ... ok
+test global_entity::tests::module_directory_reuses_vacant_slots_before_growing ... ok
+test global_entity::tests::module_records_round_trip_through_the_codec ... ok
+test global_entity::tests::multiple_modules_are_isolated ... ok
+test global_entity::tests::new_allocates_the_module_directory_under_the_entity_space ... ok
+test global_entity::tests::read_and_write_resolve_compiled_slots_deterministically ... ok
+test global_entity::tests::unknown_module_and_index_are_detected ... ok
+test global_entity::tests::wrong_entity_space_is_rejected ... ok
+test local_entity::tests::current_cell_reflects_the_identity_pairing ... ok
+test local_entity::tests::local_entity_resolver_is_send_and_sync ... ok
+test local_entity::tests::nested_invocations_resolve_against_the_current_invocation ... ok
+test local_entity::tests::read_and_write_resolve_compiled_slots_deterministically ... ok
+test local_entity::tests::repeated_invocations_of_a_scope_resolve_independently ... ok
+test local_entity::tests::resolution_fails_when_the_entity_cell_is_missing_or_unbound ... ok
+test local_entity::tests::resolution_requires_a_live_invocation ... ok
+test local_entity::tests::slot_access_is_bounds_checked_through_resolution ... ok
+test local_entity::tests::write_local_rejects_extended_handles ... ok
+test manager::tests::access_checks_bounds_and_liveness ... ok
+test manager::tests::allocate_and_access_round_trip ... ok
+test manager::tests::allocate_rejects_bad_input ... ok
+test manager::tests::default_manager_begins_with_zero_committed_regions ... ok
+test manager::tests::idle_trailing_regions_are_returned_to_the_host ... ok
+test manager::tests::invalid_configs_are_rejected ... ok
+test manager::tests::manager_types_are_send_and_sync ... ok
+test manager::tests::new_manager_is_empty ... ok
+test manager::tests::ownership_tracking_counts_per_space ... ok
+test manager::tests::regions_grow_on_demand_and_stop_at_the_limit ... ok
+test manager::tests::register_lookup_and_unregister_spaces ... ok
+test manager::tests::shutdown_reports_the_final_state ... ok
+test manager::tests::slots_are_reused_before_growing ... ok
+test manager::tests::stale_addresses_are_detected_after_reuse ... ok
+test manager::tests::zeroing_on_deallocate_is_configurable ... ok
+test module_table::tests::growth_preserves_records ... ok
+test module_table::tests::insert_assigns_fresh_ids_and_reuses_vacant_slots ... ok
+test module_table::tests::record_codec_round_trips_through_storage ... ok
+test program_space::tests::code_map_iterator_yields_entries_in_order ... ok
+test program_space::tests::destroy_releases_all_storage_and_unregisters ... ok
+test program_space::tests::duplicate_and_empty_names_are_rejected ... ok
+test program_space::tests::empty_payloads_are_supported ... ok
+test program_space::tests::load_and_query_module ... ok
+test program_space::tests::module_id_display_and_ordering ... ok
+test program_space::tests::new_registers_program_space ... ok
+test program_space::tests::program_space_types_are_send_and_sync ... ok
+test program_space::tests::reads_are_bounds_checked ... ok
+test program_space::tests::source_for_rei_offset_maps_to_last_entry_at_or_before ... ok
+test program_space::tests::table_grows_beyond_initial_capacity ... ok
+test program_space::tests::unload_frees_storage_and_reuses_table_slots ... ok
+test region::tests::alloc_splits_runs_and_reports_capacity ... ok
+test region::tests::dealloc_coalesces_adjacent_runs ... ok
+test region::tests::generations_bump_on_reuse_and_catch_stale_addresses ... ok
+test region::tests::partial_reuse_of_a_freed_run_invalidates_old_addresses ... ok
+test region::tests::read_write_and_fill_obey_bounds ... ok
+test region::tests::resolve_rejects_unknown_and_freed_addresses ... ok
+test region::tests::zeroing_on_deallocate_is_optional ... ok
+test space::tests::all_spaces_have_names_and_descriptions ... ok
+test space::tests::space_ids_are_distinct_values ... ok
+test space::tests::space_records_expose_identity ... ok
+test space::tests::space_types_are_send_and_sync ... ok
+test value_list::tests::arrays_round_trip_preserving_order ... ok
+test value_list::tests::clear_resets_slot_to_nil ... ok
+test value_list::tests::destroy_releases_all_extended_storage ... ok
+test value_list::tests::encoded_extended_records_round_trip ... ok
+test value_list::tests::extended_handles_cannot_be_stored_directly_or_nested ... ok
+test value_list::tests::extended_values_survive_iteration_in_order ... ok
+test value_list::tests::float_values_round_trip_bit_exactly ... ok
+test value_list::tests::lists_are_isolated_from_each_other ... ok
+test value_list::tests::new_allocates_under_space_with_all_nil_slots ... ok
+test value_list::tests::objects_round_trip_preserving_entry_order ... ok
+test value_list::tests::overwriting_releases_previous_extended_storage ... ok
+test value_list::tests::positional_order_is_deterministic ... ok
+test value_list::tests::readers_reject_wrong_categories ... ok
+test value_list::tests::set_and_get_round_trip_all_value_kinds ... ok
+test value_list::tests::slots_are_bounds_checked ... ok
+test value_list::tests::strings_round_trip_through_manager_storage ... ok
+test value_list::tests::value_categories_are_descriptive ... ok
+test value_list::tests::value_list_types_are_send_and_sync ... ok
+test value_list::tests::zero_capacity_is_rejected ... ok
+
+test result: ok. 123 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 6.37s
+
+
+running 3 tests
+test deep_chain_spans_multiple_blocks ... ok
+test mini_log_records_and_caps_transitions ... ok
+test call_chain_tracks_active_execution_path ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.11s
+
+
+running 4 tests
+test release_validates_stale_cells ... ok
+test allocate_release_reuse_cycle ... ok
+test grid_grows_across_blocks_and_cells_survive ... ok
+test bound_value_list_lifecycle ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.19s
+
+
+running 3 tests
+test teardown_order_is_detectable ... ok
+test module_unload_isolates_the_group ... ok
+test global_entity_area_full_lifecycle ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.14s
+
+
+running 2 tests
+test local_resolution_full_lifecycle ... ok
+test repeated_invocations_of_a_scope_resolve_independently ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s
+
+
+running 3 tests
+test stale_addresses_are_rejected ... ok
+test regions_grow_and_shrink ... ok
+test end_to_end_memory_lifecycle ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.14s
+
+
+running 2 tests
+test load_execute_cycle_reads_rei_from_program_space ... ok
+test modules_survive_table_growth ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s
+
+
+running 5 tests
+test value_list_lifecycle_under_entity_space ... ok
+test deterministic_ordering_and_list_isolation ... ok
+test extended_value_lifecycle_releases_everything ... ok
+test extended_string_array_object_storage_under_entity_space ... ok
+test slot_access_is_bounds_checked ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.23s
+
+
+running 32 tests
+test deserializer::tests::binary_deserializers_report_pending_encoding ... ok
+test deserializer::tests::ra_deserializer_reads_utf8_text ... ok
+test deserializer::tests::ra_deserializer_rejects_invalid_utf8 ... ok
+test file_type::tests::detection_is_case_insensitive_and_path_based ... ok
+test file_type::tests::semantic_properties_match_the_specification ... ok
+test lpm::tests::delete_range_rejects_out_of_bounds ... ok
+test lpm::tests::delete_range_removes_text ... ok
+test lpm::tests::freeze_captures_state_independently ... ok
+test lpm::tests::insert_text_appends_and_inserts ... ok
+test file_type::tests::extensions_and_formats_map_one_to_one ... ok
+test lpm::tests::insert_text_rejects_mid_character ... ok
+test lpm::tests::insert_text_rejects_out_of_bounds ... ok
+test lpm::tests::mark_clean_and_modified ... ok
+test lpm::tests::new_program_defaults ... ok
+test lpm::tests::program_ids_are_unique ... ok
+test lpm::tests::replace_range_replaces_text ... ok
+test serializer::tests::binary_serializers_report_pending_encoding ... ok
+test serializer::tests::ra_serializer_encodes_utf8_text ... ok
+test serializer::tests::ra_serializer_rejects_non_program_artifacts ... ok
+test snapshot::tests::freeze_captures_program_state ... ok
+test snapshot::tests::integrity_verification_detects_corruption ... ok
+test snapshot::tests::integrity_verification_passes ... ok
+test tests::common_error_converts ... ok
+test tests::fnv1a64_known_vectors ... ok
+test tests::format_display ... ok
+test tests::format_extensions_round_trip ... ok
+test tests::io_error_converts ... ok
+test validation::tests::bytecode_accepts_programs_only ... ok
+test validation::tests::frozen_accepts_snapshots_only ... ok
+test validation::tests::portable_accepts_packages_only ... ok
+test validation::tests::source_accepts_programs_only ... ok
+test validation::tests::validator_reports_its_file_type ... ok
+
+test result: ok. 32 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.37s
+
+
+running 279 tests
+test hub::active_object::tests::the_object_lifecycle_is_validated ... ok
+test hub::active_object::tests::identities_are_stable_and_distinct ... ok
+test hub::active_object::tests::closing_a_closed_object_is_rejected ... ok
+test hub::active_object::tests::identities_own_their_domain ... ok
+test hub::active_object::tests::documents_carry_their_content ... ok
+test hub::active_object::tests::project_and_package_record_their_association ... ok
+test hub::active_object::tests::opening_an_open_object_is_rejected ... ok
+test hub::active_object::tests::identities_reject_invalid_names ... ok
+test hub::authority::tests::active_authority_forwards_the_request_to_its_service ... ok
+test hub::authority::tests::activate_rejects_a_non_initialized_state ... ok
+test hub::authority::tests::activate_transitions_initialized_to_active ... ok
+test hub::authority::tests::a_service_never_belongs_to_another_domain ... ok
+test hub::authority::tests::an_active_authority_forwards_real_domain_operations ... ok
+test hub::authority::tests::authorities_acknowledge_backbone_delivery ... ok
+test hub::authority::tests::authorities_are_born_registered ... ok
+test hub::authority::tests::authorities_mirror_the_initial_hub_set ... ok
+test hub::authority::tests::duplicate_registration_is_rejected ... ok
+test hub::authority::tests::each_authority_owns_exactly_one_domain ... ok
+test hub::authority::tests::every_active_authority_invokes_its_owned_service ... ok
+test hub::authority::tests::every_authority_owns_the_service_of_its_domain ... ok
+test hub::authority::tests::every_authority_registers_under_its_own_id ... ok
+test hub::authority::tests::every_inactive_authority_prevents_service_invocation ... ok
+test hub::authority::tests::inactive_authority_prevents_service_invocation ... ok
+test hub::authority::tests::initialize_rejects_a_non_registered_state ... ok
+test hub::authority::tests::initialize_transitions_registered_to_initialized ... ok
+test hub::authority::tests::invalid_lifecycle_transitions_are_rejected ... ok
+test hub::authority::tests::registration_with_the_registry_round_trips ... ok
+test hub::authority::tests::resume_transitions_suspended_to_active ... ok
+test hub::authority::tests::services_are_unavailable_after_shutdown ... ok
+test hub::authority::tests::services_are_unavailable_while_the_authority_is_suspended ... ok
+test hub::authority::tests::shutdown_transitions_active_to_shutdown ... ok
+test hub::authority::tests::shutdown_transitions_suspended_to_shutdown ... ok
+test hub::authority::tests::startup_chain_runs_after_registration ... ok
+test hub::authority::tests::suspend_transitions_active_to_suspended ... ok
+test hub::authority::tests::suspension_preserves_the_domain_state_for_resume ... ok
+test hub::authority::tests::the_full_lifecycle_chain_is_validated ... ok
+test hub::authority::tests::the_full_startup_chain_reaches_active ... ok
+test hub::authority::tests::the_log_authority_invokes_its_proof_service ... ok
+test hub::authority::tests::the_log_authority_owns_the_log_service ... ok
+test hub::backbone::tests::a_request_cannot_be_broadcast ... ok
+test hub::backbone::tests::a_response_answers_the_request_it_correlates_with ... ok
+test hub::backbone::tests::a_response_cannot_be_broadcast ... ok
+test hub::backbone::tests::a_response_is_a_correlated_response_message ... ok
+test hub::backbone::tests::accept_accepts_a_valid_envelope ... ok
+test hub::backbone::tests::accept_rejects_a_self_target ... ok
+test hub::backbone::tests::accept_rejects_an_unregistered_source ... ok
+test hub::backbone::tests::accept_returns_an_accepted_receipt ... ok
+test hub::backbone::tests::backbone_attaches_to_a_ready_kernel ... ok
+test hub::backbone::tests::backbone_delivers_a_domain_request_to_its_service ... ok
+test hub::backbone::tests::backbone_delivers_a_log_request_to_the_log_service ... ok
+test hub::backbone::tests::backbone_delivers_real_operations_to_the_workspace_domain ... ok
+test hub::backbone::tests::backbone_detects_an_incomplete_kernel ... ok
+test hub::backbone::tests::backbone_is_not_operational_when_incomplete ... ok
+test hub::backbone::tests::backbone_is_operational_on_a_ready_kernel ... ok
+test hub::backbone::tests::broadcast_accepts_a_platform_lifecycle_signal ... ok
+test hub::backbone::tests::broadcast_accepts_a_platform_wide_message ... ok
+test hub::backbone::tests::broadcast_delivers_a_platform_lifecycle_signal ... ok
+test hub::backbone::tests::broadcast_delivers_to_every_active_authority ... ok
+test hub::backbone::tests::broadcast_reaches_no_authority_while_suspended ... ok
+test hub::backbone::tests::broadcast_rejects_a_single_target ... ok
+test hub::backbone::tests::broadcast_rejects_a_targeted_kind ... ok
+test hub::backbone::tests::broadcast_skips_inactive_authorities ... ok
+test hub::backbone::tests::correlation_sequences_are_sequential_and_deterministic ... ok
+test hub::backbone::tests::dispatch_delivers_a_command ... ok
+test hub::backbone::tests::dispatch_delivers_a_request ... ok
+test hub::backbone::tests::dispatch_dispatches_to_an_active_authority ... ok
+test hub::backbone::tests::dispatch_rejects_an_inactive_authority ... ok
+test hub::backbone::tests::dispatch_rejects_an_inactive_request_target ... ok
+test hub::backbone::tests::dispatch_rejects_an_unregistered_authority ... ok
+test hub::backbone::tests::dispatch_rejects_an_unregistered_request_target ... ok
+test hub::backbone::tests::dispatch_rejects_normal_traffic_after_shutdown ... ok
+test hub::backbone::tests::dispatch_rejects_normal_traffic_while_the_platform_is_suspended ... ok
+test hub::backbone::tests::dispatch_requires_a_concrete_target_for_requests ... ok
+test hub::backbone::tests::envelope_records_kind_source_and_target ... ok
+test hub::backbone::tests::message_kinds_print_stably ... ok
+test hub::backbone::tests::messages_carry_a_domain_neutral_payload ... ok
+test hub::backbone::tests::messages_carry_an_optional_correlation_identifier ... ok
+test hub::backbone::tests::platform_wide_kinds_are_broadcast_and_lifecycle_signals ... ok
+test hub::backbone::tests::platform_wide_messages_carry_no_target ... ok
+test hub::backbone::tests::reply_accepts_a_valid_reply ... ok
+test hub::backbone::tests::reply_delivers_a_correlated_response_back_to_the_caller ... ok
+test hub::backbone::tests::reply_delivers_a_response_back ... ok
+test hub::backbone::tests::reply_requires_a_concrete_target ... ok
+test hub::backbone::tests::reply_requires_a_response_kind ... ok
+test hub::backbone::tests::route_rejects_a_platform_wide_message ... ok
+test hub::backbone::tests::route_rejects_a_self_route ... ok
+test hub::backbone::tests::route_rejects_an_unregistered_target ... ok
+test hub::backbone::tests::route_resolves_the_target_and_returns_an_accepted_receipt ... ok
+test hub::backbone::tests::route_routes_between_registered_hubs ... ok
+test hub::backbone::tests::service_results_map_explicitly_to_response_payloads ... ok
+test hub::backbone::tests::verify_answers_rejects_a_mismatched_or_missing_correlation ... ok
+test hub::backbone::tests::vocabulary_has_the_seven_message_kinds ... ok
+test hub::graph::tests::authority_for_finds_the_registered_owner ... ok
+test hub::graph::tests::duplicate_registration_fails_through_the_graph ... ok
+test hub::graph::tests::empty_graph_knows_nothing ... ok
+test hub::graph::tests::graph_registers_all_initial_hubs ... ok
+test hub::graph::tests::relationships_derive_from_registered_hubs_sorted ... ok
+test hub::graph::tests::unregister_fails_for_unknown_hubs ... ok
+test hub::hub::tests::domain_names_are_stable ... ok
+test hub::hub::tests::every_domain_yields_a_distinct_hub ... ok
+test hub::hub::tests::new_derives_the_id_from_the_domain ... ok
+test hub::hub_id::tests::all_has_eight_initial_hubs ... ok
+test hub::hub_id::tests::ids_are_pairwise_distinct ... ok
+test hub::hub_id::tests::ids_own_exactly_one_domain ... ok
+test hub::hub_id::tests::names_are_stable_and_printable ... ok
+test hub::kernel::tests::a_suspended_kernel_is_not_ready_or_operational ... ok
+test hub::kernel::tests::backbone_rejects_normal_traffic_after_kernel_shutdown ... ok
+test hub::kernel::tests::backbone_rejects_normal_traffic_while_the_kernel_is_suspended ... ok
+test hub::kernel::tests::backbone_rejects_storage_traffic_after_shutdown ... ok
+test hub::kernel::tests::builtin_authorities_are_born_registered ... ok
+test hub::kernel::tests::builtin_authorities_cover_every_initial_domain ... ok
+test hub::kernel::tests::initializer_activates_every_authority ... ok
+test hub::kernel::tests::initializer_brings_the_kernel_online ... ok
+test hub::kernel::tests::initializer_registers_every_authority ... ok
+test hub::kernel::tests::initializer_with_storage_brings_the_kernel_online ... ok
+test hub::kernel::tests::kernel_exposes_an_attached_and_operational_backbone ... ok
+test hub::kernel::tests::kernel_is_not_ready_without_activation ... ok
+test hub::kernel::tests::lifecycle_of_reports_the_authority_state ... ok
+test hub::kernel::tests::the_kernel_resumes_all_authorities_together ... ok
+test hub::kernel::tests::the_kernel_shuts_down_all_authorities ... ok
+test hub::kernel::tests::the_kernel_shuts_down_from_suspended ... ok
+test hub::kernel::tests::the_kernel_shuts_down_once ... ok
+test hub::kernel::tests::the_kernel_suspends_all_authorities_together ... ok
+test hub::kernel::tests::the_kernel_suspends_once ... ok
+test hub::lifecycle::tests::shutdown_is_terminal ... ok
+test hub::lifecycle::tests::states_are_distinct ... ok
+test hub::lifecycle::tests::states_print_stably ... ok
+test hub::lifecycle::tests::the_transition_table_is_exact ... ok
+test hub::registry::tests::duplicate_registration_is_rejected ... ok
+test hub::registry::tests::empty_registry_knows_no_hubs ... ok
+test hub::registry::tests::register_and_lookup_round_trip ... ok
+test hub::registry::tests::unregister_removes_and_reports_missing ... ok
+test hub::routing::tests::route_contract_records_source_and_target ... ok
+test hub::routing::tests::router_placeholder_validates_the_contract ... ok
+test hub::routing::tests::self_routes_are_rejected ... ok
+test hub::service::tests::a_domain_service_cannot_belong_to_another_domain ... ok
+test hub::service::tests::a_service_cannot_belong_to_another_domain ... ok
+test hub::service::tests::device_service_probes_and_inspects ... ok
+test hub::service::tests::device_service_probes_the_platform_capability ... ok
+test hub::service::tests::document_close_returns_to_none ... ok
+test hub::service::tests::document_close_without_open_is_rejected ... ok
+test hub::service::tests::document_duplicate_open_is_rejected ... ok
+test hub::service::tests::document_export_without_open_is_rejected ... ok
+test hub::service::tests::document_export_writes_a_device_file ... ok
+test hub::service::tests::document_import_brings_a_device_file_in_without_opening ... ok
+test hub::service::tests::document_inspect_reports_none_when_closed ... ok
+test hub::service::tests::document_open_loads_a_device_file_as_the_active_document ... ok
+test hub::service::tests::document_open_rejects_missing_files ... ok
+test hub::service::tests::document_open_rejects_path_traversal_and_invalid_names ... ok
+test hub::service::tests::document_open_rejects_unsupported_formats ... ok
+test hub::service::tests::document_operations_are_rejected_outside_the_workspace_domain ... ok
+test hub::service::tests::document_persistence_stays_inside_the_storage_root ... ok
+test hub::service::tests::document_save_as_rejects_invalid_targets ... ok
+test hub::service::tests::document_save_as_without_open_is_rejected ... ok
+test hub::service::tests::document_save_as_writes_a_device_file ... ok
+test hub::service::tests::document_save_persists_the_current_content ... ok
+test hub::service::tests::document_save_without_open_is_rejected ... ok
+test hub::service::tests::document_set_content_without_open_is_rejected ... ok
+test hub::service::tests::domain_services_perform_the_operation_kind_contract ... ok
+test hub::service::tests::domain_state_is_isolated_across_services ... ok
+test hub::service::tests::every_domain_service_has_a_stable_identity_and_owner ... ok
+test hub::service::tests::history_service_records_inspects_and_clears ... ok
+test hub::service::tests::invocation_exposes_the_message_and_its_kind ... ok
+test hub::service::tests::log_service_answers_a_question_with_its_state ... ok
+test hub::service::tests::log_service_completes_a_log_notification ... ok
+test hub::service::tests::log_service_records_inspects_and_clears ... ok
+test hub::service::tests::log_service_rejects_non_log_requests ... ok
+test hub::service::tests::log_service_returns_completed_for_a_log_request ... ok
+test hub::service::tests::operations_are_rejected_outside_their_domain ... ok
+test hub::service::tests::package_duplicate_open_is_rejected ... ok
+test hub::service::tests::package_opens_inside_a_project ... ok
+test hub::service::tests::package_service_opens_closes_and_inspects ... ok
+test hub::service::tests::payload_less_messages_fall_back_to_the_kind_operation ... ok
+test hub::service::tests::project_duplicate_open_is_rejected ... ok
+test hub::service::tests::project_open_rejects_invalid_association_names ... ok
+test hub::service::tests::project_opens_inside_a_workspace ... ok
+test hub::service::tests::project_service_opens_closes_and_inspects ... ok
+test hub::service::tests::service_identity_prints_stably ... ok
+test hub::service::tests::service_results_are_distinct ... ok
+test hub::service::tests::services_are_owned_by_the_log_authority ... ok
+test hub::service::tests::services_are_ready ... ok
+test hub::service::tests::services_have_a_stable_identity ... ok
+test hub::service::tests::settings_service_updates_and_inspects ... ok
+test hub::service::tests::storage_operations_are_rejected_outside_the_storage_domain ... ok
+test hub::service::tests::storage_service_completes_the_platform_storage_proof_operation ... ok
+test hub::service::tests::storage_service_loads_missing_entries_as_rejections ... ok
+test hub::service::tests::storage_service_owns_the_real_storage_stack ... ok
+test hub::service::tests::storage_service_probes_and_inspects ... ok
+test hub::service::tests::storage_service_recover_resolves_interrupted_writes ... ok
+test hub::service::tests::storage_service_rejects_unsafe_storage_names ... ok
+test hub::service::tests::storage_service_saves_and_loads_through_the_real_stack ... ok
+test hub::service::tests::workspace_close_without_open_is_rejected ... ok
+test hub::service::tests::workspace_duplicate_open_is_rejected ... ok
+test hub::service::tests::workspace_open_rejects_invalid_names ... ok
+test hub::service::tests::workspace_service_opens_closes_and_inspects ... ok
+test hub::tests::hub_errors_display ... ok
+test platform::tests::a_document_rejection_round_trips_as_a_rejected_response ... ok
+test platform::tests::a_rejected_operation_round_trips_as_a_rejected_response ... ok
+test platform::tests::a_storage_error_crosses_the_service_boundary_as_a_rejection ... ok
+test platform::tests::correlation_ids_do_not_leak_between_requests ... ok
+test platform::tests::document_operations_follow_the_platform_lifecycle ... ok
+test platform::tests::document_operations_round_trip_through_the_backbone ... ok
+test platform::tests::domain_state_survives_suspend_and_resume ... ok
+test platform::tests::initialize_brings_the_platform_kernel_online ... ok
+test platform::tests::initialize_establishes_the_platform_storage_root ... ok
+test platform::tests::initialize_returns_a_platform_handle ... ok
+test platform::tests::invalid_platform_state_transitions_are_rejected ... ok
+test platform::tests::invalid_storage_root_fails_initialization_safely ... ok
+test platform::tests::invoke_service_completes_for_every_domain_hub ... ok
+test platform::tests::lifecycle_states_are_distinct ... ok
+test platform::tests::new_platform_state_starts_in_starting_phase ... ok
+test platform::tests::package_association_flows_through_the_backbone ... ok
+test platform::tests::platform_state_transitions_are_validated ... ok
+test platform::tests::probe_service_reaches_the_log_proof_service ... ok
+test platform::tests::project_association_flows_through_the_backbone ... ok
+test platform::tests::real_workspace_operations_flow_through_the_backbone ... ok
+test platform::tests::request_responses_reflect_real_domain_state ... ok
+test platform::tests::request_returns_a_correlated_response_for_workspace_inspect ... ok
+test platform::tests::shutdown_completes ... ok
+test platform::tests::shutdown_consumes_the_platform_handle ... ok
+test platform::tests::shutdown_from_suspension_completes ... ok
+test platform::tests::shutdown_stops_the_platform_state ... ok
+test platform::tests::startup_runs_crash_recovery_over_the_storage_root ... ok
+test platform::tests::storage_errors_cross_the_boundary_as_rejections ... ok
+test platform::tests::storage_operations_follow_the_platform_lifecycle ... ok
+test platform::tests::storage_recovery_round_trips_through_the_backbone ... ok
+test platform::tests::storage_requests_follow_the_platform_lifecycle ... ok
+test platform::tests::storage_requests_round_trip_with_correlation ... ok
+test platform::tests::storage_save_and_load_round_trip_through_the_backbone ... ok
+test platform::tests::suspend_and_resume_are_validated ... ok
+test platform::tests::suspension_blocks_requests_and_resume_restores_them ... ok
+test platform_interface::tests::document_operations_reject_invalid_inputs ... ok
+test platform_interface::tests::document_operations_are_real_through_the_interface ... ok
+test platform_interface::tests::every_operation_accepts_the_contract ... ok
+test platform_interface::tests::inspect_workspace_round_trips_through_the_backbone ... ok
+test platform_interface::tests::probe_delivers_through_the_backbone ... ok
+test platform_interface::tests::probe_service_reaches_the_log_service ... ok
+test platform_interface::tests::service_accessors_complete_through_the_backbone ... ok
+test platform_interface::tests::shutdown_completes ... ok
+test platform_interface::tests::shutdown_completes_from_running_and_suspended ... ok
+test platform_interface::tests::start_returns_an_interface_handle ... ok
+test platform_interface::tests::suspend_and_resume_are_validated ... ok
+test platform_interface::tests::suspend_blocks_document_operations_and_resume_restores_them ... ok
+test platform_interface::tests::suspend_blocks_service_requests_and_resume_restores_them ... ok
+test pss::tests::artifact_kind_names ... ok
+test pss::tests::binary_codecs_report_pending_encoding ... ok
+test pss::tests::default_pss_registers_all_four_file_types ... ok
+test pss::tests::default_pss_round_trips_ra_source ... ok
+test pss::tests::default_validators_enforce_artifact_kinds ... ok
+test pss::tests::duplicate_registration_is_rejected ... ok
+test pss::tests::duplicate_validator_registration_is_rejected ... ok
+test pss::tests::empty_pss_has_no_codecs ... ok
+test pss::tests::oversized_input_is_rejected ... ok
+test pss::tests::package_entries_are_leaf_artifacts_only ... ok
+test pss::tests::package_manages_entries ... ok
+test pss::tests::pss_debug_lists_registered_formats ... ok
+test pss::tests::registered_program_codec_round_trips ... ok
+test pss::tests::serializer_rejects_unsupported_artifact_kind ... ok
+test pss::tests::snapshot_codec_round_trips_and_kind_is_enforced ... ok
+test pss::tests::stream_import_export_round_trips ... ok
+test recovery::tests::clean_store_has_nothing_to_recover ... ok
+test recovery::tests::interrupted_write_is_rolled_forward ... ok
+test recovery::tests::scan_finds_temps_in_nested_directories ... ok
+test recovery::tests::stale_temp_with_existing_final_is_removed ... ok
+test storage::tests::the_storage_vocabulary_is_complete_and_stable ... ok
+test syss::tests::delete_removes_and_reports_missing ... ok
+test syss::tests::ensure_creates_category_directories ... ok
+test syss::tests::import_and_export_roundtrip ... ok
+test syss::tests::invalid_names_are_rejected ... ok
+test syss::tests::list_returns_sorted_names ... ok
+test syss::tests::load_missing_reports_not_found ... ok
+test syss::tests::save_and_load_roundtrip ... ok
+test syss::tests::save_leaves_no_temp_file ... ok
+test syss::tests::save_overwrites_existing_entry ... ok
+test tests::hub_errors_convert_to_kernel_errors ... ok
+test tests::io_errors_convert ... ok
+test tests::persistence_errors_convert ... ok
+test tests::platform_errors_display ... ok
+test tests::storage_errors_are_owned_by_syss ... ok
+
+test result: ok. 279 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 15.25s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+
+running 1 test
+test software\bootstrap\src\lib.rs - (line 45) ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+
+all doctests ran in 2.88s; merged doctests compilation took 2.34s
+
+running 1 test
+test software\common\src\lib.rs - (line 17) ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s
+
+all doctests ran in 1.52s; merged doctests compilation took 1.10s
+
+running 7 tests
+test software\memory\src\entity_space.rs - entity_space (line 95) ... ok
+test software\memory\src\global_entity.rs - global_entity (line 90) ... ok
+test software\memory\src\active_space.rs - active_space (line 74) ... ok
+test software\memory\src\lib.rs - (line 182) ... ok
+test software\memory\src\program_space.rs - program_space (line 54) ... ok
+test software\memory\src\value_list.rs - value_list (line 71) ... ok
+test software\memory\src\local_entity.rs - local_entity (line 32) ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.34s
+
+all doctests ran in 2.03s; merged doctests compilation took 1.41s
+
+running 1 test
+test software\persistence\src\lib.rs - (line 51) ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+all doctests ran in 0.90s; merged doctests compilation took 0.63s
+
+running 3 tests
+test software\syss\src\lib.rs - (line 127) ... ok
+test software\syss\src\lib.rs - (line 138) ... ok
+test software\syss\src\lib.rs - (line 149) ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.19s
+
+all doctests ran in 1.15s; merged doctests compilation took 0.72s

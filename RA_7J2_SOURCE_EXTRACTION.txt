@@ -1,0 +1,1609 @@
+
+============================================================
+SOURCE: .\docs\RA_Execution_Workflow_Architecture_Frozen_V1.docx
+============================================================
+.\docs\RA_Execution_Workflow_Architecture_Frozen_V1.docx:2: RA Execution Workflow Architecture (Frozen V1)
+  
+  Status: Frozen Design
+  1. Editing Workflow
+  RA SOFTWARE    ¦    ?IDE / Terminal    ¦User Types Source Code    ¦    ?Live Program Model (LPM)    ¦Syntax / Semantic Check / Auto Complete    ¦    ?PSS    ¦    ?SySS
+  2. Execution Workflow
+.\docs\RA_Execution_Workflow_Architecture_Frozen_V1.docx:6: 2. Execution Workflow
+  1. Editing Workflow
+  RA SOFTWARE    ¦    ?IDE / Terminal    ¦User Types Source Code    ¦    ?Live Program Model (LPM)    ¦Syntax / Semantic Check / Auto Complete    ¦    ?PSS    ¦    ?SySS
+  Run ¦ ?LPM ¦ ?Freeze Snapshot ¦ ?Execution Manager ¦ +-- Interpret +-- Compile ? Compiler          ¦          ?    Runtime Loader          ¦          ?PS ? AS ? ES ? WS ? RS          ¦          ?Program Ends          ¦          ?Destroy Runtime Memory          ¦          ?Return Result
+  3. Runtime Memory Population
+  Space
+  When
+.\docs\RA_Execution_Workflow_Architecture_Frozen_V1.docx:7: Run ¦ ?LPM ¦ ?Freeze Snapshot ¦ ?Execution Manager ¦ +-- Interpret +-- Compile ? Compiler          ¦          ?    Runtime Loader          ¦          ?PS ? AS ? ES ? WS ? RS          ¦          ?Program Ends          ¦          ?Destroy Runtime Memory          ¦          ?Return Result
+  RA SOFTWARE    ¦    ?IDE / Terminal    ¦User Types Source Code    ¦    ?Live Program Model (LPM)    ¦Syntax / Semantic Check / Auto Complete    ¦    ?PSS    ¦    ?SySS
+  2. Execution Workflow
+  3. Runtime Memory Population
+  Space
+  When
+  Purpose
+.\docs\RA_Execution_Workflow_Architecture_Frozen_V1.docx:8: 3. Runtime Memory Population
+  2. Execution Workflow
+  Run ¦ ?LPM ¦ ?Freeze Snapshot ¦ ?Execution Manager ¦ +-- Interpret +-- Compile ? Compiler          ¦          ?    Runtime Loader          ¦          ?PS ? AS ? ES ? WS ? RS          ¦          ?Program Ends          ¦          ?Destroy Runtime Memory          ¦          ?Return Result
+  Space
+  When
+  Purpose
+  PS
+.\docs\RA_Execution_Workflow_Architecture_Frozen_V1.docx:13: Before execution
+  Purpose
+  PS
+  Program representation
+  AS
+  Execution starts
+  Active execution
+.\docs\RA_Execution_Workflow_Architecture_Frozen_V1.docx:16: Execution starts
+  Program representation
+  AS
+  Active execution
+  ES
+  During execution
+  Entities
+.\docs\RA_Execution_Workflow_Architecture_Frozen_V1.docx:17: Active execution
+  AS
+  Execution starts
+  ES
+  During execution
+  Entities
+  WS
+.\docs\RA_Execution_Workflow_Architecture_Frozen_V1.docx:19: During execution
+  Active execution
+  ES
+  Entities
+  WS
+  During execution
+  Temporary work
+.\docs\RA_Execution_Workflow_Architecture_Frozen_V1.docx:22: During execution
+  Entities
+  WS
+  Temporary work
+  RS
+  Continuous
+  Registry & metadata
+.\docs\RA_Execution_Workflow_Architecture_Frozen_V1.docx:28: Editing and execution are separate workflows.
+  Registry & metadata
+  4. Frozen Rules
+  LPM belongs to the IDE.
+  LPM is never executed directly; a frozen snapshot is used.
+  Runtime Loader is the only component that populates runtime memory.
+  PS is populated before execution.
+.\docs\RA_Execution_Workflow_Architecture_Frozen_V1.docx:30: LPM is never executed directly; a frozen snapshot is used.
+  Editing and execution are separate workflows.
+  LPM belongs to the IDE.
+  Runtime Loader is the only component that populates runtime memory.
+  PS is populated before execution.
+  AS, ES, WS and RS are populated dynamically during execution.
+  Runtime memory is destroyed after execution.
+.\docs\RA_Execution_Workflow_Architecture_Frozen_V1.docx:31: Runtime Loader is the only component that populates runtime memory.
+  LPM belongs to the IDE.
+  LPM is never executed directly; a frozen snapshot is used.
+  PS is populated before execution.
+  AS, ES, WS and RS are populated dynamically during execution.
+  Runtime memory is destroyed after execution.
+  PSS persists artifacts; SySS persists software state.
+.\docs\RA_Execution_Workflow_Architecture_Frozen_V1.docx:32: PS is populated before execution.
+  LPM is never executed directly; a frozen snapshot is used.
+  Runtime Loader is the only component that populates runtime memory.
+  AS, ES, WS and RS are populated dynamically during execution.
+  Runtime memory is destroyed after execution.
+  PSS persists artifacts; SySS persists software state.
+  
+.\docs\RA_Execution_Workflow_Architecture_Frozen_V1.docx:33: AS, ES, WS and RS are populated dynamically during execution.
+  Runtime Loader is the only component that populates runtime memory.
+  PS is populated before execution.
+  Runtime memory is destroyed after execution.
+  PSS persists artifacts; SySS persists software state.
+  
+.\docs\RA_Execution_Workflow_Architecture_Frozen_V1.docx:34: Runtime memory is destroyed after execution.
+  PS is populated before execution.
+  AS, ES, WS and RS are populated dynamically during execution.
+  PSS persists artifacts; SySS persists software state.
+  
+
+============================================================
+SOURCE: .\docs\RA_Program_Space_V1.docx
+============================================================
+.\docs\RA_Program_Space_V1.docx:2: RA PROGRAM SPACE V1
+  
+  RA Memory Architecture — Program Space Logical Structure
+  Status: LOGICAL STRUCTURE FROZEN — internal encoding/physical layout remains open.
+  1. One-Line Definition
+  Program Space is the RA Memory area that stores a program's ready-to-execute code so RA Execution can run it quickly.
+.\docs\RA_Program_Space_V1.docx:3: RA Memory Architecture — Program Space Logical Structure
+  
+  RA PROGRAM SPACE V1
+  Status: LOGICAL STRUCTURE FROZEN — internal encoding/physical layout remains open.
+  1. One-Line Definition
+  Program Space is the RA Memory area that stores a program's ready-to-execute code so RA Execution can run it quickly.
+  2. WHY RA Needs Program Space
+.\docs\RA_Program_Space_V1.docx:6: Program Space is the RA Memory area that stores a program's ready-to-execute code so RA Execution can run it quickly.
+  Status: LOGICAL STRUCTURE FROZEN — internal encoding/physical layout remains open.
+  1. One-Line Definition
+  2. WHY RA Needs Program Space
+  RA Execution needs a ready-to-run representation after RA Core has understood and validated the .ra source/module file.
+  .ra Source ? RA Core ? RA IR ? RA Executable Instructions (REI) ? Program Space ? RA Execution
+  Primary goal: avoid repeatedly parsing and semantically analyzing source during execution.
+.\docs\RA_Program_Space_V1.docx:7: 2. WHY RA Needs Program Space
+  1. One-Line Definition
+  Program Space is the RA Memory area that stores a program's ready-to-execute code so RA Execution can run it quickly.
+  RA Execution needs a ready-to-run representation after RA Core has understood and validated the .ra source/module file.
+  .ra Source ? RA Core ? RA IR ? RA Executable Instructions (REI) ? Program Space ? RA Execution
+  Primary goal: avoid repeatedly parsing and semantically analyzing source during execution.
+  3. WHAT Program Space Contains
+.\docs\RA_Program_Space_V1.docx:8: RA Execution needs a ready-to-run representation after RA Core has understood and validated the .ra source/module file.
+  Program Space is the RA Memory area that stores a program's ready-to-execute code so RA Execution can run it quickly.
+  2. WHY RA Needs Program Space
+  .ra Source ? RA Core ? RA IR ? RA Executable Instructions (REI) ? Program Space ? RA Execution
+  Primary goal: avoid repeatedly parsing and semantically analyzing source during execution.
+  3. WHAT Program Space Contains
+  Module Metadata / Module Table — Tracks loaded .ra modules and maps each module to its executable instruction range and required program metadata.
+.\docs\RA_Program_Space_V1.docx:9: .ra Source ? RA Core ? RA IR ? RA Executable Instructions (REI) ? Program Space ? RA Execution
+  2. WHY RA Needs Program Space
+  RA Execution needs a ready-to-run representation after RA Core has understood and validated the .ra source/module file.
+  Primary goal: avoid repeatedly parsing and semantically analyzing source during execution.
+  3. WHAT Program Space Contains
+  Module Metadata / Module Table — Tracks loaded .ra modules and maps each module to its executable instruction range and required program metadata.
+  REI Instruction Area — Stores RA Executable Instructions. This is the core of Program Space and is the representation directly consumed by RA Execution.
+.\docs\RA_Program_Space_V1.docx:10: Primary goal: avoid repeatedly parsing and semantically analyzing source during execution.
+  RA Execution needs a ready-to-run representation after RA Core has understood and validated the .ra source/module file.
+  .ra Source ? RA Core ? RA IR ? RA Executable Instructions (REI) ? Program Space ? RA Execution
+  3. WHAT Program Space Contains
+  Module Metadata / Module Table — Tracks loaded .ra modules and maps each module to its executable instruction range and required program metadata.
+  REI Instruction Area — Stores RA Executable Instructions. This is the core of Program Space and is the representation directly consumed by RA Execution.
+  Constant Area — Stores immutable constants/literals that are beneficial to share or reference rather than repeatedly allocate.
+.\docs\RA_Program_Space_V1.docx:11: 3. WHAT Program Space Contains
+  .ra Source ? RA Core ? RA IR ? RA Executable Instructions (REI) ? Program Space ? RA Execution
+  Primary goal: avoid repeatedly parsing and semantically analyzing source during execution.
+  Module Metadata / Module Table — Tracks loaded .ra modules and maps each module to its executable instruction range and required program metadata.
+  REI Instruction Area — Stores RA Executable Instructions. This is the core of Program Space and is the representation directly consumed by RA Execution.
+  Constant Area — Stores immutable constants/literals that are beneficial to share or reference rather than repeatedly allocate.
+  Code Map — Provides compact REI-to-.ra source mapping for diagnostics, debugging and source navigation.
+.\docs\RA_Program_Space_V1.docx:12: Module Metadata / Module Table — Tracks loaded .ra modules and maps each module to its executable instruction range and required program metadata.
+  Primary goal: avoid repeatedly parsing and semantically analyzing source during execution.
+  3. WHAT Program Space Contains
+  REI Instruction Area — Stores RA Executable Instructions. This is the core of Program Space and is the representation directly consumed by RA Execution.
+  Constant Area — Stores immutable constants/literals that are beneficial to share or reference rather than repeatedly allocate.
+  Code Map — Provides compact REI-to-.ra source mapping for diagnostics, debugging and source navigation.
+  4. Logical Diagram
+.\docs\RA_Program_Space_V1.docx:13: REI Instruction Area — Stores RA Executable Instructions. This is the core of Program Space and is the representation directly consumed by RA Execution.
+  3. WHAT Program Space Contains
+  Module Metadata / Module Table — Tracks loaded .ra modules and maps each module to its executable instruction range and required program metadata.
+  Constant Area — Stores immutable constants/literals that are beneficial to share or reference rather than repeatedly allocate.
+  Code Map — Provides compact REI-to-.ra source mapping for diagnostics, debugging and source navigation.
+  4. Logical Diagram
+  +----------------------------------------------+¦               PROGRAM SPACE                  ¦¦                                              ¦¦  +----------------------------------------+  ¦¦  ¦ 1. MODULE METADATA / TABLE           ¦  ¦¦  ¦    .ra module ? REI instruction range¦  ¦¦  +----------------------------------------+  ¦¦                                              ¦¦  +----------------------------------------+  ¦¦  ¦ 2. REI INSTRUCTION AREA              ¦  ¦¦  ¦    [instruction][instruction][...]    ¦  ¦¦  +----------------------------------------+  ¦¦                                              ¦¦  +----------------------------------------+  ¦¦  ¦ 3. CONSTANT AREA                     ¦  ¦¦  ¦    reusable immutable literals        ¦  ¦¦  +----------------------------------------+  ¦¦                                              ¦¦  +----------------------------------------+  ¦¦  ¦ 4. CODE MAP                          ¦  ¦¦  ¦    REI ? .ra source location          ¦  ¦¦  +----------------------------------------+  ¦+----------------------------------------------+
+.\docs\RA_Program_Space_V1.docx:15: Code Map — Provides compact REI-to-.ra source mapping for diagnostics, debugging and source navigation.
+  REI Instruction Area — Stores RA Executable Instructions. This is the core of Program Space and is the representation directly consumed by RA Execution.
+  Constant Area — Stores immutable constants/literals that are beneficial to share or reference rather than repeatedly allocate.
+  4. Logical Diagram
+  +----------------------------------------------+¦               PROGRAM SPACE                  ¦¦                                              ¦¦  +----------------------------------------+  ¦¦  ¦ 1. MODULE METADATA / TABLE           ¦  ¦¦  ¦    .ra module ? REI instruction range¦  ¦¦  +----------------------------------------+  ¦¦                                              ¦¦  +----------------------------------------+  ¦¦  ¦ 2. REI INSTRUCTION AREA              ¦  ¦¦  ¦    [instruction][instruction][...]    ¦  ¦¦  +----------------------------------------+  ¦¦                                              ¦¦  +----------------------------------------+  ¦¦  ¦ 3. CONSTANT AREA                     ¦  ¦¦  ¦    reusable immutable literals        ¦  ¦¦  +----------------------------------------+  ¦¦                                              ¦¦  +----------------------------------------+  ¦¦  ¦ 4. CODE MAP                          ¦  ¦¦  ¦    REI ? .ra source location          ¦  ¦¦  +----------------------------------------+  ¦+----------------------------------------------+
+  5. HOW Program Space Operates
+  A .ra source/module enters RA Core.
+.\docs\RA_Program_Space_V1.docx:17: +----------------------------------------------+¦               PROGRAM SPACE                  ¦¦                                              ¦¦  +----------------------------------------+  ¦¦  ¦ 1. MODULE METADATA / TABLE           ¦  ¦¦  ¦    .ra module ? REI instruction range¦  ¦¦  +----------------------------------------+  ¦¦                                              ¦¦  +----------------------------------------+  ¦¦  ¦ 2. REI INSTRUCTION AREA              ¦  ¦¦  ¦    [instruction][instruction][...]    ¦  ¦¦  +----------------------------------------+  ¦¦                                              ¦¦  +----------------------------------------+  ¦¦  ¦ 3. CONSTANT AREA                     ¦  ¦¦  ¦    reusable immutable literals        ¦  ¦¦  +----------------------------------------+  ¦¦                                              ¦¦  +----------------------------------------+  ¦¦  ¦ 4. CODE MAP                          ¦  ¦¦  ¦    REI ? .ra source location          ¦  ¦¦  +----------------------------------------+  ¦+----------------------------------------------+
+  Code Map — Provides compact REI-to-.ra source mapping for diagnostics, debugging and source navigation.
+  4. Logical Diagram
+  5. HOW Program Space Operates
+  A .ra source/module enters RA Core.
+  Lexer, Parser, structured syntax/AST and Semantic Analysis validate and understand it.
+  RA Core may produce RA IR for internal transformation/optimization.
+.\docs\RA_Program_Space_V1.docx:18: 5. HOW Program Space Operates
+  4. Logical Diagram
+  +----------------------------------------------+¦               PROGRAM SPACE                  ¦¦                                              ¦¦  +----------------------------------------+  ¦¦  ¦ 1. MODULE METADATA / TABLE           ¦  ¦¦  ¦    .ra module ? REI instruction range¦  ¦¦  +----------------------------------------+  ¦¦                                              ¦¦  +----------------------------------------+  ¦¦  ¦ 2. REI INSTRUCTION AREA              ¦  ¦¦  ¦    [instruction][instruction][...]    ¦  ¦¦  +----------------------------------------+  ¦¦                                              ¦¦  +----------------------------------------+  ¦¦  ¦ 3. CONSTANT AREA                     ¦  ¦¦  ¦    reusable immutable literals        ¦  ¦¦  +----------------------------------------+  ¦¦                                              ¦¦  +----------------------------------------+  ¦¦  ¦ 4. CODE MAP                          ¦  ¦¦  ¦    REI ? .ra source location          ¦  ¦¦  +----------------------------------------+  ¦+----------------------------------------------+
+  A .ra source/module enters RA Core.
+  Lexer, Parser, structured syntax/AST and Semantic Analysis validate and understand it.
+  RA Core may produce RA IR for internal transformation/optimization.
+  RA IR is lowered into RA Executable Instructions (REI).
+.\docs\RA_Program_Space_V1.docx:22: RA IR is lowered into RA Executable Instructions (REI).
+  Lexer, Parser, structured syntax/AST and Semantic Analysis validate and understand it.
+  RA Core may produce RA IR for internal transformation/optimization.
+  REI, required constants, module metadata and compact Code Map information are loaded into Program Space.
+  RA Execution reads REI from Program Space.
+  When the program/session lifetime ends, Program Space storage is reclaimed and made reusable.
+  6. WHICH Representation Is Selected
+.\docs\RA_Program_Space_V1.docx:23: REI, required constants, module metadata and compact Code Map information are loaded into Program Space.
+  RA Core may produce RA IR for internal transformation/optimization.
+  RA IR is lowered into RA Executable Instructions (REI).
+  RA Execution reads REI from Program Space.
+  When the program/session lifetime ends, Program Space storage is reclaimed and made reusable.
+  6. WHICH Representation Is Selected
+  Selected direction: RA-specific executable instruction format.
+.\docs\RA_Program_Space_V1.docx:24: RA Execution reads REI from Program Space.
+  RA IR is lowered into RA Executable Instructions (REI).
+  REI, required constants, module metadata and compact Code Map information are loaded into Program Space.
+  When the program/session lifetime ends, Program Space storage is reclaimed and made reusable.
+  6. WHICH Representation Is Selected
+  Selected direction: RA-specific executable instruction format.
+  RA IR = compiler/internal working representation.REI = final RA-specific executable representation stored in Program Space.
+.\docs\RA_Program_Space_V1.docx:25: When the program/session lifetime ends, Program Space storage is reclaimed and made reusable.
+  REI, required constants, module metadata and compact Code Map information are loaded into Program Space.
+  RA Execution reads REI from Program Space.
+  6. WHICH Representation Is Selected
+  Selected direction: RA-specific executable instruction format.
+  RA IR = compiler/internal working representation.REI = final RA-specific executable representation stored in Program Space.
+  Traditional bytecode is not frozen as RA's execution model. REI may be byte-encoded internally later, but its architecture is defined around RA Execution and RA Memory rather than assuming a conventional stack VM.
+.\docs\RA_Program_Space_V1.docx:27: Selected direction: RA-specific executable instruction format.
+  When the program/session lifetime ends, Program Space storage is reclaimed and made reusable.
+  6. WHICH Representation Is Selected
+  RA IR = compiler/internal working representation.REI = final RA-specific executable representation stored in Program Space.
+  Traditional bytecode is not frozen as RA's execution model. REI may be byte-encoded internally later, but its architecture is defined around RA Execution and RA Memory rather than assuming a conventional stack VM.
+  7. .ra File Definition
+  .ra is the RA source/module file, analogous in role to a Python .py source/module file. It contains human-readable RA source code; it is not the Program Space executable representation.
+.\docs\RA_Program_Space_V1.docx:28: RA IR = compiler/internal working representation.REI = final RA-specific executable representation stored in Program Space.
+  6. WHICH Representation Is Selected
+  Selected direction: RA-specific executable instruction format.
+  Traditional bytecode is not frozen as RA's execution model. REI may be byte-encoded internally later, but its architecture is defined around RA Execution and RA Memory rather than assuming a conventional stack VM.
+  7. .ra File Definition
+  .ra is the RA source/module file, analogous in role to a Python .py source/module file. It contains human-readable RA source code; it is not the Program Space executable representation.
+  8. What Does NOT Belong in Program Space
+.\docs\RA_Program_Space_V1.docx:29: Traditional bytecode is not frozen as RA's execution model. REI may be byte-encoded internally later, but its architecture is defined around RA Execution and RA Memory rather than assuming a conventional stack VM.
+  Selected direction: RA-specific executable instruction format.
+  RA IR = compiler/internal working representation.REI = final RA-specific executable representation stored in Program Space.
+  7. .ra File Definition
+  .ra is the RA source/module file, analogous in role to a Python .py source/module file. It contains human-readable RA source code; it is not the Program Space executable representation.
+  8. What Does NOT Belong in Program Space
+  AST after it is no longer required for compilation/debug services.
+.\docs\RA_Program_Space_V1.docx:31: .ra is the RA source/module file, analogous in role to a Python .py source/module file. It contains human-readable RA source code; it is not the Program Space executable representation.
+  Traditional bytecode is not frozen as RA's execution model. REI may be byte-encoded internally later, but its architecture is defined around RA Execution and RA Memory rather than assuming a conventional stack VM.
+  7. .ra File Definition
+  8. What Does NOT Belong in Program Space
+  AST after it is no longer required for compilation/debug services.
+  RA IR after REI generation when no longer required.
+  Mutable variables and runtime objects — Entity Space.
+.\docs\RA_Program_Space_V1.docx:32: 8. What Does NOT Belong in Program Space
+  7. .ra File Definition
+  .ra is the RA source/module file, analogous in role to a Python .py source/module file. It contains human-readable RA source code; it is not the Program Space executable representation.
+  AST after it is no longer required for compilation/debug services.
+  RA IR after REI generation when no longer required.
+  Mutable variables and runtime objects — Entity Space.
+  Temporary/intermediate calculation results — Work Space.
+.\docs\RA_Program_Space_V1.docx:34: RA IR after REI generation when no longer required.
+  8. What Does NOT Belong in Program Space
+  AST after it is no longer required for compilation/debug services.
+  Mutable variables and runtime objects — Entity Space.
+  Temporary/intermediate calculation results — Work Space.
+  Current calls and local execution state — Active Space.
+  Database records/ER relationships — RA Database.
+.\docs\RA_Program_Space_V1.docx:35: Mutable variables and runtime objects — Entity Space.
+  AST after it is no longer required for compilation/debug services.
+  RA IR after REI generation when no longer required.
+  Temporary/intermediate calculation results — Work Space.
+  Current calls and local execution state — Active Space.
+  Database records/ER relationships — RA Database.
+  9. Efficiency Rules
+.\docs\RA_Program_Space_V1.docx:37: Current calls and local execution state — Active Space.
+  Mutable variables and runtime objects — Entity Space.
+  Temporary/intermediate calculation results — Work Space.
+  Database records/ER relationships — RA Database.
+  9. Efficiency Rules
+  Keep Program Space compact, read-mostly and cache-friendly.
+  Do not reserve four rigid physical RAM blocks for its logical sections.
+.\docs\RA_Program_Space_V1.docx:38: Database records/ER relationships — RA Database.
+  Temporary/intermediate calculation results — Work Space.
+  Current calls and local execution state — Active Space.
+  9. Efficiency Rules
+  Keep Program Space compact, read-mostly and cache-friendly.
+  Do not reserve four rigid physical RAM blocks for its logical sections.
+  Module Metadata and Code Map may later share/pack physical metadata storage.
+.\docs\RA_Program_Space_V1.docx:40: Keep Program Space compact, read-mostly and cache-friendly.
+  Database records/ER relationships — RA Database.
+  9. Efficiency Rules
+  Do not reserve four rigid physical RAM blocks for its logical sections.
+  Module Metadata and Code Map may later share/pack physical metadata storage.
+  Tiny literals may be encoded directly in REI when cheaper than a Constant Area lookup.
+  Avoid unnecessary runtime allocations while executing REI.
+.\docs\RA_Program_Space_V1.docx:43: Tiny literals may be encoded directly in REI when cheaper than a Constant Area lookup.
+  Do not reserve four rigid physical RAM blocks for its logical sections.
+  Module Metadata and Code Map may later share/pack physical metadata storage.
+  Avoid unnecessary runtime allocations while executing REI.
+  10. Frozen vs Open
+  FROZEN:
+  Program Space purpose.
+.\docs\RA_Program_Space_V1.docx:44: Avoid unnecessary runtime allocations while executing REI.
+  Module Metadata and Code Map may later share/pack physical metadata storage.
+  Tiny literals may be encoded directly in REI when cheaper than a Constant Area lookup.
+  10. Frozen vs Open
+  FROZEN:
+  Program Space purpose.
+  Four logical responsibilities: Module Metadata, REI, Constants, Code Map.
+.\docs\RA_Program_Space_V1.docx:47: Program Space purpose.
+  10. Frozen vs Open
+  FROZEN:
+  Four logical responsibilities: Module Metadata, REI, Constants, Code Map.
+  .ra as RA source/module file.
+  REI as Program Space's selected executable representation direction.
+  OPEN:
+.\docs\RA_Program_Space_V1.docx:48: Four logical responsibilities: Module Metadata, REI, Constants, Code Map.
+  FROZEN:
+  Program Space purpose.
+  .ra as RA source/module file.
+  REI as Program Space's selected executable representation direction.
+  OPEN:
+  Exact REI instruction encoding and width.
+.\docs\RA_Program_Space_V1.docx:50: REI as Program Space's selected executable representation direction.
+  Four logical responsibilities: Module Metadata, REI, Constants, Code Map.
+  .ra as RA source/module file.
+  OPEN:
+  Exact REI instruction encoding and width.
+  Exact RA IR design.
+  Physical packing of the four logical structures.
+.\docs\RA_Program_Space_V1.docx:52: Exact REI instruction encoding and width.
+  REI as Program Space's selected executable representation direction.
+  OPEN:
+  Exact RA IR design.
+  Physical packing of the four logical structures.
+  Constant encoding/inlining rules.
+  Code Map compression format.
+.\docs\RA_Program_Space_V1.docx:57: Future relationship between REI and .rab.
+  Constant encoding/inlining rules.
+  Code Map compression format.
+  11. Next Architecture Step
+  Apply the same WHY ? WHAT ? HOW ? WHICH process to Active Space.
+  
+.\docs\RA_Program_Space_V1.docx:59: Apply the same WHY ? WHAT ? HOW ? WHICH process to Active Space.
+  Future relationship between REI and .rab.
+  11. Next Architecture Step
+  
+
+============================================================
+SOURCE: .\docs\RA_Active_Space_V1_Frozen.docx
+============================================================
+.\docs\RA_Active_Space_V1_Frozen.docx:2: RA ACTIVE SPACE V1
+  
+  RA Memory Architecture — Grid-Based Execution Tracking
+  Status: ARCHITECTURAL CONCEPT FROZEN — low-level sizing/encoding remains implementation-defined.
+  1. Definition
+  Active Space (AS) is RA's temporary execution-tracking memory. It remembers the currently active execution path while an RA program runs.
+.\docs\RA_Active_Space_V1_Frozen.docx:3: RA Memory Architecture — Grid-Based Execution Tracking
+  
+  RA ACTIVE SPACE V1
+  Status: ARCHITECTURAL CONCEPT FROZEN — low-level sizing/encoding remains implementation-defined.
+  1. Definition
+  Active Space (AS) is RA's temporary execution-tracking memory. It remembers the currently active execution path while an RA program runs.
+  2. WHY — Purpose
+.\docs\RA_Active_Space_V1_Frozen.docx:6: Active Space (AS) is RA's temporary execution-tracking memory. It remembers the currently active execution path while an RA program runs.
+  Status: ARCHITECTURAL CONCEPT FROZEN — low-level sizing/encoding remains implementation-defined.
+  1. Definition
+  2. WHY — Purpose
+  RA needs Active Space to know what function/scope is currently executing, its executable position, and which previous execution context becomes active when the current function closes.
+  3. WHAT — Active Record
+  Each logical Grid cell holds one compact Active Record:
+.\docs\RA_Active_Space_V1_Frozen.docx:8: RA needs Active Space to know what function/scope is currently executing, its executable position, and which previous execution context becomes active when the current function closes.
+  Active Space (AS) is RA's temporary execution-tracking memory. It remembers the currently active execution path while an RA program runs.
+  2. WHY — Purpose
+  3. WHAT — Active Record
+  Each logical Grid cell holds one compact Active Record:
+  Active Record = Function/Scope ID + REI Execution Position
+  The Active Record does not store full local-variable values. Runtime values belong to Entity Space; temporary calculations belong to Work Space.
+.\docs\RA_Active_Space_V1_Frozen.docx:11: Active Record = Function/Scope ID + REI Execution Position
+  3. WHAT — Active Record
+  Each logical Grid cell holds one compact Active Record:
+  The Active Record does not store full local-variable values. Runtime values belong to Entity Space; temporary calculations belong to Work Space.
+  4. Grid Method
+  ACTIVE SPACE — DEFAULT GRID+--------------------------------------------------------+¦ main             ¦ calculate        ¦ print            ¦¦ REI position     ¦ REI position     ¦ REI position     ¦+------------------+------------------+------------------¦¦ Active Record    ¦ Active Record    ¦ Active Record    ¦+------------------+------------------+------------------¦¦ Active Record    ¦ Active Record    ¦ Active Record    ¦+--------------------------------------------------------+Each cell = one Active RecordCurrent execution = latest live logical cell
+  5. Grid Size Rule
+.\docs\RA_Active_Space_V1_Frozen.docx:12: The Active Record does not store full local-variable values. Runtime values belong to Entity Space; temporary calculations belong to Work Space.
+  Each logical Grid cell holds one compact Active Record:
+  Active Record = Function/Scope ID + REI Execution Position
+  4. Grid Method
+  ACTIVE SPACE — DEFAULT GRID+--------------------------------------------------------+¦ main             ¦ calculate        ¦ print            ¦¦ REI position     ¦ REI position     ¦ REI position     ¦+------------------+------------------+------------------¦¦ Active Record    ¦ Active Record    ¦ Active Record    ¦+------------------+------------------+------------------¦¦ Active Record    ¦ Active Record    ¦ Active Record    ¦+--------------------------------------------------------+Each cell = one Active RecordCurrent execution = latest live logical cell
+  5. Grid Size Rule
+  The Active Grid is bounded per block:
+.\docs\RA_Active_Space_V1_Frozen.docx:14: ACTIVE SPACE — DEFAULT GRID+--------------------------------------------------------+¦ main             ¦ calculate        ¦ print            ¦¦ REI position     ¦ REI position     ¦ REI position     ¦+------------------+------------------+------------------¦¦ Active Record    ¦ Active Record    ¦ Active Record    ¦+------------------+------------------+------------------¦¦ Active Record    ¦ Active Record    ¦ Active Record    ¦+--------------------------------------------------------+Each cell = one Active RecordCurrent execution = latest live logical cell
+  The Active Record does not store full local-variable values. Runtime values belong to Entity Space; temporary calculations belong to Work Space.
+  4. Grid Method
+  5. Grid Size Rule
+  The Active Grid is bounded per block:
+  Minimum/default Grid: 3×3 = 9 Active Records.
+  Maximum Grid: 8×8 = 64 Active Records.
+.\docs\RA_Active_Space_V1_Frozen.docx:19: The Grid may scale between these limits as execution demand grows.
+  Minimum/default Grid: 3×3 = 9 Active Records.
+  Maximum Grid: 8×8 = 64 Active Records.
+  When an 8×8 Active Grid Block is full, RA creates another Active Grid Block rather than enlarging or relocating the existing block.
+  3×3 ? 4×4 ? 5×5 ? 6×6 ? 7×7 ? 8×8
+  6. HOW — Call / Return
+  Ordinary synchronous calls use logical sequential ordering:
+.\docs\RA_Active_Space_V1_Frozen.docx:26: For ordinary synchronous execution, RA therefore does not require a separate return-cell pointer in every Active Record.
+  main ? calculate ? print
+  A new function call occupies the next logical Active Record. When the current function closes, its end cell is released and the previous live logical cell becomes current.
+  7. Reuse Rule
+  Released end/top cells become reusable immediately.
+  RA does not reuse holes in the middle of a live synchronous call chain.
+  Growth adds capacity without moving existing live Active Records.
+.\docs\RA_Active_Space_V1_Frozen.docx:33: REI uses a compact binary scope state:
+  Empty/released capacity may be reclaimed according to the final allocator policy.
+  8. Local and Global Scope Encoding
+  0 = Local     |     1 = Global
+  The IDE/debugger does not display these internal scope states by default. They are exposed only through explicit RA introspection/debug facilities.
+  9. Local Invocation Ownership
+  For local entities, the currently active Grid Cell ID can participate in identifying the function invocation. This allows recursive calls to have independent local values without placing those values inside Active Space.
+.\docs\RA_Active_Space_V1_Frozen.docx:36: 9. Local Invocation Ownership
+  0 = Local     |     1 = Global
+  The IDE/debugger does not display these internal scope states by default. They are exposed only through explicit RA introspection/debug facilities.
+  For local entities, the currently active Grid Cell ID can participate in identifying the function invocation. This allows recursive calls to have independent local values without placing those values inside Active Space.
+  Local lookup candidate: (Active Cell ID, Entity ID)Global lookup candidate: Global Entity Area + Entity ID
+  10. Relationship with Other RA Memory Spaces
+  Memory Space
+.\docs\RA_Active_Space_V1_Frozen.docx:37: For local entities, the currently active Grid Cell ID can participate in identifying the function invocation. This allows recursive calls to have independent local values without placing those values inside Active Space.
+  The IDE/debugger does not display these internal scope states by default. They are exposed only through explicit RA introspection/debug facilities.
+  9. Local Invocation Ownership
+  Local lookup candidate: (Active Cell ID, Entity ID)Global lookup candidate: Global Entity Area + Entity ID
+  10. Relationship with Other RA Memory Spaces
+  Memory Space
+  Primary Responsibility
+.\docs\RA_Active_Space_V1_Frozen.docx:39: 10. Relationship with Other RA Memory Spaces
+  For local entities, the currently active Grid Cell ID can participate in identifying the function invocation. This allows recursive calls to have independent local values without placing those values inside Active Space.
+  Local lookup candidate: (Active Cell ID, Entity ID)Global lookup candidate: Global Entity Area + Entity ID
+  Memory Space
+  Primary Responsibility
+  Program Space
+  What executable code exists / should execute.
+.\docs\RA_Active_Space_V1_Frozen.docx:42: Program Space
+  Memory Space
+  Primary Responsibility
+  What executable code exists / should execute.
+  Active Space
+  Where execution currently is and the active call path.
+  Entity Space
+.\docs\RA_Active_Space_V1_Frozen.docx:43: What executable code exists / should execute.
+  Primary Responsibility
+  Program Space
+  Active Space
+  Where execution currently is and the active call path.
+  Entity Space
+  Runtime entities, including global and function-local values.
+.\docs\RA_Active_Space_V1_Frozen.docx:44: Active Space
+  Program Space
+  What executable code exists / should execute.
+  Where execution currently is and the active call path.
+  Entity Space
+  Runtime entities, including global and function-local values.
+  Work Space
+.\docs\RA_Active_Space_V1_Frozen.docx:45: Where execution currently is and the active call path.
+  What executable code exists / should execute.
+  Active Space
+  Entity Space
+  Runtime entities, including global and function-local values.
+  Work Space
+  Temporary/intermediate calculations.
+.\docs\RA_Active_Space_V1_Frozen.docx:46: Entity Space
+  Active Space
+  Where execution currently is and the active call path.
+  Runtime entities, including global and function-local values.
+  Work Space
+  Temporary/intermediate calculations.
+  11. Optional Mini-Log
+.\docs\RA_Active_Space_V1_Frozen.docx:47: Runtime entities, including global and function-local values.
+  Where execution currently is and the active call path.
+  Entity Space
+  Work Space
+  Temporary/intermediate calculations.
+  11. Optional Mini-Log
+  Active Space may include one small fixed-size circular Mini-Log for fast debugging/error tracing. It is not required for normal call/return execution and is not duplicated inside every Active Record.
+.\docs\RA_Active_Space_V1_Frozen.docx:51: Active Space may include one small fixed-size circular Mini-Log for fast debugging/error tracing. It is not required for normal call/return execution and is not duplicated inside every Active Record.
+  Temporary/intermediate calculations.
+  11. Optional Mini-Log
+  Records only important execution transitions such as ENTER/CALL/RETURN/error-relevant events.
+  Uses fixed capacity to avoid unbounded allocation.
+  When full, the oldest entry may be overwritten.
+  12. Frozen Decisions
+.\docs\RA_Active_Space_V1_Frozen.docx:52: Records only important execution transitions such as ENTER/CALL/RETURN/error-relevant events.
+  11. Optional Mini-Log
+  Active Space may include one small fixed-size circular Mini-Log for fast debugging/error tracing. It is not required for normal call/return execution and is not duplicated inside every Active Record.
+  Uses fixed capacity to avoid unbounded allocation.
+  When full, the oldest entry may be overwritten.
+  12. Frozen Decisions
+  Active Space is RA execution-tracking memory.
+.\docs\RA_Active_Space_V1_Frozen.docx:56: Active Space is RA execution-tracking memory.
+  When full, the oldest entry may be overwritten.
+  12. Frozen Decisions
+  Active Space uses the Grid/Block Method.
+  Each Grid cell is one compact Active Record.
+  Active Record candidate fields: Function/Scope ID + REI Execution Position.
+  Call/return follows logical sequential Grid ordering for ordinary synchronous execution.
+.\docs\RA_Active_Space_V1_Frozen.docx:57: Active Space uses the Grid/Block Method.
+  12. Frozen Decisions
+  Active Space is RA execution-tracking memory.
+  Each Grid cell is one compact Active Record.
+  Active Record candidate fields: Function/Scope ID + REI Execution Position.
+  Call/return follows logical sequential Grid ordering for ordinary synchronous execution.
+  Released end cells are reusable.
+.\docs\RA_Active_Space_V1_Frozen.docx:59: Active Record candidate fields: Function/Scope ID + REI Execution Position.
+  Active Space uses the Grid/Block Method.
+  Each Grid cell is one compact Active Record.
+  Call/return follows logical sequential Grid ordering for ordinary synchronous execution.
+  Released end cells are reusable.
+  Grid range per block is fixed from 3×3 to 8×8.
+  A full 8×8 block causes creation of another Active Grid Block.
+.\docs\RA_Active_Space_V1_Frozen.docx:60: Call/return follows logical sequential Grid ordering for ordinary synchronous execution.
+  Each Grid cell is one compact Active Record.
+  Active Record candidate fields: Function/Scope ID + REI Execution Position.
+  Released end cells are reusable.
+  Grid range per block is fixed from 3×3 to 8×8.
+  A full 8×8 block causes creation of another Active Grid Block.
+  REI scope encoding: 0 = Local, 1 = Global.
+.\docs\RA_Active_Space_V1_Frozen.docx:64: REI scope encoding: 0 = Local, 1 = Global.
+  Grid range per block is fixed from 3×3 to 8×8.
+  A full 8×8 block causes creation of another Active Grid Block.
+  Local invocation identity can use Active Cell ID with Entity ID.
+  Mini-Log is optional, small, circular, and debugging-oriented.
+  13. Intentionally Open for Implementation / Benchmarking
+  Exact byte/bit width of an Active Record.
+.\docs\RA_Active_Space_V1_Frozen.docx:69: Exact REI instruction encoding.
+  13. Intentionally Open for Implementation / Benchmarking
+  Exact byte/bit width of an Active Record.
+  Physical allocator layout behind the logical Grid.
+  Precise Grid growth trigger/strategy between 3×3 and 8×8.
+  Mini-Log capacity and event encoding.
+  Concurrency, async, task and multi-thread Active Space behavior.
+.\docs\RA_Active_Space_V1_Frozen.docx:73: Concurrency, async, task and multi-thread Active Space behavior.
+  Precise Grid growth trigger/strategy between 3×3 and 8×8.
+  Mini-Log capacity and event encoding.
+  Final reclaim thresholds for completely empty blocks.
+  14. Active Space V1 Summary
+  Active Space = compact Grid-based execution memory: 3×3 minimum ? dynamic growth ? 8×8 maximum per block ? new block on full capacity ? sequential call/return ? release/reuse ? optional circular Mini-Log.
+  
+.\docs\RA_Active_Space_V1_Frozen.docx:75: 14. Active Space V1 Summary
+  Concurrency, async, task and multi-thread Active Space behavior.
+  Final reclaim thresholds for completely empty blocks.
+  Active Space = compact Grid-based execution memory: 3×3 minimum ? dynamic growth ? 8×8 maximum per block ? new block on full capacity ? sequential call/return ? release/reuse ? optional circular Mini-Log.
+  
+.\docs\RA_Active_Space_V1_Frozen.docx:76: Active Space = compact Grid-based execution memory: 3×3 minimum ? dynamic growth ? 8×8 maximum per block ? new block on full capacity ? sequential call/return ? release/reuse ? optional circular Mini-Log.
+  Final reclaim thresholds for completely empty blocks.
+  14. Active Space V1 Summary
+  
+
+============================================================
+SOURCE: .\docs\RA_Entity_Space_V1.docx
+============================================================
+.\docs\RA_Entity_Space_V1.docx:2: RA ENTITY SPACE V1
+  
+  RA Memory Architecture — Grid + Indexed Value List
+  Status: ARCHITECTURAL CONCEPT FIXED — low-level representation remains open.
+  1. Definition
+  Entity Space (ES) is RA's runtime-data memory. It stores the actual values/entities created and used by an executing RA program, while Active Space tracks execution.
+.\docs\RA_Entity_Space_V1.docx:6: Entity Space (ES) is RA's runtime-data memory. It stores the actual values/entities created and used by an executing RA program, while Active Space tracks execution.
+  Status: ARCHITECTURAL CONCEPT FIXED — low-level representation remains open.
+  1. Definition
+  2. WHY — Purpose
+  RA needs Entity Space so runtime values do not bloat Active Space. Active Space answers 'what is executing?', while Entity Space answers 'what data currently exists?'.
+  3. Core ES Design
+  Entity Space uses a Grid of Entity Cells. Each Entity Cell contains an ordered, indexed Value List.
+.\docs\RA_Entity_Space_V1.docx:8: RA needs Entity Space so runtime values do not bloat Active Space. Active Space answers 'what is executing?', while Entity Space answers 'what data currently exists?'.
+  Entity Space (ES) is RA's runtime-data memory. It stores the actual values/entities created and used by an executing RA program, while Active Space tracks execution.
+  2. WHY — Purpose
+  3. Core ES Design
+  Entity Space uses a Grid of Entity Cells. Each Entity Cell contains an ordered, indexed Value List.
+  ENTITY SPACEEntity Cell 0Slot        0        1        2            ?        ?        ?       +--------------------------+List ? ¦  100   ¦   50   ¦   20  ¦       +--------------------------+            ?        ?        ?            x        y        z       source/debug metadata
+  4. Name ? Slot Compilation
+.\docs\RA_Entity_Space_V1.docx:10: Entity Space uses a Grid of Entity Cells. Each Entity Cell contains an ordered, indexed Value List.
+  RA needs Entity Space so runtime values do not bloat Active Space. Active Space answers 'what is executing?', while Entity Space answers 'what data currently exists?'.
+  3. Core ES Design
+  ENTITY SPACEEntity Cell 0Slot        0        1        2            ?        ?        ?       +--------------------------+List ? ¦  100   ¦   50   ¦   20  ¦       +--------------------------+            ?        ?        ?            x        y        z       source/debug metadata
+  4. Name ? Slot Compilation
+  Runtime storage does not need to duplicate variable-name strings beside every value. RA Core can compile source entity names into compact Entity Slots.
+  x ? slot 0    y ? slot 1    z ? slot 2
+.\docs\RA_Entity_Space_V1.docx:11: ENTITY SPACEEntity Cell 0Slot        0        1        2            ?        ?        ?       +--------------------------+List ? ¦  100   ¦   50   ¦   20  ¦       +--------------------------+            ?        ?        ?            x        y        z       source/debug metadata
+  3. Core ES Design
+  Entity Space uses a Grid of Entity Cells. Each Entity Cell contains an ordered, indexed Value List.
+  4. Name ? Slot Compilation
+  Runtime storage does not need to duplicate variable-name strings beside every value. RA Core can compile source entity names into compact Entity Slots.
+  x ? slot 0    y ? slot 1    z ? slot 2
+  Human-readable names remain available as program/debug metadata when required by the IDE or introspection facilities.
+.\docs\RA_Entity_Space_V1.docx:13: Runtime storage does not need to duplicate variable-name strings beside every value. RA Core can compile source entity names into compact Entity Slots.
+  ENTITY SPACEEntity Cell 0Slot        0        1        2            ?        ?        ?       +--------------------------+List ? ¦  100   ¦   50   ¦   20  ¦       +--------------------------+            ?        ?        ?            x        y        z       source/debug metadata
+  4. Name ? Slot Compilation
+  x ? slot 0    y ? slot 1    z ? slot 2
+  Human-readable names remain available as program/debug metadata when required by the IDE or introspection facilities.
+  5. REI Scope + Slot Access
+  The existing REI scope encoding is reused:
+.\docs\RA_Entity_Space_V1.docx:16: 5. REI Scope + Slot Access
+  x ? slot 0    y ? slot 1    z ? slot 2
+  Human-readable names remain available as program/debug metadata when required by the IDE or introspection facilities.
+  The existing REI scope encoding is reused:
+  0 = Local     |     1 = Global
+  REI can combine the scope state with a compiled Entity Slot, avoiding normal runtime name searching.
+  Example concept:GET 1,0  ? Global ? slot 0GET 0,1  ? Local  ? current invocation's Entity Cell ? slot 1
+.\docs\RA_Entity_Space_V1.docx:17: The existing REI scope encoding is reused:
+  Human-readable names remain available as program/debug metadata when required by the IDE or introspection facilities.
+  5. REI Scope + Slot Access
+  0 = Local     |     1 = Global
+  REI can combine the scope state with a compiled Entity Slot, avoiding normal runtime name searching.
+  Example concept:GET 1,0  ? Global ? slot 0GET 0,1  ? Local  ? current invocation's Entity Cell ? slot 1
+  6. Local Entity Cells
+.\docs\RA_Entity_Space_V1.docx:19: REI can combine the scope state with a compiled Entity Slot, avoiding normal runtime name searching.
+  The existing REI scope encoding is reused:
+  0 = Local     |     1 = Global
+  Example concept:GET 1,0  ? Global ? slot 0GET 0,1  ? Local  ? current invocation's Entity Cell ? slot 1
+  6. Local Entity Cells
+  A function invocation may use an Entity Cell containing its local/parameter values as an indexed list.
+  fun . play . a, b :    a = 5    b = 3    c = a + bf . close
+.\docs\RA_Entity_Space_V1.docx:25: 7. Active Space Relationship
+  fun . play . a, b :    a = 5    b = 3    c = a + bf . close
+  AS Cell 4  -----?  ES local Entity Cell                   Slot 0   Slot 1   Slot 2                     5        3        8                     a        b        c
+  For local entities, the current Active Grid Cell identifies the active function invocation. A candidate local lookup identity is therefore (Active Cell ID, Entity Slot).
+  This supports separate local values for repeated/recursive invocations without storing those values inside Active Space.
+  8. Global Entity Handling
+  Global entities are resolved through the global Entity area/group using scope state 1 plus the compiled Entity Slot. They are not tied to one function invocation.
+.\docs\RA_Entity_Space_V1.docx:27: This supports separate local values for repeated/recursive invocations without storing those values inside Active Space.
+  7. Active Space Relationship
+  For local entities, the current Active Grid Cell identifies the active function invocation. A candidate local lookup identity is therefore (Active Cell ID, Entity Slot).
+  8. Global Entity Handling
+  Global entities are resolved through the global Entity area/group using scope state 1 plus the compiled Entity Slot. They are not tied to one function invocation.
+  9. Lifetime and Reuse
+  Local Entity Cells are associated with the lifetime of their owning function invocation.
+.\docs\RA_Entity_Space_V1.docx:35: 10. Relationship with RA Memory Spaces
+  Global entities follow the broader program/module lifetime defined by RA's final lifecycle rules.
+  The Grid provides grouped lifetime management; the indexed Value List provides direct positional access.
+  Space
+  Responsibility
+  Program Space
+  Executable program representation and program metadata.
+.\docs\RA_Entity_Space_V1.docx:38: Program Space
+  Space
+  Responsibility
+  Executable program representation and program metadata.
+  Active Space
+  Current execution path, Active Grid cells and REI execution positions.
+  Entity Space
+.\docs\RA_Entity_Space_V1.docx:40: Active Space
+  Program Space
+  Executable program representation and program metadata.
+  Current execution path, Active Grid cells and REI execution positions.
+  Entity Space
+  Actual runtime values/entities organized by Entity Grid + indexed Value Lists.
+  Work Space
+.\docs\RA_Entity_Space_V1.docx:41: Current execution path, Active Grid cells and REI execution positions.
+  Executable program representation and program metadata.
+  Active Space
+  Entity Space
+  Actual runtime values/entities organized by Entity Grid + indexed Value Lists.
+  Work Space
+  Temporary/intermediate calculations.
+.\docs\RA_Entity_Space_V1.docx:42: Entity Space
+  Active Space
+  Current execution path, Active Grid cells and REI execution positions.
+  Actual runtime values/entities organized by Entity Grid + indexed Value Lists.
+  Work Space
+  Temporary/intermediate calculations.
+  11. Why List + Grid
+.\docs\RA_Entity_Space_V1.docx:43: Actual runtime values/entities organized by Entity Grid + indexed Value Lists.
+  Current execution path, Active Grid cells and REI execution positions.
+  Entity Space
+  Work Space
+  Temporary/intermediate calculations.
+  11. Why List + Grid
+  Grid groups entities by runtime ownership/lifetime.
+.\docs\RA_Entity_Space_V1.docx:47: Grid groups entities by runtime ownership/lifetime.
+  Temporary/intermediate calculations.
+  11. Why List + Grid
+  List gives deterministic ordering inside an Entity Cell.
+  Compiled slots permit direct positional access instead of repeated variable-name searches.
+  Grouped local storage can reduce many small independent allocations.
+  Names can remain outside the hot runtime value path.
+.\docs\RA_Entity_Space_V1.docx:51: Names can remain outside the hot runtime value path.
+  Compiled slots permit direct positional access instead of repeated variable-name searches.
+  Grouped local storage can reduce many small independent allocations.
+  12. Fixed V1 Decisions
+  Entity Space is RA runtime-data memory.
+  ES uses a Grid of Entity Cells.
+  Each Entity Cell contains an indexed Value List.
+.\docs\RA_Entity_Space_V1.docx:53: Entity Space is RA runtime-data memory.
+  Names can remain outside the hot runtime value path.
+  12. Fixed V1 Decisions
+  ES uses a Grid of Entity Cells.
+  Each Entity Cell contains an indexed Value List.
+  Runtime entity names are compiled to Entity Slots rather than necessarily stored beside every value.
+  REI uses 0 = Local and 1 = Global together with an Entity Slot.
+.\docs\RA_Entity_Space_V1.docx:56: Runtime entity names are compiled to Entity Slots rather than necessarily stored beside every value.
+  ES uses a Grid of Entity Cells.
+  Each Entity Cell contains an indexed Value List.
+  REI uses 0 = Local and 1 = Global together with an Entity Slot.
+  Local resolution uses the current Active invocation/Cell to reach the correct local Entity Cell.
+  Global resolution uses the global Entity area/group.
+  Local Entity Cells become reusable when their owning invocation ends.
+.\docs\RA_Entity_Space_V1.docx:57: REI uses 0 = Local and 1 = Global together with an Entity Slot.
+  Each Entity Cell contains an indexed Value List.
+  Runtime entity names are compiled to Entity Slots rather than necessarily stored beside every value.
+  Local resolution uses the current Active invocation/Cell to reach the correct local Entity Cell.
+  Global resolution uses the global Entity area/group.
+  Local Entity Cells become reusable when their owning invocation ends.
+  13. Intentionally Open
+.\docs\RA_Entity_Space_V1.docx:69: Concurrency/async ownership rules.
+  Physical allocator layout and packing.
+  Detailed global lifetime/reclaim policy.
+  14. Entity Space V1 Summary
+  Entity Space = Grid of Entity Cells ? each cell holds an indexed Value List ? source names compile to slots ? REI uses scope bit (0 Local / 1 Global) + slot ? local lifetime follows the active invocation ? released local cells are reusable.
+  
+.\docs\RA_Entity_Space_V1.docx:70: 14. Entity Space V1 Summary
+  Detailed global lifetime/reclaim policy.
+  Concurrency/async ownership rules.
+  Entity Space = Grid of Entity Cells ? each cell holds an indexed Value List ? source names compile to slots ? REI uses scope bit (0 Local / 1 Global) + slot ? local lifetime follows the active invocation ? released local cells are reusable.
+  
+.\docs\RA_Entity_Space_V1.docx:71: Entity Space = Grid of Entity Cells ? each cell holds an indexed Value List ? source names compile to slots ? REI uses scope bit (0 Local / 1 Global) + slot ? local lifetime follows the active invocation ? released local cells are reusable.
+  Concurrency/async ownership rules.
+  14. Entity Space V1 Summary
+  
+
+============================================================
+SOURCE: .\docs\RA_Registry_Space_V1.docx
+============================================================
+.\docs\RA_Registry_Space_V1.docx:2: RA Registry Space V1
+  
+  RA Memory Architecture — Registry SpaceStatus: V1 Fixed
+  Definition
+  Registry Space (RS) is the identity, relationship, and metadata layer of the RA Runtime. It does not execute code, store runtime values, or perform calculations.
+  WHY
+.\docs\RA_Registry_Space_V1.docx:3: RA Memory Architecture — Registry SpaceStatus: V1 Fixed
+  
+  RA Registry Space V1
+  Definition
+  Registry Space (RS) is the identity, relationship, and metadata layer of the RA Runtime. It does not execute code, store runtime values, or perform calculations.
+  WHY
+  RS maintains identity and relationships for executable entities and connects Program Space, Active Space, Entity Space, and Work Space.
+.\docs\RA_Registry_Space_V1.docx:5: Registry Space (RS) is the identity, relationship, and metadata layer of the RA Runtime. It does not execute code, store runtime values, or perform calculations.
+  RA Memory Architecture — Registry SpaceStatus: V1 Fixed
+  Definition
+  WHY
+  RS maintains identity and relationships for executable entities and connects Program Space, Active Space, Entity Space, and Work Space.
+  WHAT RS Stores
+  Function metadata
+.\docs\RA_Registry_Space_V1.docx:7: RS maintains identity and relationships for executable entities and connects Program Space, Active Space, Entity Space, and Work Space.
+  Registry Space (RS) is the identity, relationship, and metadata layer of the RA Runtime. It does not execute code, store runtime values, or perform calculations.
+  WHY
+  WHAT RS Stores
+  Function metadata
+  Variable/parameter metadata
+  Module metadata
+.\docs\RA_Registry_Space_V1.docx:14: Ownership
+  Library/package classification
+  Type information
+  Program/Active/Entity/Work Space mappings
+  Runtime metadata
+  Universal Identity
+  REI is the primary identity (primary key) for executable entities. A separate RID system is not used in V1.
+.\docs\RA_Registry_Space_V1.docx:16: Runtime metadata
+  Ownership
+  Program/Active/Entity/Work Space mappings
+  Universal Identity
+  REI is the primary identity (primary key) for executable entities. A separate RID system is not used in V1.
+  ExampleREI 120Kind       : FunctionName       : playModule     : MainParameters : 2Locals     : 5AS Cell    : Cell 4ES Cell    : Cell 8
+  Compiler
+.\docs\RA_Registry_Space_V1.docx:18: REI is the primary identity (primary key) for executable entities. A separate RID system is not used in V1.
+  Runtime metadata
+  Universal Identity
+  ExampleREI 120Kind       : FunctionName       : playModule     : MainParameters : 2Locals     : 5AS Cell    : Cell 4ES Cell    : Cell 8
+  Compiler
+  The compiler exists before runtime. It generates REIs, resolves libraries/packages, and emits Registry metadata into the compiled program (.rab).
+  REI Lifecycle
+.\docs\RA_Registry_Space_V1.docx:19: ExampleREI 120Kind       : FunctionName       : playModule     : MainParameters : 2Locals     : 5AS Cell    : Cell 4ES Cell    : Cell 8
+  Universal Identity
+  REI is the primary identity (primary key) for executable entities. A separate RID system is not used in V1.
+  Compiler
+  The compiler exists before runtime. It generates REIs, resolves libraries/packages, and emits Registry metadata into the compiled program (.rab).
+  REI Lifecycle
+  Generated during compilation.
+.\docs\RA_Registry_Space_V1.docx:21: The compiler exists before runtime. It generates REIs, resolves libraries/packages, and emits Registry metadata into the compiled program (.rab).
+  ExampleREI 120Kind       : FunctionName       : playModule     : MainParameters : 2Locals     : 5AS Cell    : Cell 4ES Cell    : Cell 8
+  Compiler
+  REI Lifecycle
+  Generated during compilation.
+  Stored in .rab.
+  Immutable during execution.
+.\docs\RA_Registry_Space_V1.docx:22: REI Lifecycle
+  Compiler
+  The compiler exists before runtime. It generates REIs, resolves libraries/packages, and emits Registry metadata into the compiled program (.rab).
+  Generated during compilation.
+  Stored in .rab.
+  Immutable during execution.
+  Changes only after recompilation.
+.\docs\RA_Registry_Space_V1.docx:25: Immutable during execution.
+  Generated during compilation.
+  Stored in .rab.
+  Changes only after recompilation.
+  Logical Addressing
+  Program Space : REIActive Space  : Grid CellEntity Space  : Entity Cell + SlotWork Space    : Matrix + Row + ColumnRegistry Space: REI Metadata
+  Library Categories
+.\docs\RA_Registry_Space_V1.docx:28: Program Space : REIActive Space  : Grid CellEntity Space  : Entity Cell + SlotWork Space    : Matrix + Row + ColumnRegistry Space: REI Metadata
+  Changes only after recompilation.
+  Logical Addressing
+  Library Categories
+  Built-in
+  Standard Library
+  External Library
+.\docs\RA_Registry_Space_V1.docx:35: RS is the metadata/relationship layer.
+  User Package
+  Fixed Decisions
+  REI is the primary key.
+  No RID in V1.
+  Compiler generates REI.
+  Compiler classifies libraries.
+.\docs\RA_Registry_Space_V1.docx:36: REI is the primary key.
+  Fixed Decisions
+  RS is the metadata/relationship layer.
+  No RID in V1.
+  Compiler generates REI.
+  Compiler classifies libraries.
+  RA uses logical addresses; RAM addresses remain implementation details.
+.\docs\RA_Registry_Space_V1.docx:38: Compiler generates REI.
+  REI is the primary key.
+  No RID in V1.
+  Compiler classifies libraries.
+  RA uses logical addresses; RAM addresses remain implementation details.
+  
+
+============================================================
+SOURCE: .\docs\The One\RA_Master_Architecture_Constitution_V1.docx
+============================================================
+.\docs\The One\RA_Master_Architecture_Constitution_V1.docx:5: RA Software is a Rust-based software platform containing both the RA IDE and RA Terminal. RA programs target RA Software rather than directly targeting the operating system. Editing and execution are separated.
+  PurposeThis document is the single architectural authority for the RA Programming Language project. It consolidates the uploaded architecture documents without redefining or replacing them. Where detailed implementation remains open in the source documents, those decisions remain open here.
+  1. Vision
+  2. Repository Structure
+  RA/+-- software/¦   +-- common/¦   +-- compiler/¦   +-- runtime/¦   +-- memory/¦   +-- persistence/¦   +-- cli/¦   +-- ide/¦   +-- debugger/+-- libraries/+-- documentation/+-- specifications/+-- examples/+-- tests/Responsibilities:common = shared utilities, logging, configuration, constants, errors.compiler = lexer, parser, semantic analysis, REI generation.runtime = execution manager, runtime loader, interpreter.memory = PS, AS, ES, WS, RS.persistence = LPM, PSS, SySS.ide = editor/workspace/project explorer/debugger UI.cli = terminal.debugger = debugging services.
+  3. Execution Workflow
+  Editing:IDE/Terminal -> LPM -> Syntax/Semantic/Autocomplete -> PSS -> SySSExecution:Run -> LPM -> Freeze Snapshot -> Execution Manager-> Interpret or Compile -> Runtime Loader-> Program Space -> Active Space -> Entity Space -> Work Space -> Registry Space-> Program Ends -> Destroy Runtime Memory -> Return ResultFrozen rules:- LPM belongs to IDE.- Frozen snapshot is executed.- Runtime Loader populates runtime memory.- PS before execution.- AS/ES/WS/RS during execution.- Runtime memory destroyed after execution.
+.\docs\The One\RA_Master_Architecture_Constitution_V1.docx:7: RA/+-- software/¦   +-- common/¦   +-- compiler/¦   +-- runtime/¦   +-- memory/¦   +-- persistence/¦   +-- cli/¦   +-- ide/¦   +-- debugger/+-- libraries/+-- documentation/+-- specifications/+-- examples/+-- tests/Responsibilities:common = shared utilities, logging, configuration, constants, errors.compiler = lexer, parser, semantic analysis, REI generation.runtime = execution manager, runtime loader, interpreter.memory = PS, AS, ES, WS, RS.persistence = LPM, PSS, SySS.ide = editor/workspace/project explorer/debugger UI.cli = terminal.debugger = debugging services.
+  RA Software is a Rust-based software platform containing both the RA IDE and RA Terminal. RA programs target RA Software rather than directly targeting the operating system. Editing and execution are separated.
+  2. Repository Structure
+  3. Execution Workflow
+  Editing:IDE/Terminal -> LPM -> Syntax/Semantic/Autocomplete -> PSS -> SySSExecution:Run -> LPM -> Freeze Snapshot -> Execution Manager-> Interpret or Compile -> Runtime Loader-> Program Space -> Active Space -> Entity Space -> Work Space -> Registry Space-> Program Ends -> Destroy Runtime Memory -> Return ResultFrozen rules:- LPM belongs to IDE.- Frozen snapshot is executed.- Runtime Loader populates runtime memory.- PS before execution.- AS/ES/WS/RS during execution.- Runtime memory destroyed after execution.
+  4. Memory
+  Memory spaces:Program Space (PS): REI, module metadata, constants, code map.Active Space (AS): execution tracking grid, active records.Entity Space (ES): runtime values using Entity Cells and indexed value lists.Work Space (WS): temporary calculations.Registry Space (RS): metadata, relationships, REI identity.Memory Manager controls allocate, address, access, reclaim and reuse.Region Allocator acquires/reuses host memory.Logical addresses are RA-managed rather than native pointers.
+.\docs\The One\RA_Master_Architecture_Constitution_V1.docx:8: 3. Execution Workflow
+  2. Repository Structure
+  RA/+-- software/¦   +-- common/¦   +-- compiler/¦   +-- runtime/¦   +-- memory/¦   +-- persistence/¦   +-- cli/¦   +-- ide/¦   +-- debugger/+-- libraries/+-- documentation/+-- specifications/+-- examples/+-- tests/Responsibilities:common = shared utilities, logging, configuration, constants, errors.compiler = lexer, parser, semantic analysis, REI generation.runtime = execution manager, runtime loader, interpreter.memory = PS, AS, ES, WS, RS.persistence = LPM, PSS, SySS.ide = editor/workspace/project explorer/debugger UI.cli = terminal.debugger = debugging services.
+  Editing:IDE/Terminal -> LPM -> Syntax/Semantic/Autocomplete -> PSS -> SySSExecution:Run -> LPM -> Freeze Snapshot -> Execution Manager-> Interpret or Compile -> Runtime Loader-> Program Space -> Active Space -> Entity Space -> Work Space -> Registry Space-> Program Ends -> Destroy Runtime Memory -> Return ResultFrozen rules:- LPM belongs to IDE.- Frozen snapshot is executed.- Runtime Loader populates runtime memory.- PS before execution.- AS/ES/WS/RS during execution.- Runtime memory destroyed after execution.
+  4. Memory
+  Memory spaces:Program Space (PS): REI, module metadata, constants, code map.Active Space (AS): execution tracking grid, active records.Entity Space (ES): runtime values using Entity Cells and indexed value lists.Work Space (WS): temporary calculations.Registry Space (RS): metadata, relationships, REI identity.Memory Manager controls allocate, address, access, reclaim and reuse.Region Allocator acquires/reuses host memory.Logical addresses are RA-managed rather than native pointers.
+  5. Persistence
+.\docs\The One\RA_Master_Architecture_Constitution_V1.docx:9: Editing:IDE/Terminal -> LPM -> Syntax/Semantic/Autocomplete -> PSS -> SySSExecution:Run -> LPM -> Freeze Snapshot -> Execution Manager-> Interpret or Compile -> Runtime Loader-> Program Space -> Active Space -> Entity Space -> Work Space -> Registry Space-> Program Ends -> Destroy Runtime Memory -> Return ResultFrozen rules:- LPM belongs to IDE.- Frozen snapshot is executed.- Runtime Loader populates runtime memory.- PS before execution.- AS/ES/WS/RS during execution.- Runtime memory destroyed after execution.
+  RA/+-- software/¦   +-- common/¦   +-- compiler/¦   +-- runtime/¦   +-- memory/¦   +-- persistence/¦   +-- cli/¦   +-- ide/¦   +-- debugger/+-- libraries/+-- documentation/+-- specifications/+-- examples/+-- tests/Responsibilities:common = shared utilities, logging, configuration, constants, errors.compiler = lexer, parser, semantic analysis, REI generation.runtime = execution manager, runtime loader, interpreter.memory = PS, AS, ES, WS, RS.persistence = LPM, PSS, SySS.ide = editor/workspace/project explorer/debugger UI.cli = terminal.debugger = debugging services.
+  3. Execution Workflow
+  4. Memory
+  Memory spaces:Program Space (PS): REI, module metadata, constants, code map.Active Space (AS): execution tracking grid, active records.Entity Space (ES): runtime values using Entity Cells and indexed value lists.Work Space (WS): temporary calculations.Registry Space (RS): metadata, relationships, REI identity.Memory Manager controls allocate, address, access, reclaim and reuse.Region Allocator acquires/reuses host memory.Logical addresses are RA-managed rather than native pointers.
+  5. Persistence
+  LPM: Live Program Model in IDE.PSS: Program Serialization Service; serializes/deserializes .ra .rab .raf .rap.SySS: System Storage Space owned by RA Software.Save:RA Memory -> PSS -> SySS -> User Save -> Device FileLoad:Device File -> SySS -> PSS -> RA MemoryPSS is a service, not a memory space.SySS stores workspace, projects, packages, loaded files, settings, logs, history, artifacts.
+.\docs\The One\RA_Master_Architecture_Constitution_V1.docx:11: Memory spaces:Program Space (PS): REI, module metadata, constants, code map.Active Space (AS): execution tracking grid, active records.Entity Space (ES): runtime values using Entity Cells and indexed value lists.Work Space (WS): temporary calculations.Registry Space (RS): metadata, relationships, REI identity.Memory Manager controls allocate, address, access, reclaim and reuse.Region Allocator acquires/reuses host memory.Logical addresses are RA-managed rather than native pointers.
+  Editing:IDE/Terminal -> LPM -> Syntax/Semantic/Autocomplete -> PSS -> SySSExecution:Run -> LPM -> Freeze Snapshot -> Execution Manager-> Interpret or Compile -> Runtime Loader-> Program Space -> Active Space -> Entity Space -> Work Space -> Registry Space-> Program Ends -> Destroy Runtime Memory -> Return ResultFrozen rules:- LPM belongs to IDE.- Frozen snapshot is executed.- Runtime Loader populates runtime memory.- PS before execution.- AS/ES/WS/RS during execution.- Runtime memory destroyed after execution.
+  4. Memory
+  5. Persistence
+  LPM: Live Program Model in IDE.PSS: Program Serialization Service; serializes/deserializes .ra .rab .raf .rap.SySS: System Storage Space owned by RA Software.Save:RA Memory -> PSS -> SySS -> User Save -> Device FileLoad:Device File -> SySS -> PSS -> RA MemoryPSS is a service, not a memory space.SySS stores workspace, projects, packages, loaded files, settings, logs, history, artifacts.
+  6. SySS Hub Architecture
+  Permanent hubs:WH001 WorkspacePH001 ProjectPK001 PackageLF001 Loaded FileSH001 SettingsHH001 HistoryLG001 LogAH001 ArtifactCommunication:WH001.call(PH001)All hubs inherit abstract call(), reply(), status().Implementation remains hidden.Hubs live for the lifetime of RA Software.
+.\docs\The One\RA_Master_Architecture_Constitution_V1.docx:19: - Memory = PS + AS + ES + WS + RS.- LPM belongs to IDE.- PSS is serialization service.- SySS is persistent software storage.- REI is executable representation.- REI is primary runtime identity in Registry Space.- Editing and execution are separate workflows.- Hub communication uses abstract call(HubID).
+  Language: Rust Edition 2024.Cargo workspace.No unsafe unless explicitly approved.Production-quality code.Unit tests for every module.Document all public APIs.Keep subsystem responsibilities separated.Compiler-specific logic stays in compiler crate.Common contains only platform-wide shared utilities.
+  8. Frozen Decisions
+  9. Open Decisions
+  Remain intentionally open:- REI encoding.- Memory allocator internals.- Exact logical address layout.- Concurrency model.- Physical storage layouts.- Optimization strategies.
+  10. Governance
+  Any implementation by humans or AI must conform to this constitution and the detailed subsystem documents. If a conflict appears, the subsystem specification should be updated intentionally rather than silently changing the implementation.
+.\docs\The One\RA_Master_Architecture_Constitution_V1.docx:21: Remain intentionally open:- REI encoding.- Memory allocator internals.- Exact logical address layout.- Concurrency model.- Physical storage layouts.- Optimization strategies.
+  - Memory = PS + AS + ES + WS + RS.- LPM belongs to IDE.- PSS is serialization service.- SySS is persistent software storage.- REI is executable representation.- REI is primary runtime identity in Registry Space.- Editing and execution are separate workflows.- Hub communication uses abstract call(HubID).
+  9. Open Decisions
+  10. Governance
+  Any implementation by humans or AI must conform to this constitution and the detailed subsystem documents. If a conflict appears, the subsystem specification should be updated intentionally rather than silently changing the implementation.
+  Referenced Source Documents
+  This constitution is derived from the uploaded architecture documents including:- Updated Memory Architecture- Program Space- Active Space- Entity Space- Registry Space- Execution Workflow- Persistence Architecture- PSS & SySS- SySS Hub Graph- SySS Hub Communication- Repository StructureThese remain the authoritative detailed specifications.
+.\docs\The One\RA_Master_Architecture_Constitution_V1.docx:25: This constitution is derived from the uploaded architecture documents including:- Updated Memory Architecture- Program Space- Active Space- Entity Space- Registry Space- Execution Workflow- Persistence Architecture- PSS & SySS- SySS Hub Graph- SySS Hub Communication- Repository StructureThese remain the authoritative detailed specifications.
+  Any implementation by humans or AI must conform to this constitution and the detailed subsystem documents. If a conflict appears, the subsystem specification should be updated intentionally rather than silently changing the implementation.
+  Referenced Source Documents
+  
+
+============================================================
+SOURCE: .\docs\The One\RA_File_Format_Specification_V1.docx
+============================================================
+.\docs\The One\RA_File_Format_Specification_V1.docx:5: Defines file purpose, lifecycle, ownership, editability, execution model, and relationships with PSS, Runtime, and Memory. Binary encoding/layout is intentionally out of scope.
+  Status: Frozen Version 1.0Purpose: Defines the official RA file types before implementation.
+  1. Scope
+  2. Supported File Types
+  .ra — RA Source File (editable, text).rab — RA Bytecode File (binary).raf — RA Frozen Application (binary, importable, editable after import).rap — RA Portable Application (binary, read-only, executable)
+  3. .ra
+  Default editable UTF-8 source file. Produced by IDE/Terminal. Consumed by LPM, Compiler, Interpreter.
+.\docs\The One\RA_File_Format_Specification_V1.docx:7: .ra — RA Source File (editable, text).rab — RA Bytecode File (binary).raf — RA Frozen Application (binary, importable, editable after import).rap — RA Portable Application (binary, read-only, executable)
+  Defines file purpose, lifecycle, ownership, editability, execution model, and relationships with PSS, Runtime, and Memory. Binary encoding/layout is intentionally out of scope.
+  2. Supported File Types
+  3. .ra
+  Default editable UTF-8 source file. Produced by IDE/Terminal. Consumed by LPM, Compiler, Interpreter.
+  4. .rab
+  Compiled binary bytecode generated by the Compiler and executed by the Runtime. Not intended for editing.
+.\docs\The One\RA_File_Format_Specification_V1.docx:11: Compiled binary bytecode generated by the Compiler and executed by the Runtime. Not intended for editing.
+  Default editable UTF-8 source file. Produced by IDE/Terminal. Consumed by LPM, Compiler, Interpreter.
+  4. .rab
+  5. .raf
+  Frozen application snapshot. Stored by PSS and later restored into RA Memory to continue development.
+  6. .rap
+  Portable read-only executable package. Executes through a protected runtime loading path and is never imported into the editable RA Memory model (PS, AS, ES, WS, RS).
+.\docs\The One\RA_File_Format_Specification_V1.docx:15: Portable read-only executable package. Executes through a protected runtime loading path and is never imported into the editable RA Memory model (PS, AS, ES, WS, RS).
+  Frozen application snapshot. Stored by PSS and later restored into RA Memory to continue development.
+  6. .rap
+  7. Lifecycle
+  Development: .raCompilation: .ra -> .rabSnapshot: Memory -> .rafDeployment: Memory -> .rap
+  8. Relationship to PSS
+  PSS owns serialization/deserialization only. It does not own Runtime, Compiler, Memory, or IDE.
+.\docs\The One\RA_File_Format_Specification_V1.docx:18: 8. Relationship to PSS
+  7. Lifecycle
+  Development: .raCompilation: .ra -> .rabSnapshot: Memory -> .rafDeployment: Memory -> .rap
+  PSS owns serialization/deserialization only. It does not own Runtime, Compiler, Memory, or IDE.
+  9. Memory Relationship
+  .ra and .raf import into editable memory. .rab and .rap do not.
+  10. Runtime Relationship
+.\docs\The One\RA_File_Format_Specification_V1.docx:19: PSS owns serialization/deserialization only. It does not own Runtime, Compiler, Memory, or IDE.
+  Development: .raCompilation: .ra -> .rabSnapshot: Memory -> .rafDeployment: Memory -> .rap
+  8. Relationship to PSS
+  9. Memory Relationship
+  .ra and .raf import into editable memory. .rab and .rap do not.
+  10. Runtime Relationship
+  .rab executes directly. .raf executes after restore. .rap executes through protected runtime loading.
+.\docs\The One\RA_File_Format_Specification_V1.docx:20: 9. Memory Relationship
+  8. Relationship to PSS
+  PSS owns serialization/deserialization only. It does not own Runtime, Compiler, Memory, or IDE.
+  .ra and .raf import into editable memory. .rab and .rap do not.
+  10. Runtime Relationship
+  .rab executes directly. .raf executes after restore. .rap executes through protected runtime loading.
+  11. Frozen Decisions
+.\docs\The One\RA_File_Format_Specification_V1.docx:22: 10. Runtime Relationship
+  9. Memory Relationship
+  .ra and .raf import into editable memory. .rab and .rap do not.
+  .rab executes directly. .raf executes after restore. .rap executes through protected runtime loading.
+  11. Frozen Decisions
+  .ra = source.rab = bytecode.raf = frozen application.rap = portable applicationPSS = serialization/deserialization only.
+  
+.\docs\The One\RA_File_Format_Specification_V1.docx:23: .rab executes directly. .raf executes after restore. .rap executes through protected runtime loading.
+  .ra and .raf import into editable memory. .rab and .rap do not.
+  10. Runtime Relationship
+  11. Frozen Decisions
+  .ra = source.rab = bytecode.raf = frozen application.rap = portable applicationPSS = serialization/deserialization only.
+  
+.\docs\The One\RA_File_Format_Specification_V1.docx:25: .ra = source.rab = bytecode.raf = frozen application.rap = portable applicationPSS = serialization/deserialization only.
+  .rab executes directly. .raf executes after restore. .rap executes through protected runtime loading.
+  11. Frozen Decisions
+  
+
+============================================================
+SOURCE: .\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md
+============================================================
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:1: # RA-RUST-4C — PHASE 7J.1 PRE-IMPLEMENTATION CONTRACT AUDIT
+  
+  **Date:** 2026-08-15
+  **Scope:** Audit only — no code modified. `ra-gateway`, `ra-memory`, `ra-persistence`, `ra-common`, `ra-syss` all untouched.
+  **Question:** What contract is required for `Execution Manager ? ra-memory ? ProgramSpace`, and can Phase 7J.1 proceed against the frozen memory architecture?
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:5: **Question:** What contract is required for `Execution Manager ? ra-memory ? ProgramSpace`, and can Phase 7J.1 proceed against the frozen memory architecture?
+  **Date:** 2026-08-15
+  **Scope:** Audit only — no code modified. `ra-gateway`, `ra-memory`, `ra-persistence`, `ra-common`, `ra-syss` all untouched.
+  
+  ---
+  
+  ## 1. Sources inspected
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:13: | `software/gateway/src/{lib.rs, gateway.rs, execution.rs, error.rs}` | The frozen Phase 7J contract (identity, request/result/lifecycle vocabularies, `Gateway` trait). |
+  | Source | What it established |
+  |---|---|
+  | `software/memory/src/*.rs` (all 13 files) | The complete frozen memory implementation: `MemoryManager` (+Config/`ShutdownReport`/`SpaceUsage`), `ProgramSpace` (+`LoadedModule`/`ModuleId`/`ModuleRecord`/`CodeMapEntry`/`CodeMapIter`), `ModuleTable`, `ActiveSpace` (+`CellId`/`ScopeId`/`ActiveRecord`/Mini-Log), `EntitySpace` (+`EntityCellId`), `ValueList`/`Value`/`ValueStorage`, `LocalEntityResolver`, `GlobalEntityArea`, `LogicalAddress`, `SpaceKind`/`SpaceId`/`SpaceRecord`, `Error` (16 variants). |
+  | `software/memory/Cargo.toml` | `ra-memory ? ra-common` only (leaf, frozen). |
+  | `docs/architecture.md` | Layer rules 1–6; the gateway attach point ("The future RA Core Gateway attaches behind the backbone"); `ra-syss` must never depend on runtime/compiler/memory (rule 3). |
+  | `docs/RA_Forensic_Audit_Report_V1.md` | Memory is **FROZEN (3/3B/3C/3D-1..3D-5), IMPLEMENTED-UNINTEGRATED, consumers: NONE**; "waiting for the Execution Manager/Runtime to consume it through the future RA Core Gateway". |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:16: | `docs/architecture.md` | Layer rules 1–6; the gateway attach point ("The future RA Core Gateway attaches behind the backbone"); `ra-syss` must never depend on runtime/compiler/memory (rule 3). |
+  | `software/memory/src/*.rs` (all 13 files) | The complete frozen memory implementation: `MemoryManager` (+Config/`ShutdownReport`/`SpaceUsage`), `ProgramSpace` (+`LoadedModule`/`ModuleId`/`ModuleRecord`/`CodeMapEntry`/`CodeMapIter`), `ModuleTable`, `ActiveSpace` (+`CellId`/`ScopeId`/`ActiveRecord`/Mini-Log), `EntitySpace` (+`EntityCellId`), `ValueList`/`Value`/`ValueStorage`, `LocalEntityResolver`, `GlobalEntityArea`, `LogicalAddress`, `SpaceKind`/`SpaceId`/`SpaceRecord`, `Error` (16 variants). |
+  | `software/memory/Cargo.toml` | `ra-memory ? ra-common` only (leaf, frozen). |
+  | `docs/RA_Forensic_Audit_Report_V1.md` | Memory is **FROZEN (3/3B/3C/3D-1..3D-5), IMPLEMENTED-UNINTEGRATED, consumers: NONE**; "waiting for the Execution Manager/Runtime to consume it through the future RA Core Gateway". |
+  | `docs/RA_Program_Space_V1.docx` (FROZEN) | PS = Module Table/Metadata + REI Instruction Area + Constant Area + Code Map; `.ra ? RA Core ? RA IR ? REI ? Program Space ? RA Execution`; REI encoding **open**; bytecode **not** frozen; PS holds no AST/IR/values/calls. |
+  | `docs/RA_Execution_Workflow_Architecture_Frozen_V1.docx` (FROZEN) | Run ? LPM ? **Freeze Snapshot** ? Execution Manager ? (Interpret | Compile?Compiler) ? **Runtime Loader** ? PS ? AS ? ES ? WS ? RS ? Program Ends ? **Destroy Runtime Memory** ? Return Result. **Runtime Loader is the only component that populates runtime memory.** |
+  | `software/persistence/src/snapshot.rs`, `lpm.rs` | `FreezeSnapshot` lives in **ra-persistence**, not ra-memory: immutable copy of **source text** + FNV-1a checksum + `ProgramMeta`; `verify_integrity()`; produced by `LiveProgram::freeze()`. |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:17: | `docs/RA_Forensic_Audit_Report_V1.md` | Memory is **FROZEN (3/3B/3C/3D-1..3D-5), IMPLEMENTED-UNINTEGRATED, consumers: NONE**; "waiting for the Execution Manager/Runtime to consume it through the future RA Core Gateway". |
+  | `software/memory/Cargo.toml` | `ra-memory ? ra-common` only (leaf, frozen). |
+  | `docs/architecture.md` | Layer rules 1–6; the gateway attach point ("The future RA Core Gateway attaches behind the backbone"); `ra-syss` must never depend on runtime/compiler/memory (rule 3). |
+  | `docs/RA_Program_Space_V1.docx` (FROZEN) | PS = Module Table/Metadata + REI Instruction Area + Constant Area + Code Map; `.ra ? RA Core ? RA IR ? REI ? Program Space ? RA Execution`; REI encoding **open**; bytecode **not** frozen; PS holds no AST/IR/values/calls. |
+  | `docs/RA_Execution_Workflow_Architecture_Frozen_V1.docx` (FROZEN) | Run ? LPM ? **Freeze Snapshot** ? Execution Manager ? (Interpret | Compile?Compiler) ? **Runtime Loader** ? PS ? AS ? ES ? WS ? RS ? Program Ends ? **Destroy Runtime Memory** ? Return Result. **Runtime Loader is the only component that populates runtime memory.** |
+  | `software/persistence/src/snapshot.rs`, `lpm.rs` | `FreezeSnapshot` lives in **ra-persistence**, not ra-memory: immutable copy of **source text** + FNV-1a checksum + `ProgramMeta`; `verify_integrity()`; produced by `LiveProgram::freeze()`. |
+  | `software/syss/src/pss.rs` | `.raf` codec exists: `Pss::serialize_snapshot` / `deserialize_snapshot`. |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:18: | `docs/RA_Program_Space_V1.docx` (FROZEN) | PS = Module Table/Metadata + REI Instruction Area + Constant Area + Code Map; `.ra ? RA Core ? RA IR ? REI ? Program Space ? RA Execution`; REI encoding **open**; bytecode **not** frozen; PS holds no AST/IR/values/calls. |
+  | `docs/architecture.md` | Layer rules 1–6; the gateway attach point ("The future RA Core Gateway attaches behind the backbone"); `ra-syss` must never depend on runtime/compiler/memory (rule 3). |
+  | `docs/RA_Forensic_Audit_Report_V1.md` | Memory is **FROZEN (3/3B/3C/3D-1..3D-5), IMPLEMENTED-UNINTEGRATED, consumers: NONE**; "waiting for the Execution Manager/Runtime to consume it through the future RA Core Gateway". |
+  | `docs/RA_Execution_Workflow_Architecture_Frozen_V1.docx` (FROZEN) | Run ? LPM ? **Freeze Snapshot** ? Execution Manager ? (Interpret | Compile?Compiler) ? **Runtime Loader** ? PS ? AS ? ES ? WS ? RS ? Program Ends ? **Destroy Runtime Memory** ? Return Result. **Runtime Loader is the only component that populates runtime memory.** |
+  | `software/persistence/src/snapshot.rs`, `lpm.rs` | `FreezeSnapshot` lives in **ra-persistence**, not ra-memory: immutable copy of **source text** + FNV-1a checksum + `ProgramMeta`; `verify_integrity()`; produced by `LiveProgram::freeze()`. |
+  | `software/syss/src/pss.rs` | `.raf` codec exists: `Pss::serialize_snapshot` / `deserialize_snapshot`. |
+  | `documentation/`, `specifications/` | Empty directories — no additional memory docs. |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:19: | `docs/RA_Execution_Workflow_Architecture_Frozen_V1.docx` (FROZEN) | Run ? LPM ? **Freeze Snapshot** ? Execution Manager ? (Interpret | Compile?Compiler) ? **Runtime Loader** ? PS ? AS ? ES ? WS ? RS ? Program Ends ? **Destroy Runtime Memory** ? Return Result. **Runtime Loader is the only component that populates runtime memory.** |
+  | `docs/RA_Forensic_Audit_Report_V1.md` | Memory is **FROZEN (3/3B/3C/3D-1..3D-5), IMPLEMENTED-UNINTEGRATED, consumers: NONE**; "waiting for the Execution Manager/Runtime to consume it through the future RA Core Gateway". |
+  | `docs/RA_Program_Space_V1.docx` (FROZEN) | PS = Module Table/Metadata + REI Instruction Area + Constant Area + Code Map; `.ra ? RA Core ? RA IR ? REI ? Program Space ? RA Execution`; REI encoding **open**; bytecode **not** frozen; PS holds no AST/IR/values/calls. |
+  | `software/persistence/src/snapshot.rs`, `lpm.rs` | `FreezeSnapshot` lives in **ra-persistence**, not ra-memory: immutable copy of **source text** + FNV-1a checksum + `ProgramMeta`; `verify_integrity()`; produced by `LiveProgram::freeze()`. |
+  | `software/syss/src/pss.rs` | `.raf` codec exists: `Pss::serialize_snapshot` / `deserialize_snapshot`. |
+  | `documentation/`, `specifications/` | Empty directories — no additional memory docs. |
+  
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:28: | Phase 7J contract item | ra-memory counterpart | Compatible? | Notes |
+  ## 2. Compatibility matrix
+  
+  |---|---|---|---|
+  | `ProgramId` (validated name) | `LoadedModule.name` / `ProgramSpace::module_by_name` | ? | Any gateway `ProgramId` is a valid module name (memory only requires non-empty; duplicates rejected). Natural lookup exists — no map needed. |
+  | `ExecutionId` (minted by `ExecutionSequence`) | none (memory is module-scoped) | ? new | Execution-Manager-level identity; must **not** be conflated with `ModuleId` (minted by `ProgramSpace`, never reused). |
+  | `CorrelationId` | none | ? new | Echo/verify inside the Execution Manager; mirrors the frozen backbone round-trip. |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:31: | `ExecutionId` (minted by `ExecutionSequence`) | none (memory is module-scoped) | ? new | Execution-Manager-level identity; must **not** be conflated with `ModuleId` (minted by `ProgramSpace`, never reused). |
+  |---|---|---|---|
+  | `ProgramId` (validated name) | `LoadedModule.name` / `ProgramSpace::module_by_name` | ? | Any gateway `ProgramId` is a valid module name (memory only requires non-empty; duplicates rejected). Natural lookup exists — no map needed. |
+  | `CorrelationId` | none | ? new | Echo/verify inside the Execution Manager; mirrors the frozen backbone round-trip. |
+  | `ExecutionRequest::Load` | `ProgramSpace::load_module(&mut MemoryManager, &LoadedModule)` | ? | Requires an REI **source** (see §8 gap): `LoadedModule` needs REI bytes, and no compiler exists. |
+  | `ExecutionRequest::Run/Stop/Pause/Resume` | `ActiveSpace::call`/`close` (state only); no executor | ?? partial | Lifecycle *state transitions* implementable; real execution semantics deferred (no Runtime/VM). |
+  | `ExecutionRequest::Inspect` | `ProgramSpace::module`/`module_by_name`/`read_rei`/`module_count` | ? | Summary string (matches `Inspected(String)` pattern). |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:32: | `CorrelationId` | none | ? new | Echo/verify inside the Execution Manager; mirrors the frozen backbone round-trip. |
+  | `ProgramId` (validated name) | `LoadedModule.name` / `ProgramSpace::module_by_name` | ? | Any gateway `ProgramId` is a valid module name (memory only requires non-empty; duplicates rejected). Natural lookup exists — no map needed. |
+  | `ExecutionId` (minted by `ExecutionSequence`) | none (memory is module-scoped) | ? new | Execution-Manager-level identity; must **not** be conflated with `ModuleId` (minted by `ProgramSpace`, never reused). |
+  | `ExecutionRequest::Load` | `ProgramSpace::load_module(&mut MemoryManager, &LoadedModule)` | ? | Requires an REI **source** (see §8 gap): `LoadedModule` needs REI bytes, and no compiler exists. |
+  | `ExecutionRequest::Run/Stop/Pause/Resume` | `ActiveSpace::call`/`close` (state only); no executor | ?? partial | Lifecycle *state transitions* implementable; real execution semantics deferred (no Runtime/VM). |
+  | `ExecutionRequest::Inspect` | `ProgramSpace::module`/`module_by_name`/`read_rei`/`module_count` | ? | Summary string (matches `Inspected(String)` pattern). |
+  | `ExecutionLifecycle` (Loaded?Running?Paused?Completed/Stopped/Failed) | none (ActiveSpace depth is orthogonal) | ? new | Manager-owned mapping; memory has no execution-instance concept. |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:33: | `ExecutionRequest::Load` | `ProgramSpace::load_module(&mut MemoryManager, &LoadedModule)` | ? | Requires an REI **source** (see §8 gap): `LoadedModule` needs REI bytes, and no compiler exists. |
+  | `ExecutionId` (minted by `ExecutionSequence`) | none (memory is module-scoped) | ? new | Execution-Manager-level identity; must **not** be conflated with `ModuleId` (minted by `ProgramSpace`, never reused). |
+  | `CorrelationId` | none | ? new | Echo/verify inside the Execution Manager; mirrors the frozen backbone round-trip. |
+  | `ExecutionRequest::Run/Stop/Pause/Resume` | `ActiveSpace::call`/`close` (state only); no executor | ?? partial | Lifecycle *state transitions* implementable; real execution semantics deferred (no Runtime/VM). |
+  | `ExecutionRequest::Inspect` | `ProgramSpace::module`/`module_by_name`/`read_rei`/`module_count` | ? | Summary string (matches `Inspected(String)` pattern). |
+  | `ExecutionLifecycle` (Loaded?Running?Paused?Completed/Stopped/Failed) | none (ActiveSpace depth is orthogonal) | ? new | Manager-owned mapping; memory has no execution-instance concept. |
+  | `ExecutionResult::Finished`/`ProgramOutcome` | none | ? deferred | Requires a real run (Runtime/VM, Phase 7J.2+). |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:34: | `ExecutionRequest::Run/Stop/Pause/Resume` | `ActiveSpace::call`/`close` (state only); no executor | ?? partial | Lifecycle *state transitions* implementable; real execution semantics deferred (no Runtime/VM). |
+  | `CorrelationId` | none | ? new | Echo/verify inside the Execution Manager; mirrors the frozen backbone round-trip. |
+  | `ExecutionRequest::Load` | `ProgramSpace::load_module(&mut MemoryManager, &LoadedModule)` | ? | Requires an REI **source** (see §8 gap): `LoadedModule` needs REI bytes, and no compiler exists. |
+  | `ExecutionRequest::Inspect` | `ProgramSpace::module`/`module_by_name`/`read_rei`/`module_count` | ? | Summary string (matches `Inspected(String)` pattern). |
+  | `ExecutionLifecycle` (Loaded?Running?Paused?Completed/Stopped/Failed) | none (ActiveSpace depth is orthogonal) | ? new | Manager-owned mapping; memory has no execution-instance concept. |
+  | `ExecutionResult::Finished`/`ProgramOutcome` | none | ? deferred | Requires a real run (Runtime/VM, Phase 7J.2+). |
+  | `ExecutionResult::Rejected` | `ra_memory::Error` (`UnknownModule`, `DuplicateModule`, …) | ? | Manager converts memory errors ? `ExecutionFailure{code}`; no `From` impl (gateway stays dependency-free). |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:35: | `ExecutionRequest::Inspect` | `ProgramSpace::module`/`module_by_name`/`read_rei`/`module_count` | ? | Summary string (matches `Inspected(String)` pattern). |
+  | `ExecutionRequest::Load` | `ProgramSpace::load_module(&mut MemoryManager, &LoadedModule)` | ? | Requires an REI **source** (see §8 gap): `LoadedModule` needs REI bytes, and no compiler exists. |
+  | `ExecutionRequest::Run/Stop/Pause/Resume` | `ActiveSpace::call`/`close` (state only); no executor | ?? partial | Lifecycle *state transitions* implementable; real execution semantics deferred (no Runtime/VM). |
+  | `ExecutionLifecycle` (Loaded?Running?Paused?Completed/Stopped/Failed) | none (ActiveSpace depth is orthogonal) | ? new | Manager-owned mapping; memory has no execution-instance concept. |
+  | `ExecutionResult::Finished`/`ProgramOutcome` | none | ? deferred | Requires a real run (Runtime/VM, Phase 7J.2+). |
+  | `ExecutionResult::Rejected` | `ra_memory::Error` (`UnknownModule`, `DuplicateModule`, …) | ? | Manager converts memory errors ? `ExecutionFailure{code}`; no `From` impl (gateway stays dependency-free). |
+  | `GatewayState` (Idle?Executing?ShutDown) | `MemoryManager` lifecycle (new ? shutdown) | ? | Manager mirrors the state gate; shutdown exactly-once. |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:36: | `ExecutionLifecycle` (Loaded?Running?Paused?Completed/Stopped/Failed) | none (ActiveSpace depth is orthogonal) | ? new | Manager-owned mapping; memory has no execution-instance concept. |
+  | `ExecutionRequest::Run/Stop/Pause/Resume` | `ActiveSpace::call`/`close` (state only); no executor | ?? partial | Lifecycle *state transitions* implementable; real execution semantics deferred (no Runtime/VM). |
+  | `ExecutionRequest::Inspect` | `ProgramSpace::module`/`module_by_name`/`read_rei`/`module_count` | ? | Summary string (matches `Inspected(String)` pattern). |
+  | `ExecutionResult::Finished`/`ProgramOutcome` | none | ? deferred | Requires a real run (Runtime/VM, Phase 7J.2+). |
+  | `ExecutionResult::Rejected` | `ra_memory::Error` (`UnknownModule`, `DuplicateModule`, …) | ? | Manager converts memory errors ? `ExecutionFailure{code}`; no `From` impl (gateway stays dependency-free). |
+  | `GatewayState` (Idle?Executing?ShutDown) | `MemoryManager` lifecycle (new ? shutdown) | ? | Manager mirrors the state gate; shutdown exactly-once. |
+  | `Gateway::shutdown` | `ProgramSpace::destroy` ? `ActiveSpace::destroy` ? `EntitySpace::destroy` ? `MemoryManager::shutdown` | ? | Ordered teardown; see §6. |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:37: | `ExecutionResult::Finished`/`ProgramOutcome` | none | ? deferred | Requires a real run (Runtime/VM, Phase 7J.2+). |
+  | `ExecutionRequest::Inspect` | `ProgramSpace::module`/`module_by_name`/`read_rei`/`module_count` | ? | Summary string (matches `Inspected(String)` pattern). |
+  | `ExecutionLifecycle` (Loaded?Running?Paused?Completed/Stopped/Failed) | none (ActiveSpace depth is orthogonal) | ? new | Manager-owned mapping; memory has no execution-instance concept. |
+  | `ExecutionResult::Rejected` | `ra_memory::Error` (`UnknownModule`, `DuplicateModule`, …) | ? | Manager converts memory errors ? `ExecutionFailure{code}`; no `From` impl (gateway stays dependency-free). |
+  | `GatewayState` (Idle?Executing?ShutDown) | `MemoryManager` lifecycle (new ? shutdown) | ? | Manager mirrors the state gate; shutdown exactly-once. |
+  | `Gateway::shutdown` | `ProgramSpace::destroy` ? `ActiveSpace::destroy` ? `EntitySpace::destroy` ? `MemoryManager::shutdown` | ? | Ordered teardown; see §6. |
+  | `FreezeSnapshot` (roadmap's "FreezeSnapshot ? ProgramSpace") | none in ra-memory; lives in ra-persistence | ?? gap | Snapshot carries **source text**, not REI. Not loadable without the compiler (Phase 7L). |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:38: | `ExecutionResult::Rejected` | `ra_memory::Error` (`UnknownModule`, `DuplicateModule`, …) | ? | Manager converts memory errors ? `ExecutionFailure{code}`; no `From` impl (gateway stays dependency-free). |
+  | `ExecutionLifecycle` (Loaded?Running?Paused?Completed/Stopped/Failed) | none (ActiveSpace depth is orthogonal) | ? new | Manager-owned mapping; memory has no execution-instance concept. |
+  | `ExecutionResult::Finished`/`ProgramOutcome` | none | ? deferred | Requires a real run (Runtime/VM, Phase 7J.2+). |
+  | `GatewayState` (Idle?Executing?ShutDown) | `MemoryManager` lifecycle (new ? shutdown) | ? | Manager mirrors the state gate; shutdown exactly-once. |
+  | `Gateway::shutdown` | `ProgramSpace::destroy` ? `ActiveSpace::destroy` ? `EntitySpace::destroy` ? `MemoryManager::shutdown` | ? | Ordered teardown; see §6. |
+  | `FreezeSnapshot` (roadmap's "FreezeSnapshot ? ProgramSpace") | none in ra-memory; lives in ra-persistence | ?? gap | Snapshot carries **source text**, not REI. Not loadable without the compiler (Phase 7L). |
+  
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:41: | `FreezeSnapshot` (roadmap's "FreezeSnapshot ? ProgramSpace") | none in ra-memory; lives in ra-persistence | ?? gap | Snapshot carries **source text**, not REI. Not loadable without the compiler (Phase 7L). |
+  | `GatewayState` (Idle?Executing?ShutDown) | `MemoryManager` lifecycle (new ? shutdown) | ? | Manager mirrors the state gate; shutdown exactly-once. |
+  | `Gateway::shutdown` | `ProgramSpace::destroy` ? `ActiveSpace::destroy` ? `EntitySpace::destroy` ? `MemoryManager::shutdown` | ? | Ordered teardown; see §6. |
+  
+  **Verdict:** The Phase 7J contract and the frozen memory architecture are **fundamentally compatible** — the memory crate was explicitly designed for exactly this consumer. Three gaps must be resolved by scope/decision, not by changing either crate: the REI source for `Load`, the composition/injection point, and the lifecycle/id mapping owned by the Execution Manager.
+  
+  ---
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:43: **Verdict:** The Phase 7J contract and the frozen memory architecture are **fundamentally compatible** — the memory crate was explicitly designed for exactly this consumer. Three gaps must be resolved by scope/decision, not by changing either crate: the REI source for `Load`, the composition/injection point, and the lifecycle/id mapping owned by the Execution Manager.
+  | `FreezeSnapshot` (roadmap's "FreezeSnapshot ? ProgramSpace") | none in ra-memory; lives in ra-persistence | ?? gap | Snapshot carries **source text**, not REI. Not loadable without the compiler (Phase 7L). |
+  
+  
+  ---
+  
+  ## 3. Audit findings (the 12 points)
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:50: - Input: `LoadedModule<'a> { name: &'a str, rei: &'a [u8], constants: &'a [u8], code_map: &'a [CodeMapEntry] }` — transient buffers; Program Space **copies** them into manager-backed storage (empty payloads are legal, stored as a null-address marker).
+  
+  ### 3.1 Program loading representation
+  - REI is an **opaque byte stream** whose length is tracked; the exact REI encoding is deliberately **open** (Program Space V1 §10). `CodeMapEntry { rei_offset: u32, source: SourcePos }` (8 bytes LE).
+  - `FreezeSnapshot` is **not** a loading representation: it is `.ra` source text + checksum. The frozen pipeline is `.ra ? RA Core (lexer/parser/AST/IR) ? REI ? Program Space` — the lowering does not exist yet.
+  
+  ### 3.2 ProgramSpace creation/loading API
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:51: - REI is an **opaque byte stream** whose length is tracked; the exact REI encoding is deliberately **open** (Program Space V1 §10). `CodeMapEntry { rei_offset: u32, source: SourcePos }` (8 bytes LE).
+  ### 3.1 Program loading representation
+  - Input: `LoadedModule<'a> { name: &'a str, rei: &'a [u8], constants: &'a [u8], code_map: &'a [CodeMapEntry] }` — transient buffers; Program Space **copies** them into manager-backed storage (empty payloads are legal, stored as a null-address marker).
+  - `FreezeSnapshot` is **not** a loading representation: it is `.ra` source text + checksum. The frozen pipeline is `.ra ? RA Core (lexer/parser/AST/IR) ? REI ? Program Space` — the lowering does not exist yet.
+  
+  ### 3.2 ProgramSpace creation/loading API
+  - `ProgramSpace::new(&mut MemoryManager) -> Result<ProgramSpace>` — registers `SpaceKind::Program`, allocates the module table.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:52: - `FreezeSnapshot` is **not** a loading representation: it is `.ra` source text + checksum. The frozen pipeline is `.ra ? RA Core (lexer/parser/AST/IR) ? REI ? Program Space` — the lowering does not exist yet.
+  - Input: `LoadedModule<'a> { name: &'a str, rei: &'a [u8], constants: &'a [u8], code_map: &'a [CodeMapEntry] }` — transient buffers; Program Space **copies** them into manager-backed storage (empty payloads are legal, stored as a null-address marker).
+  - REI is an **opaque byte stream** whose length is tracked; the exact REI encoding is deliberately **open** (Program Space V1 §10). `CodeMapEntry { rei_offset: u32, source: SourcePos }` (8 bytes LE).
+  
+  ### 3.2 ProgramSpace creation/loading API
+  - `ProgramSpace::new(&mut MemoryManager) -> Result<ProgramSpace>` — registers `SpaceKind::Program`, allocates the module table.
+  - `load_module(&mut MemoryManager, &LoadedModule) -> Result<ModuleId>` — rejects empty names (`InvalidArgument`) and duplicate names (`DuplicateModule`).
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:58: - Reads (take `&MemoryManager`): `module(id) -> ModuleRecord`, `module_by_name(name) -> Option<ModuleId>`, `read_rei`, `read_constants`, `code_map_entry`, `code_map` iterator, `source_for_rei_offset`.
+  - `load_module(&mut MemoryManager, &LoadedModule) -> Result<ModuleId>` — rejects empty names (`InvalidArgument`) and duplicate names (`DuplicateModule`).
+  - `unload_module(&mut MemoryManager, id)`, `destroy(self, &mut MemoryManager)` (reclaims all + unregisters the space).
+  - Every operation passes the manager explicitly — the spaces are clients, they never own or borrow it.
+  
+  ### 3.3 Memory ownership rules (frozen)
+  - **MemoryManager is the sole owner of RA memory** (host regions, allocation metadata, space registry).
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:61: ### 3.3 Memory ownership rules (frozen)
+  - Every operation passes the manager explicitly — the spaces are clients, they never own or borrow it.
+  
+  - **MemoryManager is the sole owner of RA memory** (host regions, allocation metadata, space registry).
+  - **Runtime never allocates host memory directly**; **memory spaces never allocate host memory directly**; **all allocation flows through the manager**.
+  - **Runtime Loader owns the `MemoryManager` instance plus space creation and destruction** (manager.rs docs + frozen Execution Workflow).
+  - Spaces hold only bookkeeping (`SpaceId` + manager-backed structures); operations take `&mut MemoryManager`.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:63: - **Runtime never allocates host memory directly**; **memory spaces never allocate host memory directly**; **all allocation flows through the manager**.
+  ### 3.3 Memory ownership rules (frozen)
+  - **MemoryManager is the sole owner of RA memory** (host regions, allocation metadata, space registry).
+  - **Runtime Loader owns the `MemoryManager` instance plus space creation and destruction** (manager.rs docs + frozen Execution Workflow).
+  - Spaces hold only bookkeeping (`SpaceId` + manager-backed structures); operations take `&mut MemoryManager`.
+  - `destroy()` is explicit (drop alone leaks — detectably); "Destroy Runtime Memory after execution" is a frozen rule.
+  - Consequence for 7J.1: the Execution Manager must **own** the `MemoryManager` and drive all space lifecycles; it never allocates outside it.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:64: - **Runtime Loader owns the `MemoryManager` instance plus space creation and destruction** (manager.rs docs + frozen Execution Workflow).
+  - **MemoryManager is the sole owner of RA memory** (host regions, allocation metadata, space registry).
+  - **Runtime never allocates host memory directly**; **memory spaces never allocate host memory directly**; **all allocation flows through the manager**.
+  - Spaces hold only bookkeeping (`SpaceId` + manager-backed structures); operations take `&mut MemoryManager`.
+  - `destroy()` is explicit (drop alone leaks — detectably); "Destroy Runtime Memory after execution" is a frozen rule.
+  - Consequence for 7J.1: the Execution Manager must **own** the `MemoryManager` and drive all space lifecycles; it never allocates outside it.
+  
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:66: - `destroy()` is explicit (drop alone leaks — detectably); "Destroy Runtime Memory after execution" is a frozen rule.
+  - **Runtime Loader owns the `MemoryManager` instance plus space creation and destruction** (manager.rs docs + frozen Execution Workflow).
+  - Spaces hold only bookkeeping (`SpaceId` + manager-backed structures); operations take `&mut MemoryManager`.
+  - Consequence for 7J.1: the Execution Manager must **own** the `MemoryManager` and drive all space lifecycles; it never allocates outside it.
+  
+  ### 3.4 Logical address / reference types
+  - `LogicalAddress [region|slot|generation]` — `Copy`/`Hash`/`Eq`, validated on every use (`NotAllocated`, `StaleAddress`, `OutOfBounds`); never a raw pointer.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:67: - Consequence for 7J.1: the Execution Manager must **own** the `MemoryManager` and drive all space lifecycles; it never allocates outside it.
+  - Spaces hold only bookkeeping (`SpaceId` + manager-backed structures); operations take `&mut MemoryManager`.
+  - `destroy()` is explicit (drop alone leaks — detectably); "Destroy Runtime Memory after execution" is a frozen rule.
+  
+  ### 3.4 Logical address / reference types
+  - `LogicalAddress [region|slot|generation]` — `Copy`/`Hash`/`Eq`, validated on every use (`NotAllocated`, `StaleAddress`, `OutOfBounds`); never a raw pointer.
+  - RA-level handles: `SpaceId(u32)`, `ModuleId(u32)` (monotonic, never reused), `CellId`/`ScopeId` (Active Space), `EntityCellId` (Entity Grid), `ValueStorage` (embedded in `Value` for extended values).
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:71: - RA-level handles: `SpaceId(u32)`, `ModuleId(u32)` (monotonic, never reused), `CellId`/`ScopeId` (Active Space), `EntityCellId` (Entity Grid), `ValueStorage` (embedded in `Value` for extended values).
+  ### 3.4 Logical address / reference types
+  - `LogicalAddress [region|slot|generation]` — `Copy`/`Hash`/`Eq`, validated on every use (`NotAllocated`, `StaleAddress`, `OutOfBounds`); never a raw pointer.
+  - The **gateway must never expose any of these** (contract independence). The Execution Manager owns the mapping and never leaks addresses across the boundary.
+  
+  ### 3.5 FreezeSnapshot / snapshot APIs
+  - Location: **ra-persistence** (`FreezeSnapshot`), not ra-memory. `freeze(&LiveProgram)`, `source()`, `meta()`, `checksum()`, `verify_integrity()`, `frozen_at()`.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:72: - The **gateway must never expose any of these** (contract independence). The Execution Manager owns the mapping and never leaks addresses across the boundary.
+  - `LogicalAddress [region|slot|generation]` — `Copy`/`Hash`/`Eq`, validated on every use (`NotAllocated`, `StaleAddress`, `OutOfBounds`); never a raw pointer.
+  - RA-level handles: `SpaceId(u32)`, `ModuleId(u32)` (monotonic, never reused), `CellId`/`ScopeId` (Active Space), `EntityCellId` (Entity Grid), `ValueStorage` (embedded in `Value` for extended values).
+  
+  ### 3.5 FreezeSnapshot / snapshot APIs
+  - Location: **ra-persistence** (`FreezeSnapshot`), not ra-memory. `freeze(&LiveProgram)`, `source()`, `meta()`, `checksum()`, `verify_integrity()`, `frozen_at()`.
+  - `.raf` persistence path exists (`Pss::serialize_snapshot`/`deserialize_snapshot` in ra-syss).
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:77: - **Gap:** no `FreezeSnapshot ? LoadedModule` bridge exists or can exist without the compiler (source text ? REI). The roadmap's "first `FreezeSnapshot ? ProgramSpace` load path" must be rescoped for 7J.1 (see §7 risks, C2).
+  - Location: **ra-persistence** (`FreezeSnapshot`), not ra-memory. `freeze(&LiveProgram)`, `source()`, `meta()`, `checksum()`, `verify_integrity()`, `frozen_at()`.
+  - `.raf` persistence path exists (`Pss::serialize_snapshot`/`deserialize_snapshot` in ra-syss).
+  
+  ### 3.6 Shutdown/cleanup APIs
+  - `MemoryManager::shutdown(self) -> ShutdownReport`, `unregister_space`, `release_idle_regions`.
+  - Space teardown: `ProgramSpace::destroy`, `ActiveSpace::destroy`, `EntitySpace::destroy` (+ `destroy_value_list` before releasing cells), `GlobalEntityArea::destroy`, `ValueList::destroy`.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:82: - Required order (7J.1's `Gateway::shutdown`): destroy all spaces/areas ? `MemoryManager::shutdown` ? gateway state `ShutDown` (terminal, exactly once).
+  - `MemoryManager::shutdown(self) -> ShutdownReport`, `unregister_space`, `release_idle_regions`.
+  - Space teardown: `ProgramSpace::destroy`, `ActiveSpace::destroy`, `EntitySpace::destroy` (+ `destroy_value_list` before releasing cells), `GlobalEntityArea::destroy`, `ValueList::destroy`.
+  
+  ### 3.7 Error boundaries
+  - `ra_memory::Error` (16 variants) + its own `Result`; deliberately **not bridged into ra-syss** (audit §18 note) and must not leak into ra-gateway (dependency-free).
+  - The Execution Manager owns the mapping: memory failure ? `ExecutionResult::Rejected { reason: ExecutionFailure { code: LoadFailed | ExecutionFailed | Unsupported } }` (a **deterministic answer**, not a contract error); contract violations (unknown `ExecutionId`, wrong state, shutdown, correlation mismatch) ? `Err(GatewayError)`.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:86: - The Execution Manager owns the mapping: memory failure ? `ExecutionResult::Rejected { reason: ExecutionFailure { code: LoadFailed | ExecutionFailed | Unsupported } }` (a **deterministic answer**, not a contract error); contract violations (unknown `ExecutionId`, wrong state, shutdown, correlation mismatch) ? `Err(GatewayError)`.
+  ### 3.7 Error boundaries
+  - `ra_memory::Error` (16 variants) + its own `Result`; deliberately **not bridged into ra-syss** (audit §18 note) and must not leak into ra-gateway (dependency-free).
+  - `DuplicateModule`/`UnknownModule` on Load ? `Rejected { LoadFailed }`; `UnknownModule` on Inspect/Run of an unknown **execution** ? `Err(GatewayError::UnknownExecution)` (execution-level, not module-level — two distinct checks).
+  
+  ### 3.8 Gateway `ProgramId` ? memory model mapping
+  - Safe one-way mapping: gateway `ProgramId` (validated name: non-empty, =255 bytes, no `/` `\` NUL, not `.`/`..`, no trailing dot/space, not Windows-reserved) is always a **valid** `LoadedModule.name` (memory requires only non-empty; duplicates rejected).
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:87: - `DuplicateModule`/`UnknownModule` on Load ? `Rejected { LoadFailed }`; `UnknownModule` on Inspect/Run of an unknown **execution** ? `Err(GatewayError::UnknownExecution)` (execution-level, not module-level — two distinct checks).
+  - `ra_memory::Error` (16 variants) + its own `Result`; deliberately **not bridged into ra-syss** (audit §18 note) and must not leak into ra-gateway (dependency-free).
+  - The Execution Manager owns the mapping: memory failure ? `ExecutionResult::Rejected { reason: ExecutionFailure { code: LoadFailed | ExecutionFailed | Unsupported } }` (a **deterministic answer**, not a contract error); contract violations (unknown `ExecutionId`, wrong state, shutdown, correlation mismatch) ? `Err(GatewayError)`.
+  
+  ### 3.8 Gateway `ProgramId` ? memory model mapping
+  - Safe one-way mapping: gateway `ProgramId` (validated name: non-empty, =255 bytes, no `/` `\` NUL, not `.`/`..`, no trailing dot/space, not Windows-reserved) is always a **valid** `LoadedModule.name` (memory requires only non-empty; duplicates rejected).
+  - `ProgramSpace::module_by_name` is the natural `ProgramId ? ModuleId` bridge — no host-side map required (aligns with the gateway's "no HashMaps" rule).
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:92: - **Do not conflate** the three `*Id` types: `ra_gateway::ProgramId` (name), `ra_persistence::ProgramId` (u64 instance id), `ra_memory::ModuleId` (minted). The Execution Manager is the only component that may hold the bridges.
+  - Safe one-way mapping: gateway `ProgramId` (validated name: non-empty, =255 bytes, no `/` `\` NUL, not `.`/`..`, no trailing dot/space, not Windows-reserved) is always a **valid** `LoadedModule.name` (memory requires only non-empty; duplicates rejected).
+  - `ProgramSpace::module_by_name` is the natural `ProgramId ? ModuleId` bridge — no host-side map required (aligns with the gateway's "no HashMaps" rule).
+  
+  ### 3.9 Gateway `ExecutionRequest` variants implementable in 7J.1
+  | Variant | 7J.1 status | Implementation |
+  |---|---|---|
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:94: ### 3.9 Gateway `ExecutionRequest` variants implementable in 7J.1
+  - **Do not conflate** the three `*Id` types: `ra_gateway::ProgramId` (name), `ra_persistence::ProgramId` (u64 instance id), `ra_memory::ModuleId` (minted). The Execution Manager is the only component that may hold the bridges.
+  
+  | Variant | 7J.1 status | Implementation |
+  |---|---|---|
+  | `Load` | **Implementable** | `ReiProvider` seam ? `LoadedModule` ? `ProgramSpace::load_module` ? mint `ExecutionId` ? `Completed { state: Loaded }` |
+  | `Inspect` | **Implementable** | `ProgramSpace`/manager queries ? `Inspected { summary }` |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:95: | Variant | 7J.1 status | Implementation |
+  
+  ### 3.9 Gateway `ExecutionRequest` variants implementable in 7J.1
+  |---|---|---|
+  | `Load` | **Implementable** | `ReiProvider` seam ? `LoadedModule` ? `ProgramSpace::load_module` ? mint `ExecutionId` ? `Completed { state: Loaded }` |
+  | `Inspect` | **Implementable** | `ProgramSpace`/manager queries ? `Inspected { summary }` |
+  | `Stop` | **Implementable** | lifecycle ? `Stopped` (state-level; no real execution to stop yet) |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:97: | `Load` | **Implementable** | `ReiProvider` seam ? `LoadedModule` ? `ProgramSpace::load_module` ? mint `ExecutionId` ? `Completed { state: Loaded }` |
+  | Variant | 7J.1 status | Implementation |
+  |---|---|---|
+  | `Inspect` | **Implementable** | `ProgramSpace`/manager queries ? `Inspected { summary }` |
+  | `Stop` | **Implementable** | lifecycle ? `Stopped` (state-level; no real execution to stop yet) |
+  | `Run` / `Pause` / `Resume` | **State transitions only** | `ActiveSpace::call`/`close` + lifecycle table can drive the *states*; **real execution semantics deferred** |
+  | `shutdown()` | **Implementable** | ordered space/manager teardown ? `ShutDown` |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:99: | `Stop` | **Implementable** | lifecycle ? `Stopped` (state-level; no real execution to stop yet) |
+  | `Load` | **Implementable** | `ReiProvider` seam ? `LoadedModule` ? `ProgramSpace::load_module` ? mint `ExecutionId` ? `Completed { state: Loaded }` |
+  | `Inspect` | **Implementable** | `ProgramSpace`/manager queries ? `Inspected { summary }` |
+  | `Run` / `Pause` / `Resume` | **State transitions only** | `ActiveSpace::call`/`close` + lifecycle table can drive the *states*; **real execution semantics deferred** |
+  | `shutdown()` | **Implementable** | ordered space/manager teardown ? `ShutDown` |
+  
+  ### 3.10 Variants that must remain deferred
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:100: | `Run` / `Pause` / `Resume` | **State transitions only** | `ActiveSpace::call`/`close` + lifecycle table can drive the *states*; **real execution semantics deferred** |
+  | `Inspect` | **Implementable** | `ProgramSpace`/manager queries ? `Inspected { summary }` |
+  | `Stop` | **Implementable** | lifecycle ? `Stopped` (state-level; no real execution to stop yet) |
+  | `shutdown()` | **Implementable** | ordered space/manager teardown ? `ShutDown` |
+  
+  ### 3.10 Variants that must remain deferred
+  - **Real `Run`** (REI execution loop), **`Pause`/`Resume`** of a genuinely running program, **`ExecutionResult::Finished`/`ProgramOutcome`** — all need the Runtime/VM (Phase 7J.2+).
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:104: - **Real `Run`** (REI execution loop), **`Pause`/`Resume`** of a genuinely running program, **`ExecutionResult::Finished`/`ProgramOutcome`** — all need the Runtime/VM (Phase 7J.2+).
+  
+  ### 3.10 Variants that must remain deferred
+  - **Compiler-produced REI** (the real `ReiProvider`) — Phase 7L.
+  - `.rab`/`.raf`/`.rap` byte encodings, async execution, threading, networking — out of scope by frozen design (synchronous, deterministic).
+  
+  ### 3.11 Conflicts between Phase 7J and the frozen memory architecture
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:105: - **Compiler-produced REI** (the real `ReiProvider`) — Phase 7L.
+  ### 3.10 Variants that must remain deferred
+  - **Real `Run`** (REI execution loop), **`Pause`/`Resume`** of a genuinely running program, **`ExecutionResult::Finished`/`ProgramOutcome`** — all need the Runtime/VM (Phase 7J.2+).
+  - `.rab`/`.raf`/`.rap` byte encodings, async execution, threading, networking — out of scope by frozen design (synchronous, deterministic).
+  
+  ### 3.11 Conflicts between Phase 7J and the frozen memory architecture
+  **No fundamental conflict** — memory is frozen and waiting for this exact consumer. Five non-blocking items must be decided/documented:
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:106: - `.rab`/`.raf`/`.rap` byte encodings, async execution, threading, networking — out of scope by frozen design (synchronous, deterministic).
+  - **Real `Run`** (REI execution loop), **`Pause`/`Resume`** of a genuinely running program, **`ExecutionResult::Finished`/`ProgramOutcome`** — all need the Runtime/VM (Phase 7J.2+).
+  - **Compiler-produced REI** (the real `ReiProvider`) — Phase 7L.
+  
+  ### 3.11 Conflicts between Phase 7J and the frozen memory architecture
+  **No fundamental conflict** — memory is frozen and waiting for this exact consumer. Five non-blocking items must be decided/documented:
+  
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:108: ### 3.11 Conflicts between Phase 7J and the frozen memory architecture
+  - `.rab`/`.raf`/`.rap` byte encodings, async execution, threading, networking — out of scope by frozen design (synchronous, deterministic).
+  
+  **No fundamental conflict** — memory is frozen and waiting for this exact consumer. Five non-blocking items must be decided/documented:
+  
+  - **C1 — Composition/injection point (the big one).** `ra-syss` must never depend on `ra-runtime` (rule 3); `software` and `ra-bootstrap` must never depend on `ra-runtime` (rules 2/4). So *nothing in the current graph may construct the Execution Manager*. Required decision: rank `ra-runtime` at **2** (sibling of SySS; it must consume memory/gateway/persistence, all rank 1 — rank 1 is impossible for it by the strictly-decreasing rule), and inject the gateway into SySS through an **additive constructor** (`SySS::initialize_with_gateway(Box<dyn Gateway>)`, mirroring the 7G.1 `with_storage_root` pattern) called by the **future application shell** (Frontend/IDE), not by Bootstrap/software. The shell's forbidden-table entry is the intended friction point to revise when the shell lands.
+  - **C2 — FreezeSnapshot?REI gap.** The roadmap's "first `FreezeSnapshot ? ProgramSpace` load path" is **not end-to-end implementable**: the snapshot is source text, Program Space needs REI, and there is no compiler. 7J.1 must introduce the `ReiProvider` seam and scope to "provider ? ProgramSpace load path"; the real provider is the compiler.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:111: - **C1 — Composition/injection point (the big one).** `ra-syss` must never depend on `ra-runtime` (rule 3); `software` and `ra-bootstrap` must never depend on `ra-runtime` (rules 2/4). So *nothing in the current graph may construct the Execution Manager*. Required decision: rank `ra-runtime` at **2** (sibling of SySS; it must consume memory/gateway/persistence, all rank 1 — rank 1 is impossible for it by the strictly-decreasing rule), and inject the gateway into SySS through an **additive constructor** (`SySS::initialize_with_gateway(Box<dyn Gateway>)`, mirroring the 7G.1 `with_storage_root` pattern) called by the **future application shell** (Frontend/IDE), not by Bootstrap/software. The shell's forbidden-table entry is the intended friction point to revise when the shell lands.
+  **No fundamental conflict** — memory is frozen and waiting for this exact consumer. Five non-blocking items must be decided/documented:
+  
+  - **C2 — FreezeSnapshot?REI gap.** The roadmap's "first `FreezeSnapshot ? ProgramSpace` load path" is **not end-to-end implementable**: the snapshot is source text, Program Space needs REI, and there is no compiler. 7J.1 must introduce the `ReiProvider` seam and scope to "provider ? ProgramSpace load path"; the real provider is the compiler.
+  - **C3 — Four identity spaces.** `ra_gateway::ProgramId` (name), `ra_persistence::ProgramId` (u64), `ra_memory::ModuleId` (minted), `ra_gateway::ExecutionId` (minted). The name `ProgramId` exists in two crates — never conflate; the Execution Manager bridges via names/`module_by_name`.
+  - **C4 — Lifecycle mapping is manager-owned.** Memory has no execution-instance concept and no lifecycle type; `ExecutionId` + `ExecutionLifecycle` are Execution-Manager state, mapped onto `ProgramSpace` records and the `ActiveSpace` chain. This is a new type (`ExecutionRecord`), not a memory change.
+  - **C5 — Hub expansion.** The Phase 7J description mentions "Execution/DB hub expansion points". Attaching the gateway **behind the backbone** (architecture.md) via additive injection is the recommended path; adding an **Execution hub** to the frozen hub graph would touch the frozen kernel/registry/graph and is **not recommended** for 7J.1.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:112: - **C2 — FreezeSnapshot?REI gap.** The roadmap's "first `FreezeSnapshot ? ProgramSpace` load path" is **not end-to-end implementable**: the snapshot is source text, Program Space needs REI, and there is no compiler. 7J.1 must introduce the `ReiProvider` seam and scope to "provider ? ProgramSpace load path"; the real provider is the compiler.
+  
+  - **C1 — Composition/injection point (the big one).** `ra-syss` must never depend on `ra-runtime` (rule 3); `software` and `ra-bootstrap` must never depend on `ra-runtime` (rules 2/4). So *nothing in the current graph may construct the Execution Manager*. Required decision: rank `ra-runtime` at **2** (sibling of SySS; it must consume memory/gateway/persistence, all rank 1 — rank 1 is impossible for it by the strictly-decreasing rule), and inject the gateway into SySS through an **additive constructor** (`SySS::initialize_with_gateway(Box<dyn Gateway>)`, mirroring the 7G.1 `with_storage_root` pattern) called by the **future application shell** (Frontend/IDE), not by Bootstrap/software. The shell's forbidden-table entry is the intended friction point to revise when the shell lands.
+  - **C3 — Four identity spaces.** `ra_gateway::ProgramId` (name), `ra_persistence::ProgramId` (u64), `ra_memory::ModuleId` (minted), `ra_gateway::ExecutionId` (minted). The name `ProgramId` exists in two crates — never conflate; the Execution Manager bridges via names/`module_by_name`.
+  - **C4 — Lifecycle mapping is manager-owned.** Memory has no execution-instance concept and no lifecycle type; `ExecutionId` + `ExecutionLifecycle` are Execution-Manager state, mapped onto `ProgramSpace` records and the `ActiveSpace` chain. This is a new type (`ExecutionRecord`), not a memory change.
+  - **C5 — Hub expansion.** The Phase 7J description mentions "Execution/DB hub expansion points". Attaching the gateway **behind the backbone** (architecture.md) via additive injection is the recommended path; adding an **Execution hub** to the frozen hub graph would touch the frozen kernel/registry/graph and is **not recommended** for 7J.1.
+  
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:113: - **C3 — Four identity spaces.** `ra_gateway::ProgramId` (name), `ra_persistence::ProgramId` (u64), `ra_memory::ModuleId` (minted), `ra_gateway::ExecutionId` (minted). The name `ProgramId` exists in two crates — never conflate; the Execution Manager bridges via names/`module_by_name`.
+  - **C1 — Composition/injection point (the big one).** `ra-syss` must never depend on `ra-runtime` (rule 3); `software` and `ra-bootstrap` must never depend on `ra-runtime` (rules 2/4). So *nothing in the current graph may construct the Execution Manager*. Required decision: rank `ra-runtime` at **2** (sibling of SySS; it must consume memory/gateway/persistence, all rank 1 — rank 1 is impossible for it by the strictly-decreasing rule), and inject the gateway into SySS through an **additive constructor** (`SySS::initialize_with_gateway(Box<dyn Gateway>)`, mirroring the 7G.1 `with_storage_root` pattern) called by the **future application shell** (Frontend/IDE), not by Bootstrap/software. The shell's forbidden-table entry is the intended friction point to revise when the shell lands.
+  - **C2 — FreezeSnapshot?REI gap.** The roadmap's "first `FreezeSnapshot ? ProgramSpace` load path" is **not end-to-end implementable**: the snapshot is source text, Program Space needs REI, and there is no compiler. 7J.1 must introduce the `ReiProvider` seam and scope to "provider ? ProgramSpace load path"; the real provider is the compiler.
+  - **C4 — Lifecycle mapping is manager-owned.** Memory has no execution-instance concept and no lifecycle type; `ExecutionId` + `ExecutionLifecycle` are Execution-Manager state, mapped onto `ProgramSpace` records and the `ActiveSpace` chain. This is a new type (`ExecutionRecord`), not a memory change.
+  - **C5 — Hub expansion.** The Phase 7J description mentions "Execution/DB hub expansion points". Attaching the gateway **behind the backbone** (architecture.md) via additive injection is the recommended path; adding an **Execution hub** to the frozen hub graph would touch the frozen kernel/registry/graph and is **not recommended** for 7J.1.
+  
+  ### 3.12 Exact dependency direction required
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:114: - **C4 — Lifecycle mapping is manager-owned.** Memory has no execution-instance concept and no lifecycle type; `ExecutionId` + `ExecutionLifecycle` are Execution-Manager state, mapped onto `ProgramSpace` records and the `ActiveSpace` chain. This is a new type (`ExecutionRecord`), not a memory change.
+  - **C2 — FreezeSnapshot?REI gap.** The roadmap's "first `FreezeSnapshot ? ProgramSpace` load path" is **not end-to-end implementable**: the snapshot is source text, Program Space needs REI, and there is no compiler. 7J.1 must introduce the `ReiProvider` seam and scope to "provider ? ProgramSpace load path"; the real provider is the compiler.
+  - **C3 — Four identity spaces.** `ra_gateway::ProgramId` (name), `ra_persistence::ProgramId` (u64), `ra_memory::ModuleId` (minted), `ra_gateway::ExecutionId` (minted). The name `ProgramId` exists in two crates — never conflate; the Execution Manager bridges via names/`module_by_name`.
+  - **C5 — Hub expansion.** The Phase 7J description mentions "Execution/DB hub expansion points". Attaching the gateway **behind the backbone** (architecture.md) via additive injection is the recommended path; adding an **Execution hub** to the frozen hub graph would touch the frozen kernel/registry/graph and is **not recommended** for 7J.1.
+  
+  ### 3.12 Exact dependency direction required
+  ```
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:115: - **C5 — Hub expansion.** The Phase 7J description mentions "Execution/DB hub expansion points". Attaching the gateway **behind the backbone** (architecture.md) via additive injection is the recommended path; adding an **Execution hub** to the frozen hub graph would touch the frozen kernel/registry/graph and is **not recommended** for 7J.1.
+  - **C3 — Four identity spaces.** `ra_gateway::ProgramId` (name), `ra_persistence::ProgramId` (u64), `ra_memory::ModuleId` (minted), `ra_gateway::ExecutionId` (minted). The name `ProgramId` exists in two crates — never conflate; the Execution Manager bridges via names/`module_by_name`.
+  - **C4 — Lifecycle mapping is manager-owned.** Memory has no execution-instance concept and no lifecycle type; `ExecutionId` + `ExecutionLifecycle` are Execution-Manager state, mapped onto `ProgramSpace` records and the `ActiveSpace` chain. This is a new type (`ExecutionRecord`), not a memory change.
+  
+  ### 3.12 Exact dependency direction required
+  ```
+  ra-gateway        ? (none)                  [frozen, dependency-free]
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:122: ra-runtime  (new) ? ra-gateway, ra-memory, ra-persistence, ra-common   [rank 2 — sibling of ra-syss]
+  ra-memory         ? ra-common               [frozen, leaf]
+  ra-persistence    ? ra-common               [frozen, leaf]
+  ra-syss           ? ra-gateway, ra-persistence   [unchanged; trait call only, NEVER ra-runtime]
+  ra-bootstrap      ? ra-syss                [unchanged]
+  software          ? ra-bootstrap           [unchanged]
+  future shell      ? software/syss + ra-runtime   [the composition root; revises the shell's forbidden table deliberately]
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:123: ra-syss           ? ra-gateway, ra-persistence   [unchanged; trait call only, NEVER ra-runtime]
+  ra-persistence    ? ra-common               [frozen, leaf]
+  ra-runtime  (new) ? ra-gateway, ra-memory, ra-persistence, ra-common   [rank 2 — sibling of ra-syss]
+  ra-bootstrap      ? ra-syss                [unchanged]
+  software          ? ra-bootstrap           [unchanged]
+  future shell      ? software/syss + ra-runtime   [the composition root; revises the shell's forbidden table deliberately]
+  ```
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:126: future shell      ? software/syss + ra-runtime   [the composition root; revises the shell's forbidden table deliberately]
+  ra-bootstrap      ? ra-syss                [unchanged]
+  software          ? ra-bootstrap           [unchanged]
+  ```
+  No crate may depend on `ra-runtime` except the future application shell. `ra-syss ? ra-gateway` already passes the guard (gateway=1, syss=2).
+  
+  ---
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:128: No crate may depend on `ra-runtime` except the future application shell. `ra-syss ? ra-gateway` already passes the guard (gateway=1, syss=2).
+  future shell      ? software/syss + ra-runtime   [the composition root; revises the shell's forbidden table deliberately]
+  ```
+  
+  ---
+  
+  ## 4. Required Execution Manager types (new crate `ra-runtime`)
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:132: ## 4. Required Execution Manager types (new crate `ra-runtime`)
+  ---
+  
+  
+  | Type | Role |
+  |---|---|
+  | `ExecutionManager` | Implements `ra_gateway::Gateway`. Owns `MemoryManager`, `ProgramSpace`, `ActiveSpace`, `EntitySpace`, `GlobalEntityArea`; the `ExecutionSequence`-minted `ExecutionId`s; and the internal `ExecutionRecord` table (`ExecutionId ? { ProgramId, ModuleId, ExecutionLifecycle, ActiveSpace depth }`). |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:136: | `ExecutionManager` | Implements `ra_gateway::Gateway`. Owns `MemoryManager`, `ProgramSpace`, `ActiveSpace`, `EntitySpace`, `GlobalEntityArea`; the `ExecutionSequence`-minted `ExecutionId`s; and the internal `ExecutionRecord` table (`ExecutionId ? { ProgramId, ModuleId, ExecutionLifecycle, ActiveSpace depth }`). |
+  | Type | Role |
+  |---|---|
+  | `ExecutionManagerConfig` | Construction config (mirrors `MemoryManagerConfig` style). |
+  | `ReiProvider` trait | `fn module(&self, program: &ProgramId) -> GatewayResult<LoadedModule>` — the REI source seam. Real impl = compiler (Phase 7L); 7J.1 ships a test/host impl over pre-lowered bytes. |
+  | `ExecutionRecord` (internal) | The manager-owned lifecycle/id mapping (§3.11 C4). |
+  | `ExecutionError` + mapping | `From<ra_memory::Error>`; converter ? `ExecutionFailure { FailureCode }` for `ExecutionResult::Rejected`. |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:137: | `ExecutionManagerConfig` | Construction config (mirrors `MemoryManagerConfig` style). |
+  |---|---|
+  | `ExecutionManager` | Implements `ra_gateway::Gateway`. Owns `MemoryManager`, `ProgramSpace`, `ActiveSpace`, `EntitySpace`, `GlobalEntityArea`; the `ExecutionSequence`-minted `ExecutionId`s; and the internal `ExecutionRecord` table (`ExecutionId ? { ProgramId, ModuleId, ExecutionLifecycle, ActiveSpace depth }`). |
+  | `ReiProvider` trait | `fn module(&self, program: &ProgramId) -> GatewayResult<LoadedModule>` — the REI source seam. Real impl = compiler (Phase 7L); 7J.1 ships a test/host impl over pre-lowered bytes. |
+  | `ExecutionRecord` (internal) | The manager-owned lifecycle/id mapping (§3.11 C4). |
+  | `ExecutionError` + mapping | `From<ra_memory::Error>`; converter ? `ExecutionFailure { FailureCode }` for `ExecutionResult::Rejected`. |
+  | Ordered teardown | `destroy()`: spaces/areas ? `MemoryManager::shutdown` ? gateway `ShutDown` (exactly once). |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:138: | `ReiProvider` trait | `fn module(&self, program: &ProgramId) -> GatewayResult<LoadedModule>` — the REI source seam. Real impl = compiler (Phase 7L); 7J.1 ships a test/host impl over pre-lowered bytes. |
+  | `ExecutionManager` | Implements `ra_gateway::Gateway`. Owns `MemoryManager`, `ProgramSpace`, `ActiveSpace`, `EntitySpace`, `GlobalEntityArea`; the `ExecutionSequence`-minted `ExecutionId`s; and the internal `ExecutionRecord` table (`ExecutionId ? { ProgramId, ModuleId, ExecutionLifecycle, ActiveSpace depth }`). |
+  | `ExecutionManagerConfig` | Construction config (mirrors `MemoryManagerConfig` style). |
+  | `ExecutionRecord` (internal) | The manager-owned lifecycle/id mapping (§3.11 C4). |
+  | `ExecutionError` + mapping | `From<ra_memory::Error>`; converter ? `ExecutionFailure { FailureCode }` for `ExecutionResult::Rejected`. |
+  | Ordered teardown | `destroy()`: spaces/areas ? `MemoryManager::shutdown` ? gateway `ShutDown` (exactly once). |
+  | Gate behavior | Mirrors the Phase 7J test double: `Idle ? Executing ? Idle` per synchronous call, `ShutDown` terminal, `UnknownExecution` rejection, correlation echo/`verify_answers`. |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:139: | `ExecutionRecord` (internal) | The manager-owned lifecycle/id mapping (§3.11 C4). |
+  | `ExecutionManagerConfig` | Construction config (mirrors `MemoryManagerConfig` style). |
+  | `ReiProvider` trait | `fn module(&self, program: &ProgramId) -> GatewayResult<LoadedModule>` — the REI source seam. Real impl = compiler (Phase 7L); 7J.1 ships a test/host impl over pre-lowered bytes. |
+  | `ExecutionError` + mapping | `From<ra_memory::Error>`; converter ? `ExecutionFailure { FailureCode }` for `ExecutionResult::Rejected`. |
+  | Ordered teardown | `destroy()`: spaces/areas ? `MemoryManager::shutdown` ? gateway `ShutDown` (exactly once). |
+  | Gate behavior | Mirrors the Phase 7J test double: `Idle ? Executing ? Idle` per synchronous call, `ShutDown` terminal, `UnknownExecution` rejection, correlation echo/`verify_answers`. |
+  
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:140: | `ExecutionError` + mapping | `From<ra_memory::Error>`; converter ? `ExecutionFailure { FailureCode }` for `ExecutionResult::Rejected`. |
+  | `ReiProvider` trait | `fn module(&self, program: &ProgramId) -> GatewayResult<LoadedModule>` — the REI source seam. Real impl = compiler (Phase 7L); 7J.1 ships a test/host impl over pre-lowered bytes. |
+  | `ExecutionRecord` (internal) | The manager-owned lifecycle/id mapping (§3.11 C4). |
+  | Ordered teardown | `destroy()`: spaces/areas ? `MemoryManager::shutdown` ? gateway `ShutDown` (exactly once). |
+  | Gate behavior | Mirrors the Phase 7J test double: `Idle ? Executing ? Idle` per synchronous call, `ShutDown` terminal, `UnknownExecution` rejection, correlation echo/`verify_answers`. |
+  
+  ## 5. Required Runtime foundation types (defined in 7J.1, semantics later)
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:142: | Gate behavior | Mirrors the Phase 7J test double: `Idle ? Executing ? Idle` per synchronous call, `ShutDown` terminal, `UnknownExecution` rejection, correlation echo/`verify_answers`. |
+  | `ExecutionError` + mapping | `From<ra_memory::Error>`; converter ? `ExecutionFailure { FailureCode }` for `ExecutionResult::Rejected`. |
+  | Ordered teardown | `destroy()`: spaces/areas ? `MemoryManager::shutdown` ? gateway `ShutDown` (exactly once). |
+  
+  ## 5. Required Runtime foundation types (defined in 7J.1, semantics later)
+  
+  | Type | Role |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:144: ## 5. Required Runtime foundation types (defined in 7J.1, semantics later)
+  | Gate behavior | Mirrors the Phase 7J test double: `Idle ? Executing ? Idle` per synchronous call, `ShutDown` terminal, `UnknownExecution` rejection, correlation echo/`verify_answers`. |
+  
+  
+  | Type | Role |
+  |---|---|
+  | `RuntimeLoader` | Per the frozen docs, the **only component that populates runtime memory** and owns the `MemoryManager` instance + space creation/destruction. 7J.1's Program Space load path is its first responsibility. |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:148: | `RuntimeLoader` | Per the frozen docs, the **only component that populates runtime memory** and owns the `MemoryManager` instance + space creation/destruction. 7J.1's Program Space load path is its first responsibility. |
+  | Type | Role |
+  |---|---|
+  | `Program` | A loaded-program handle (ModuleId + entry REI offset + scope table) derived from `ProgramSpace` records. |
+  | `Frame` / `ExecutionContext` | Active Space `ActiveRecord` (ScopeId + REI position) + REI local/global scope state (Active Space §8). |
+  | `Vm` / `Executor` (shape only) | Deferred execution engine (Phase 7J.2+). `Rei` stays an opaque byte stream (encoding open). |
+  
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:149: | `Program` | A loaded-program handle (ModuleId + entry REI offset + scope table) derived from `ProgramSpace` records. |
+  |---|---|
+  | `RuntimeLoader` | Per the frozen docs, the **only component that populates runtime memory** and owns the `MemoryManager` instance + space creation/destruction. 7J.1's Program Space load path is its first responsibility. |
+  | `Frame` / `ExecutionContext` | Active Space `ActiveRecord` (ScopeId + REI position) + REI local/global scope state (Active Space §8). |
+  | `Vm` / `Executor` (shape only) | Deferred execution engine (Phase 7J.2+). `Rei` stays an opaque byte stream (encoding open). |
+  
+  ## 6. Exact files that would need modification (7J.1 implementation)
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:150: | `Frame` / `ExecutionContext` | Active Space `ActiveRecord` (ScopeId + REI position) + REI local/global scope state (Active Space §8). |
+  | `RuntimeLoader` | Per the frozen docs, the **only component that populates runtime memory** and owns the `MemoryManager` instance + space creation/destruction. 7J.1's Program Space load path is its first responsibility. |
+  | `Program` | A loaded-program handle (ModuleId + entry REI offset + scope table) derived from `ProgramSpace` records. |
+  | `Vm` / `Executor` (shape only) | Deferred execution engine (Phase 7J.2+). `Rei` stays an opaque byte stream (encoding open). |
+  
+  ## 6. Exact files that would need modification (7J.1 implementation)
+  
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:151: | `Vm` / `Executor` (shape only) | Deferred execution engine (Phase 7J.2+). `Rei` stays an opaque byte stream (encoding open). |
+  | `Program` | A loaded-program handle (ModuleId + entry REI offset + scope table) derived from `ProgramSpace` records. |
+  | `Frame` / `ExecutionContext` | Active Space `ActiveRecord` (ScopeId + REI position) + REI local/global scope state (Active Space §8). |
+  
+  ## 6. Exact files that would need modification (7J.1 implementation)
+  
+  | File | Change |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:153: ## 6. Exact files that would need modification (7J.1 implementation)
+  | `Vm` / `Executor` (shape only) | Deferred execution engine (Phase 7J.2+). `Rei` stays an opaque byte stream (encoding open). |
+  
+  
+  | File | Change |
+  |---|---|
+  | `software/runtime/Cargo.toml` (+ `src/lib.rs`, `execution_manager.rs`, `runtime_loader.rs`, `error.rs`, `rei_provider.rs`) | **New crate.** Depends on `ra-gateway`, `ra-memory`, `ra-persistence`, `ra-common`. |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:157: | `software/runtime/Cargo.toml` (+ `src/lib.rs`, `execution_manager.rs`, `runtime_loader.rs`, `error.rs`, `rei_provider.rs`) | **New crate.** Depends on `ra-gateway`, `ra-memory`, `ra-persistence`, `ra-common`. |
+  | File | Change |
+  |---|---|
+  | `Cargo.toml` (workspace root) | Add `"software/runtime"` to `members`. |
+  | `Cargo.lock` | Regenerated. |
+  | `scripts/check-architecture.sh` | `RANK[ra-runtime]=2`; `FORBIDDEN[ra-runtime]` (never ? ra-syss/ra-bootstrap/software/frontend/ide/database); `ra-syss`'s existing forbidden entry already lists `ra-runtime`. |
+  | `software/syss/src/platform.rs` (+ `platform_interface.rs`) | **Additive only:** `SySS::initialize_with_gateway(Box<dyn Gateway>)` (+ `PlatformInterface` counterpart), frozen signatures intact; execution-control ops may route through the stored gateway (no shape change). |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:158: | `Cargo.toml` (workspace root) | Add `"software/runtime"` to `members`. |
+  |---|---|
+  | `software/runtime/Cargo.toml` (+ `src/lib.rs`, `execution_manager.rs`, `runtime_loader.rs`, `error.rs`, `rei_provider.rs`) | **New crate.** Depends on `ra-gateway`, `ra-memory`, `ra-persistence`, `ra-common`. |
+  | `Cargo.lock` | Regenerated. |
+  | `scripts/check-architecture.sh` | `RANK[ra-runtime]=2`; `FORBIDDEN[ra-runtime]` (never ? ra-syss/ra-bootstrap/software/frontend/ide/database); `ra-syss`'s existing forbidden entry already lists `ra-runtime`. |
+  | `software/syss/src/platform.rs` (+ `platform_interface.rs`) | **Additive only:** `SySS::initialize_with_gateway(Box<dyn Gateway>)` (+ `PlatformInterface` counterpart), frozen signatures intact; execution-control ops may route through the stored gateway (no shape change). |
+  | `docs/architecture.md` | Phase 7J.1 section (rank, injection, scope, id mapping). |
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:160: | `scripts/check-architecture.sh` | `RANK[ra-runtime]=2`; `FORBIDDEN[ra-runtime]` (never ? ra-syss/ra-bootstrap/software/frontend/ide/database); `ra-syss`'s existing forbidden entry already lists `ra-runtime`. |
+  | `Cargo.toml` (workspace root) | Add `"software/runtime"` to `members`. |
+  | `Cargo.lock` | Regenerated. |
+  | `software/syss/src/platform.rs` (+ `platform_interface.rs`) | **Additive only:** `SySS::initialize_with_gateway(Box<dyn Gateway>)` (+ `PlatformInterface` counterpart), frozen signatures intact; execution-control ops may route through the stored gateway (no shape change). |
+  | `docs/architecture.md` | Phase 7J.1 section (rank, injection, scope, id mapping). |
+  | **Not touched (frozen)** | `ra-gateway`, `ra-memory`, `ra-persistence`, `ra-common`, the hub graph/backbone contracts, `PlatformInterface` shape, storage/lifecycle implementation. |
+  
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:161: | `software/syss/src/platform.rs` (+ `platform_interface.rs`) | **Additive only:** `SySS::initialize_with_gateway(Box<dyn Gateway>)` (+ `PlatformInterface` counterpart), frozen signatures intact; execution-control ops may route through the stored gateway (no shape change). |
+  | `Cargo.lock` | Regenerated. |
+  | `scripts/check-architecture.sh` | `RANK[ra-runtime]=2`; `FORBIDDEN[ra-runtime]` (never ? ra-syss/ra-bootstrap/software/frontend/ide/database); `ra-syss`'s existing forbidden entry already lists `ra-runtime`. |
+  | `docs/architecture.md` | Phase 7J.1 section (rank, injection, scope, id mapping). |
+  | **Not touched (frozen)** | `ra-gateway`, `ra-memory`, `ra-persistence`, `ra-common`, the hub graph/backbone contracts, `PlatformInterface` shape, storage/lifecycle implementation. |
+  
+  **Integration testing note:** `ra-runtime` proves `Gateway ? ExecutionManager ? ProgramSpace` in its own tests (full load/read/destroy round-trip, `0 live allocations` at shutdown). `ra-syss` tests can inject a **mock** `Gateway` (trait from `ra-gateway`, which ra-syss already depends on) to prove the additive constructor — **without** depending on `ra-runtime` (a `[dev-dependencies]` edge would be caught by the guard). The real gateway is wired into SySS only by the future shell.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:162: | `docs/architecture.md` | Phase 7J.1 section (rank, injection, scope, id mapping). |
+  | `scripts/check-architecture.sh` | `RANK[ra-runtime]=2`; `FORBIDDEN[ra-runtime]` (never ? ra-syss/ra-bootstrap/software/frontend/ide/database); `ra-syss`'s existing forbidden entry already lists `ra-runtime`. |
+  | `software/syss/src/platform.rs` (+ `platform_interface.rs`) | **Additive only:** `SySS::initialize_with_gateway(Box<dyn Gateway>)` (+ `PlatformInterface` counterpart), frozen signatures intact; execution-control ops may route through the stored gateway (no shape change). |
+  | **Not touched (frozen)** | `ra-gateway`, `ra-memory`, `ra-persistence`, `ra-common`, the hub graph/backbone contracts, `PlatformInterface` shape, storage/lifecycle implementation. |
+  
+  **Integration testing note:** `ra-runtime` proves `Gateway ? ExecutionManager ? ProgramSpace` in its own tests (full load/read/destroy round-trip, `0 live allocations` at shutdown). `ra-syss` tests can inject a **mock** `Gateway` (trait from `ra-gateway`, which ra-syss already depends on) to prove the additive constructor — **without** depending on `ra-runtime` (a `[dev-dependencies]` edge would be caught by the guard). The real gateway is wired into SySS only by the future shell.
+  
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:165: **Integration testing note:** `ra-runtime` proves `Gateway ? ExecutionManager ? ProgramSpace` in its own tests (full load/read/destroy round-trip, `0 live allocations` at shutdown). `ra-syss` tests can inject a **mock** `Gateway` (trait from `ra-gateway`, which ra-syss already depends on) to prove the additive constructor — **without** depending on `ra-runtime` (a `[dev-dependencies]` edge would be caught by the guard). The real gateway is wired into SySS only by the future shell.
+  | **Not touched (frozen)** | `ra-gateway`, `ra-memory`, `ra-persistence`, `ra-common`, the hub graph/backbone contracts, `PlatformInterface` shape, storage/lifecycle implementation. |
+  
+  
+  ## 7. Risks / contract conflicts (summary)
+  
+  1. **Composition root undefined** (C1) — nothing may currently construct the Execution Manager; requires the rank-2 + additive-injection + future-shell decision. Highest-priority item; a doc/guard decision, not a code blocker.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:169: 1. **Composition root undefined** (C1) — nothing may currently construct the Execution Manager; requires the rank-2 + additive-injection + future-shell decision. Highest-priority item; a doc/guard decision, not a code blocker.
+  ## 7. Risks / contract conflicts (summary)
+  
+  2. **FreezeSnapshot ? REI** (C2) — the roadmap's headline 7J.1 artifact must be rescoped to an REI-provider load path.
+  3. **Identity conflation risk** (C3) — `ProgramId` in two crates; `ModuleId` vs `ExecutionId`; enforce via the manager-only bridging rule.
+  4. **Rank revision is mandatory** — `ra-runtime` cannot be rank 1 (needs rank-1 deps) and cannot be rank 3+ (nothing could feed it memory); rank 2 with a shell composition root is the only acyclic shape.
+  5. **No hub expansion** — do not add an Execution hub to the frozen hub graph in 7J.1; attach behind the backbone by injection.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:170: 2. **FreezeSnapshot ? REI** (C2) — the roadmap's headline 7J.1 artifact must be rescoped to an REI-provider load path.
+  
+  1. **Composition root undefined** (C1) — nothing may currently construct the Execution Manager; requires the rank-2 + additive-injection + future-shell decision. Highest-priority item; a doc/guard decision, not a code blocker.
+  3. **Identity conflation risk** (C3) — `ProgramId` in two crates; `ModuleId` vs `ExecutionId`; enforce via the manager-only bridging rule.
+  4. **Rank revision is mandatory** — `ra-runtime` cannot be rank 1 (needs rank-1 deps) and cannot be rank 3+ (nothing could feed it memory); rank 2 with a shell composition root is the only acyclic shape.
+  5. **No hub expansion** — do not add an Execution hub to the frozen hub graph in 7J.1; attach behind the backbone by injection.
+  6. **Lifecycle mapping** (C4) — new manager-owned `ExecutionRecord`; explicit mapping gateway-lifecycle ? memory state; never invent memory-side lifecycle.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:171: 3. **Identity conflation risk** (C3) — `ProgramId` in two crates; `ModuleId` vs `ExecutionId`; enforce via the manager-only bridging rule.
+  1. **Composition root undefined** (C1) — nothing may currently construct the Execution Manager; requires the rank-2 + additive-injection + future-shell decision. Highest-priority item; a doc/guard decision, not a code blocker.
+  2. **FreezeSnapshot ? REI** (C2) — the roadmap's headline 7J.1 artifact must be rescoped to an REI-provider load path.
+  4. **Rank revision is mandatory** — `ra-runtime` cannot be rank 1 (needs rank-1 deps) and cannot be rank 3+ (nothing could feed it memory); rank 2 with a shell composition root is the only acyclic shape.
+  5. **No hub expansion** — do not add an Execution hub to the frozen hub graph in 7J.1; attach behind the backbone by injection.
+  6. **Lifecycle mapping** (C4) — new manager-owned `ExecutionRecord`; explicit mapping gateway-lifecycle ? memory state; never invent memory-side lifecycle.
+  7. **Destroy ordering** (C6) — exactly-once ordered teardown; `ProgramSpace.destroy`/`ActiveSpace.destroy`/`EntitySpace.destroy` before `MemoryManager::shutdown`; leaks are detectable (`ShutdownReport`).
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:172: 4. **Rank revision is mandatory** — `ra-runtime` cannot be rank 1 (needs rank-1 deps) and cannot be rank 3+ (nothing could feed it memory); rank 2 with a shell composition root is the only acyclic shape.
+  2. **FreezeSnapshot ? REI** (C2) — the roadmap's headline 7J.1 artifact must be rescoped to an REI-provider load path.
+  3. **Identity conflation risk** (C3) — `ProgramId` in two crates; `ModuleId` vs `ExecutionId`; enforce via the manager-only bridging rule.
+  5. **No hub expansion** — do not add an Execution hub to the frozen hub graph in 7J.1; attach behind the backbone by injection.
+  6. **Lifecycle mapping** (C4) — new manager-owned `ExecutionRecord`; explicit mapping gateway-lifecycle ? memory state; never invent memory-side lifecycle.
+  7. **Destroy ordering** (C6) — exactly-once ordered teardown; `ProgramSpace.destroy`/`ActiveSpace.destroy`/`EntitySpace.destroy` before `MemoryManager::shutdown`; leaks are detectable (`ShutdownReport`).
+  
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:173: 5. **No hub expansion** — do not add an Execution hub to the frozen hub graph in 7J.1; attach behind the backbone by injection.
+  3. **Identity conflation risk** (C3) — `ProgramId` in two crates; `ModuleId` vs `ExecutionId`; enforce via the manager-only bridging rule.
+  4. **Rank revision is mandatory** — `ra-runtime` cannot be rank 1 (needs rank-1 deps) and cannot be rank 3+ (nothing could feed it memory); rank 2 with a shell composition root is the only acyclic shape.
+  6. **Lifecycle mapping** (C4) — new manager-owned `ExecutionRecord`; explicit mapping gateway-lifecycle ? memory state; never invent memory-side lifecycle.
+  7. **Destroy ordering** (C6) — exactly-once ordered teardown; `ProgramSpace.destroy`/`ActiveSpace.destroy`/`EntitySpace.destroy` before `MemoryManager::shutdown`; leaks are detectable (`ShutdownReport`).
+  
+  ## 8. Recommended Phase 7J.1 implementation order
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:174: 6. **Lifecycle mapping** (C4) — new manager-owned `ExecutionRecord`; explicit mapping gateway-lifecycle ? memory state; never invent memory-side lifecycle.
+  4. **Rank revision is mandatory** — `ra-runtime` cannot be rank 1 (needs rank-1 deps) and cannot be rank 3+ (nothing could feed it memory); rank 2 with a shell composition root is the only acyclic shape.
+  5. **No hub expansion** — do not add an Execution hub to the frozen hub graph in 7J.1; attach behind the backbone by injection.
+  7. **Destroy ordering** (C6) — exactly-once ordered teardown; `ProgramSpace.destroy`/`ActiveSpace.destroy`/`EntitySpace.destroy` before `MemoryManager::shutdown`; leaks are detectable (`ShutdownReport`).
+  
+  ## 8. Recommended Phase 7J.1 implementation order
+  
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:177: ## 8. Recommended Phase 7J.1 implementation order
+  7. **Destroy ordering** (C6) — exactly-once ordered teardown; `ProgramSpace.destroy`/`ActiveSpace.destroy`/`EntitySpace.destroy` before `MemoryManager::shutdown`; leaks are detectable (`ShutdownReport`).
+  
+  
+  0. **Freeze the decisions** (doc + guard change only): `ra-runtime` at rank 2; additive `SySS::initialize_with_gateway`; shell as composition root; 7J.1 scope = REI-provider load path (not snapshot?REI).
+  1. Scaffold `ra-runtime`; `ExecutionManager` skeleton implementing `Gateway` (state gate, mints, correlation, `ExecutionRecord`).
+  2. `RuntimeLoader` foundation: `MemoryManager` + `ProgramSpace` (+ `ActiveSpace`/`EntitySpace` creation) and the ordered destroy path.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:179: 0. **Freeze the decisions** (doc + guard change only): `ra-runtime` at rank 2; additive `SySS::initialize_with_gateway`; shell as composition root; 7J.1 scope = REI-provider load path (not snapshot?REI).
+  ## 8. Recommended Phase 7J.1 implementation order
+  
+  1. Scaffold `ra-runtime`; `ExecutionManager` skeleton implementing `Gateway` (state gate, mints, correlation, `ExecutionRecord`).
+  2. `RuntimeLoader` foundation: `MemoryManager` + `ProgramSpace` (+ `ActiveSpace`/`EntitySpace` creation) and the ordered destroy path.
+  3. `ReiProvider` seam; implement **Load** (`Completed { Loaded }`).
+  4. Implement **Inspect** and **Stop**; Run/Pause/Resume as lifecycle-state transitions only.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:180: 1. Scaffold `ra-runtime`; `ExecutionManager` skeleton implementing `Gateway` (state gate, mints, correlation, `ExecutionRecord`).
+  
+  0. **Freeze the decisions** (doc + guard change only): `ra-runtime` at rank 2; additive `SySS::initialize_with_gateway`; shell as composition root; 7J.1 scope = REI-provider load path (not snapshot?REI).
+  2. `RuntimeLoader` foundation: `MemoryManager` + `ProgramSpace` (+ `ActiveSpace`/`EntitySpace` creation) and the ordered destroy path.
+  3. `ReiProvider` seam; implement **Load** (`Completed { Loaded }`).
+  4. Implement **Inspect** and **Stop**; Run/Pause/Resume as lifecycle-state transitions only.
+  5. Error mapping (memory `Error` ? `ExecutionFailure`; `DuplicateModule` ? `Rejected { LoadFailed }`).
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:181: 2. `RuntimeLoader` foundation: `MemoryManager` + `ProgramSpace` (+ `ActiveSpace`/`EntitySpace` creation) and the ordered destroy path.
+  0. **Freeze the decisions** (doc + guard change only): `ra-runtime` at rank 2; additive `SySS::initialize_with_gateway`; shell as composition root; 7J.1 scope = REI-provider load path (not snapshot?REI).
+  1. Scaffold `ra-runtime`; `ExecutionManager` skeleton implementing `Gateway` (state gate, mints, correlation, `ExecutionRecord`).
+  3. `ReiProvider` seam; implement **Load** (`Completed { Loaded }`).
+  4. Implement **Inspect** and **Stop**; Run/Pause/Resume as lifecycle-state transitions only.
+  5. Error mapping (memory `Error` ? `ExecutionFailure`; `DuplicateModule` ? `Rejected { LoadFailed }`).
+  6. `shutdown()` exactly-once; `ShutdownReport`-verified teardown.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:182: 3. `ReiProvider` seam; implement **Load** (`Completed { Loaded }`).
+  1. Scaffold `ra-runtime`; `ExecutionManager` skeleton implementing `Gateway` (state gate, mints, correlation, `ExecutionRecord`).
+  2. `RuntimeLoader` foundation: `MemoryManager` + `ProgramSpace` (+ `ActiveSpace`/`EntitySpace` creation) and the ordered destroy path.
+  4. Implement **Inspect** and **Stop**; Run/Pause/Resume as lifecycle-state transitions only.
+  5. Error mapping (memory `Error` ? `ExecutionFailure`; `DuplicateModule` ? `Rejected { LoadFailed }`).
+  6. `shutdown()` exactly-once; `ShutdownReport`-verified teardown.
+  7. Integration proof: ra-runtime tests (load test REI ? read back ? destroy ? 0 live allocations); ra-syss additive constructor + mock-gateway tests.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:184: 5. Error mapping (memory `Error` ? `ExecutionFailure`; `DuplicateModule` ? `Rejected { LoadFailed }`).
+  3. `ReiProvider` seam; implement **Load** (`Completed { Loaded }`).
+  4. Implement **Inspect** and **Stop**; Run/Pause/Resume as lifecycle-state transitions only.
+  6. `shutdown()` exactly-once; `ShutdownReport`-verified teardown.
+  7. Integration proof: ra-runtime tests (load test REI ? read back ? destroy ? 0 live allocations); ra-syss additive constructor + mock-gateway tests.
+  8. Docs + full verification suite.
+  
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:186: 7. Integration proof: ra-runtime tests (load test REI ? read back ? destroy ? 0 live allocations); ra-syss additive constructor + mock-gateway tests.
+  5. Error mapping (memory `Error` ? `ExecutionFailure`; `DuplicateModule` ? `Rejected { LoadFailed }`).
+  6. `shutdown()` exactly-once; `ShutdownReport`-verified teardown.
+  8. Docs + full verification suite.
+  
+  ## 9. Verification plan
+  
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:193: - `cargo clippy --workspace --all-targets`
+  - `cargo fmt --all --check`
+  - `cargo check --workspace`
+  - `cargo test --workspace` (new: gateway-contract compliance, Program Space round-trip, lifecycle table, teardown `live_allocations() == 0`, correlation safety, deterministic re-runs)
+  - `cargo tree --workspace` (must show `ra-runtime ? {ra-gateway, ra-memory, ra-persistence, ra-common}`, no cycle)
+  - `bash ./scripts/check-architecture.sh` (updated tables; must pass)
+  - `cargo run -p software` (unchanged boot/shutdown smoke; gateway not yet wired in the binary)
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:194: - `cargo test --workspace` (new: gateway-contract compliance, Program Space round-trip, lifecycle table, teardown `live_allocations() == 0`, correlation safety, deterministic re-runs)
+  - `cargo check --workspace`
+  - `cargo clippy --workspace --all-targets`
+  - `cargo tree --workspace` (must show `ra-runtime ? {ra-gateway, ra-memory, ra-persistence, ra-common}`, no cycle)
+  - `bash ./scripts/check-architecture.sh` (updated tables; must pass)
+  - `cargo run -p software` (unchanged boot/shutdown smoke; gateway not yet wired in the binary)
+  
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:195: - `cargo tree --workspace` (must show `ra-runtime ? {ra-gateway, ra-memory, ra-persistence, ra-common}`, no cycle)
+  - `cargo clippy --workspace --all-targets`
+  - `cargo test --workspace` (new: gateway-contract compliance, Program Space round-trip, lifecycle table, teardown `live_allocations() == 0`, correlation safety, deterministic re-runs)
+  - `bash ./scripts/check-architecture.sh` (updated tables; must pass)
+  - `cargo run -p software` (unchanged boot/shutdown smoke; gateway not yet wired in the binary)
+  
+  ## 10. Recommendation
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:196: - `bash ./scripts/check-architecture.sh` (updated tables; must pass)
+  - `cargo test --workspace` (new: gateway-contract compliance, Program Space round-trip, lifecycle table, teardown `live_allocations() == 0`, correlation safety, deterministic re-runs)
+  - `cargo tree --workspace` (must show `ra-runtime ? {ra-gateway, ra-memory, ra-persistence, ra-common}`, no cycle)
+  - `cargo run -p software` (unchanged boot/shutdown smoke; gateway not yet wired in the binary)
+  
+  ## 10. Recommendation
+  
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:201: **GO** for Phase 7J.1 implementation, subject to two prerequisite decisions and one explicit non-goal:
+  ## 10. Recommendation
+  
+  
+  - **Prerequisite 1 (composition):** freeze `ra-runtime` at rank 2, the additive `SySS::initialize_with_gateway` injection, and the future application shell as the composition root. No `ra-syss ? ra-runtime` edge, ever.
+  - **Prerequisite 2 (scope):** 7J.1 delivers the **REI-provider ? ProgramSpace load path** and the Execution Manager skeleton (Load / Inspect / Stop / lifecycle-state transitions / ordered shutdown). The `FreezeSnapshot ? ProgramSpace` artifact is deferred until the compiler exists (Phase 7L); 7J.1 proves the path with pre-lowered test REI.
+  - **Explicit non-goals:** no REI execution, no VM, no compiler, no async/threads/networking, no changes to `ra-gateway` or `ra-memory`.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:203: - **Prerequisite 1 (composition):** freeze `ra-runtime` at rank 2, the additive `SySS::initialize_with_gateway` injection, and the future application shell as the composition root. No `ra-syss ? ra-runtime` edge, ever.
+  **GO** for Phase 7J.1 implementation, subject to two prerequisite decisions and one explicit non-goal:
+  
+  - **Prerequisite 2 (scope):** 7J.1 delivers the **REI-provider ? ProgramSpace load path** and the Execution Manager skeleton (Load / Inspect / Stop / lifecycle-state transitions / ordered shutdown). The `FreezeSnapshot ? ProgramSpace` artifact is deferred until the compiler exists (Phase 7L); 7J.1 proves the path with pre-lowered test REI.
+  - **Explicit non-goals:** no REI execution, no VM, no compiler, no async/threads/networking, no changes to `ra-gateway` or `ra-memory`.
+  
+  The frozen memory architecture and the Phase 7J contract are compatible as-is; nothing requires changing either crate. The remaining work is new-manager code, one additive SySS constructor, and the deliberate layer-table/rank decision.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:204: - **Prerequisite 2 (scope):** 7J.1 delivers the **REI-provider ? ProgramSpace load path** and the Execution Manager skeleton (Load / Inspect / Stop / lifecycle-state transitions / ordered shutdown). The `FreezeSnapshot ? ProgramSpace` artifact is deferred until the compiler exists (Phase 7L); 7J.1 proves the path with pre-lowered test REI.
+  
+  - **Prerequisite 1 (composition):** freeze `ra-runtime` at rank 2, the additive `SySS::initialize_with_gateway` injection, and the future application shell as the composition root. No `ra-syss ? ra-runtime` edge, ever.
+  - **Explicit non-goals:** no REI execution, no VM, no compiler, no async/threads/networking, no changes to `ra-gateway` or `ra-memory`.
+  
+  The frozen memory architecture and the Phase 7J contract are compatible as-is; nothing requires changing either crate. The remaining work is new-manager code, one additive SySS constructor, and the deliberate layer-table/rank decision.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:205: - **Explicit non-goals:** no REI execution, no VM, no compiler, no async/threads/networking, no changes to `ra-gateway` or `ra-memory`.
+  - **Prerequisite 1 (composition):** freeze `ra-runtime` at rank 2, the additive `SySS::initialize_with_gateway` injection, and the future application shell as the composition root. No `ra-syss ? ra-runtime` edge, ever.
+  - **Prerequisite 2 (scope):** 7J.1 delivers the **REI-provider ? ProgramSpace load path** and the Execution Manager skeleton (Load / Inspect / Stop / lifecycle-state transitions / ordered shutdown). The `FreezeSnapshot ? ProgramSpace` artifact is deferred until the compiler exists (Phase 7L); 7J.1 proves the path with pre-lowered test REI.
+  
+  The frozen memory architecture and the Phase 7J contract are compatible as-is; nothing requires changing either crate. The remaining work is new-manager code, one additive SySS constructor, and the deliberate layer-table/rank decision.
+.\RA-RUST-4C_7J1_PRE_IMPLEMENTATION_AUDIT.md:207: The frozen memory architecture and the Phase 7J contract are compatible as-is; nothing requires changing either crate. The remaining work is new-manager code, one additive SySS constructor, and the deliberate layer-table/rank decision.
+  - **Explicit non-goals:** no REI execution, no VM, no compiler, no async/threads/networking, no changes to `ra-gateway` or `ra-memory`.
+  

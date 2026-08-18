@@ -1,0 +1,371 @@
+============================================================
+RA-01 — DUPLICATE / STALE FOLDER AUDIT
+Date: 2026-08-15 05:33:44 +05:30
+Repository: F:\RA_01
+============================================================
+
+=== 1. GIT STATUS ===
+## main...origin/main [ahead 3, behind 2]
+ M Cargo.lock
+ M Cargo.toml
+ M docs/architecture.md
+ M scripts/check-architecture.sh
+ m software
+?? PROJECT_DUPLICATE_FOLDER_AUDIT.txt
+?? RA-RUST-4A_PLATFORM_INTERFACE_AUDIT.txt
+?? RA-RUST-4B_GATEWAY_ATTACHMENT_AUDIT.txt
+?? RA-RUST-4B_SOURCE_LEVEL_AUDIT.txt
+?? RA-RUST-4_PRE_IMPLEMENTATION_AUDIT.txt
+?? RA_ENGINEERING_HANDOFF_CHECKLIST.md
+?? RA_FULL_PROJECT_AUDIT_2026-08-14.md
+?? ws2.err.log
+?? ws2.log
+
+=== 2. TOP-LEVEL SOFTWARE DIRECTORIES ===
+
+Name        FullName                     
+----        --------                     
+bootstrap   F:\RA_01\software\bootstrap  
+cli         F:\RA_01\software\cli        
+common      F:\RA_01\software\common     
+compiler    F:\RA_01\software\compiler   
+debugger    F:\RA_01\software\debugger   
+gateway     F:\RA_01\software\gateway    
+ide         F:\RA_01\software\ide        
+memory      F:\RA_01\software\memory     
+persistence F:\RA_01\software\persistence
+ra-data     F:\RA_01\software\ra-data    
+runtime     F:\RA_01\software\runtime    
+src         F:\RA_01\software\src        
+syss        F:\RA_01\software\syss       
+
+
+
+
+=== 3. ALL CARGO MANIFESTS ===
+
+FullName                                
+--------                                
+F:\RA_01\Cargo.toml                     
+F:\RA_01\software\bootstrap\Cargo.toml  
+F:\RA_01\software\Cargo.toml            
+F:\RA_01\software\common\Cargo.toml     
+F:\RA_01\software\gateway\Cargo.toml    
+F:\RA_01\software\memory\Cargo.toml     
+F:\RA_01\software\persistence\Cargo.toml
+F:\RA_01\software\syss\Cargo.toml       
+
+
+
+
+=== 4. CARGO PACKAGE IDENTITY ===
+PACKAGE: software | VERSION: 0.1.0 | PATH: F:\RA_01\software\Cargo.toml
+PACKAGE: ra-common | VERSION: 0.1.0 | PATH: F:\RA_01\software\common\Cargo.toml
+PACKAGE: ra-memory | VERSION: 0.1.0 | PATH: F:\RA_01\software\memory\Cargo.toml
+PACKAGE: ra-persistence | VERSION: 0.1.0 | PATH: F:\RA_01\software\persistence\Cargo.toml
+PACKAGE: ra-syss | VERSION: 0.1.0 | PATH: F:\RA_01\software\syss\Cargo.toml
+PACKAGE: ra-bootstrap | VERSION: 0.1.0 | PATH: F:\RA_01\software\bootstrap\Cargo.toml
+PACKAGE: ra-gateway | VERSION: 0.1.0 | PATH: F:\RA_01\software\gateway\Cargo.toml
+
+=== 5. DUPLICATE CARGO PACKAGE NAMES ===
+NONE
+
+=== 6. DIRECTORY NAME COLLISIONS ===
+DIRECTORY NAME: src
+
+FullName                         
+--------                         
+F:\RA_01\software\src            
+F:\RA_01\software\common\src     
+F:\RA_01\software\memory\src     
+F:\RA_01\software\runtime\src    
+F:\RA_01\software\compiler\src   
+F:\RA_01\software\persistence\src
+F:\RA_01\software\cli\src        
+F:\RA_01\software\ide\src        
+F:\RA_01\software\debugger\src   
+F:\RA_01\software\syss\src       
+F:\RA_01\software\bootstrap\src  
+F:\RA_01\software\gateway\src    
+
+
+
+DIRECTORY NAME: ra-data
+
+FullName                           
+--------                           
+F:\RA_01\software\ra-data          
+F:\RA_01\software\syss\ra-data     
+F:\RA_01\software\bootstrap\ra-data
+
+
+
+DIRECTORY NAME: tests
+
+FullName                           
+--------                           
+F:\RA_01\software\common\tests     
+F:\RA_01\software\memory\tests     
+F:\RA_01\software\runtime\tests    
+F:\RA_01\software\compiler\tests   
+F:\RA_01\software\persistence\tests
+F:\RA_01\software\cli\tests        
+F:\RA_01\software\ide\tests        
+F:\RA_01\software\debugger\tests   
+
+
+
+DIRECTORY NAME: workspaces
+
+FullName                                      
+--------                                      
+F:\RA_01\software\syss\ra-data\workspaces     
+F:\RA_01\software\bootstrap\ra-data\workspaces
+F:\RA_01\software\ra-data\workspaces          
+
+
+
+DIRECTORY NAME: projects
+
+FullName                                    
+--------                                    
+F:\RA_01\software\syss\ra-data\projects     
+F:\RA_01\software\bootstrap\ra-data\projects
+F:\RA_01\software\ra-data\projects          
+
+
+
+DIRECTORY NAME: packages
+
+FullName                                    
+--------                                    
+F:\RA_01\software\syss\ra-data\packages     
+F:\RA_01\software\bootstrap\ra-data\packages
+F:\RA_01\software\ra-data\packages          
+
+
+
+DIRECTORY NAME: files
+
+FullName                                 
+--------                                 
+F:\RA_01\software\syss\ra-data\files     
+F:\RA_01\software\bootstrap\ra-data\files
+F:\RA_01\software\ra-data\files          
+
+
+
+DIRECTORY NAME: settings
+
+FullName                                    
+--------                                    
+F:\RA_01\software\syss\ra-data\settings     
+F:\RA_01\software\bootstrap\ra-data\settings
+F:\RA_01\software\ra-data\settings          
+
+
+
+DIRECTORY NAME: logs
+
+FullName                                
+--------                                
+F:\RA_01\software\syss\ra-data\logs     
+F:\RA_01\software\bootstrap\ra-data\logs
+F:\RA_01\software\ra-data\logs          
+
+
+
+DIRECTORY NAME: history
+
+FullName                                   
+--------                                   
+F:\RA_01\software\syss\ra-data\history     
+F:\RA_01\software\bootstrap\ra-data\history
+F:\RA_01\software\ra-data\history          
+
+
+
+DIRECTORY NAME: artifacts
+
+FullName                                     
+--------                                     
+F:\RA_01\software\syss\ra-data\artifacts     
+F:\RA_01\software\bootstrap\ra-data\artifacts
+F:\RA_01\software\ra-data\artifacts          
+
+
+
+
+=== 7. EXACT DUPLICATE FILE CONTENT BY SHA256 ===
+
+Files are compared by content hash, not filename.
+NONE
+
+=== 8. IMPORTANT DOMAIN DIRECTORY INVENTORY ===
+NAME: common
+
+FullName                
+--------                
+F:\RA_01\software\common
+
+
+
+NAME: persistence
+
+FullName                     
+--------                     
+F:\RA_01\software\persistence
+
+
+
+NAME: syss
+
+FullName              
+--------              
+F:\RA_01\software\syss
+
+
+
+NAME: bootstrap
+
+FullName                   
+--------                   
+F:\RA_01\software\bootstrap
+
+
+
+NAME: memory
+
+FullName                
+--------                
+F:\RA_01\software\memory
+
+
+
+NAME: gateway
+
+FullName                 
+--------                 
+F:\RA_01\software\gateway
+
+
+
+NAME: runtime
+
+FullName                 
+--------                 
+F:\RA_01\software\runtime
+
+
+
+NAME: compiler
+
+FullName                  
+--------                  
+F:\RA_01\software\compiler
+
+
+
+NAME: ide
+
+FullName             
+--------             
+F:\RA_01\software\ide
+
+
+
+NAME: cli
+
+FullName             
+--------             
+F:\RA_01\software\cli
+
+
+
+NAME: debugger
+
+FullName                  
+--------                  
+F:\RA_01\software\debugger
+
+
+
+NAME: ra-data
+
+FullName                           
+--------                           
+F:\RA_01\software\ra-data          
+F:\RA_01\software\syss\ra-data     
+F:\RA_01\software\bootstrap\ra-data
+
+
+
+
+=== 9. ROOT WORKSPACE MEMBERS ===
+# RA Programming Language â€” Cargo workspace root.
+#
+# Each module under `software/` is its own crate; add new modules to the
+# `members` list as they are implemented (development order: common,
+# persistence, syss, bootstrap, memory, runtime, compiler, interpreter, ide,
+# debugger).
+
+[workspace]
+resolver = "2"
+members = [
+    "software",
+    "software/common",
+    "software/persistence",
+    "software/syss",
+    "software/bootstrap",
+    "software/memory",
+    "software/gateway",
+]
+
+=== 10. CURRENT DEPENDENCY GRAPH ===
+ra-bootstrap v0.1.0 (F:\RA_01\software\bootstrap)
+GööGöÇGöÇ ra-syss v0.1.0 (F:\RA_01\software\syss)
+    Gö£GöÇGöÇ ra-gateway v0.1.0 (F:\RA_01\software\gateway)
+    GööGöÇGöÇ ra-persistence v0.1.0 (F:\RA_01\software\persistence)
+        GööGöÇGöÇ ra-common v0.1.0 (F:\RA_01\software\common)
+
+ra-common v0.1.0 (F:\RA_01\software\common)
+
+ra-gateway v0.1.0 (F:\RA_01\software\gateway)
+
+ra-memory v0.1.0 (F:\RA_01\software\memory)
+GööGöÇGöÇ ra-common v0.1.0 (F:\RA_01\software\common)
+
+ra-persistence v0.1.0 (F:\RA_01\software\persistence) (*)
+
+ra-syss v0.1.0 (F:\RA_01\software\syss) (*)
+
+software v0.1.0 (F:\RA_01\software)
+GööGöÇGöÇ ra-bootstrap v0.1.0 (F:\RA_01\software\bootstrap) (*)
+
+=== 11. ARCHITECTURE GUARD ===
+Architecture check passed: 7 crates, 6 dependency edge(s) verified.
+
+=== 12. DIRECTORY SIZE SUMMARY ===
+
+Directory   Files SizeMB
+---------   ----- ------
+bootstrap       8   0.01
+cli             0      0
+common          8   0.05
+compiler        0      0
+debugger        0      0
+gateway         2      0
+ide             0      0
+memory         22   0.38
+persistence     9   0.06
+ra-data         0      0
+runtime         0      0
+src             1      0
+syss           21    0.6
+
+
+
+
+============================================================
+DUPLICATE / STALE FOLDER AUDIT COMPLETE
+============================================================

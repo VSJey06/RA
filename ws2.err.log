@@ -1,0 +1,80 @@
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\ra_common-2ckyrhho94vqr\s-hlb35h0o8h-1bd19fl-working`
+
+warning: `ra-common` (lib) generated 1 warning
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\ra_memory-08qfasfwrv8hj\s-hl4hdc9rte-1gtja98-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\ra_persistence-2ysehe10ojo8k\s-hlb36b5o56-0caydua-working`
+
+warning: `ra-memory` (lib) generated 1 warning
+warning: `ra-persistence` (lib) generated 1 warning
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\ra_syss-1hilbrkfry70r\s-hlb38oauxs-1jru2oi-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\active_space-1b5dz42k98nyx\s-hlb4cpa6n3-1qlab82-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\value_list-1jca1kjsw25sp\s-hlb4cpclxj-1nwcsby-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\program_space-08i36bl5klyav\s-hlb3eiy4va-0qs35t9-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\local_entity-39mqr74xrl7m6\s-hlb3ej9vhv-0u6mvyf-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\ra_syss-072k84opi8psl\s-hlb47047es-1qqsmk9-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\entity_space-0iard8eeteqq0\s-hlb3eiy86r-0f1cei4-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\memory-2fes948mhxtm1\s-hlb3eiy871-1l750b8-working`
+
+warning: `ra-syss` (lib) generated 1 warning
+warning: `ra-memory` (test "active_space") generated 1 warning
+warning: `ra-memory` (test "value_list") generated 1 warning
+warning: `ra-memory` (test "program_space") generated 1 warning
+warning: `ra-memory` (test "local_entity") generated 1 warning
+warning: `ra-syss` (lib test) generated 1 warning
+warning: `ra-memory` (test "entity_space") generated 1 warning
+warning: `ra-memory` (test "memory") generated 1 warning
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\ra_bootstrap-27rw8cszrf97g\s-hlb3ej9vhl-1ruolwv-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\ra_bootstrap-2xf0fdj6529bg\s-hlb4cpfd76-14psman-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\global_entity-2okekca0kz41v\s-hlb3eiv189-0bpms1p-working`
+
+   Compiling ra-memory v0.1.0 (F:\RA_01\software\memory)
+   Compiling ra-common v0.1.0 (F:\RA_01\software\common)
+   Compiling ra-persistence v0.1.0 (F:\RA_01\software\persistence)
+warning: `ra-bootstrap` (lib) generated 1 warning
+warning: `ra-bootstrap` (lib test) generated 1 warning
+warning: `ra-memory` (test "global_entity") generated 1 warning
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\software-15rcx822gcyqm\s-hlb3jlg878-0imk4cx-working`
+
+warning: `software` (bin "software" test) generated 1 warning
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\common-34pcfqzdsoml4\s-hlb57nh7sy-0o9gvhv-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\ra_persistence-3t3m25n01vfdd\s-hlb57nybzn-01oq850-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\ra_common-1b07mxodlb9p4\s-hlb57nh7ir-1wxp4p2-working`
+
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\?\F:\RA_01\target\debug\incremental\ra_memory-1ph32olrsb7v6\s-hlb57nybv2-160oott-working`
+
+warning: `ra-common` (test "common") generated 1 warning
+warning: `ra-persistence` (lib test) generated 1 warning
+warning: `ra-common` (lib test) generated 1 warning
+warning: `ra-memory` (lib test) generated 1 warning
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 11m 39s
+     Running unittests src\lib.rs (F:\RA_01\target\debug\deps\ra_bootstrap-42ae14c9d1b78402.exe)
+     Running unittests src\lib.rs (F:\RA_01\target\debug\deps\ra_common-2be33e4c72855150.exe)
+     Running tests\common.rs (F:\RA_01\target\debug\deps\common-ce703074b81f7718.exe)
+     Running unittests src\lib.rs (F:\RA_01\target\debug\deps\ra_memory-1d012b4c9cc54949.exe)
+     Running tests\active_space.rs (F:\RA_01\target\debug\deps\active_space-b12213e6f2588308.exe)
+     Running tests\entity_space.rs (F:\RA_01\target\debug\deps\entity_space-35261524446022ff.exe)
+     Running tests\global_entity.rs (F:\RA_01\target\debug\deps\global_entity-ca3b96bfa5393fd3.exe)
+     Running tests\local_entity.rs (F:\RA_01\target\debug\deps\local_entity-e308481d6a3e87ec.exe)
+     Running tests\memory.rs (F:\RA_01\target\debug\deps\memory-d80728bde5a97206.exe)
+     Running tests\program_space.rs (F:\RA_01\target\debug\deps\program_space-b30717abb5a645c4.exe)
+     Running tests\value_list.rs (F:\RA_01\target\debug\deps\value_list-33d2aec4da890e8b.exe)
+     Running unittests src\lib.rs (F:\RA_01\target\debug\deps\ra_persistence-07a28780fb0c311e.exe)
+     Running unittests src\lib.rs (F:\RA_01\target\debug\deps\ra_syss-eb87ee73d0f0b4a3.exe)
+     Running unittests src\main.rs (F:\RA_01\target\debug\deps\software-5f7e37e48e658604.exe)
+   Doc-tests ra_bootstrap
+   Doc-tests ra_common
+   Doc-tests ra_memory
+   Doc-tests ra_persistence
+   Doc-tests ra_syss

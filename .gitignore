@@ -1,0 +1,5 @@
+/target/
+
+# Platform storage root (Phase 7G.1): the default platform storage root is
+# `<cwd>/ra-data` (override with the RA_STORAGE_ROOT environment variable).
+/ra-data/

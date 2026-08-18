@@ -1,0 +1,504 @@
+
+============================================================
+FILE: compiler\oop\ast\__init__.py
+============================================================
+from compiler.oop.ast.class_node import ClassNode
+from compiler.oop.ast.object_node import ObjectDeclarationNode
+from compiler.oop.ast.method_node import MethodNode, MethodInvokeNode, MethodCallNode
+from compiler.oop.ast.constructor_node import ConstructorNode, EncapsulationNode, OOPNode
+from compiler.oop.ast.inheritance_node import InheritanceNode
+from compiler.oop.ast.property_node import PropertyAssignmentNode, PropertyAccessNode
+
+============================================================
+FILE: compiler\oop\ast\class_node.py
+============================================================
+from __future__ import annotations
+from dataclasses import dataclass, field
+from typing import Optional
+from parser.ast_core import Node
+
+============================================================
+FILE: compiler\oop\ast\constructor_node.py
+============================================================
+from __future__ import annotations
+from dataclasses import dataclass, field
+from parser.ast_core import Node
+
+============================================================
+FILE: compiler\oop\ast\inheritance_node.py
+============================================================
+from __future__ import annotations
+from dataclasses import dataclass
+from parser.ast_core import Node
+
+============================================================
+FILE: compiler\oop\ast\method_node.py
+============================================================
+from __future__ import annotations
+from dataclasses import dataclass, field
+from typing import Optional
+from parser.ast_core import Node
+
+============================================================
+FILE: compiler\oop\ast\object_node.py
+============================================================
+from __future__ import annotations
+from dataclasses import dataclass, field
+from parser.ast_core import Node
+
+============================================================
+FILE: compiler\oop\ast\property_node.py
+============================================================
+from __future__ import annotations
+from dataclasses import dataclass
+from typing import Any
+from parser.ast_core import Node
+
+============================================================
+FILE: compiler\oop\class_parser.py
+============================================================
+from __future__ import annotations
+from lexer.tokens import TokenType
+from parser.ra_ast import ClassNode, IdentifierNode
+
+============================================================
+FILE: compiler\oop\constructor_parser.py
+============================================================
+from __future__ import annotations
+from lexer.tokens import TokenType
+from parser.ra_ast import ConstructorNode, EncapsulationNode
+from parser.parser import ParseError
+from parser.parser import ParseError
+
+============================================================
+FILE: compiler\oop\method_parser.py
+============================================================
+from __future__ import annotations
+from lexer.tokens import TokenType
+from parser.ra_ast import MethodNode
+from parser.parser import ParseError
+
+============================================================
+FILE: compiler\oop\object_parser.py
+============================================================
+from __future__ import annotations
+from lexer.tokens import TokenType
+from parser.ra_ast import ObjectDeclarationNode
+from parser.parser import ParseError
+from parser.parser import ParseError
+
+============================================================
+FILE: EHub\PE\database_parser.py
+============================================================
+from __future__ import annotations
+from typing import Optional, Any
+from lexer.tokens import Token, TokenType
+from parser.ra_ast import (
+from EHub.PE.parser_environment import ParserEnvironment
+from EHub.PE.parser_registry import ParserRegistry
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+
+============================================================
+FILE: EHub\PE\declaration_parser.py
+============================================================
+from __future__ import annotations
+from typing import Optional
+from lexer.tokens import Token, TokenType
+from parser.ra_ast import (
+from EHub.PE.parser_environment import ParserEnvironment
+from EHub.PE.parser_registry import ParserRegistry
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+
+============================================================
+FILE: EHub\PE\expression_parser.py
+============================================================
+from __future__ import annotations
+from typing import Optional
+from lexer.tokens import Token, TokenType
+from parser.ra_ast import (
+from EHub.PE.parser_environment import ParserEnvironment
+from EHub.PE.parser_registry import ParserRegistry
+from parser.ra_ast import ListNode
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+
+============================================================
+FILE: EHub\PE\parser_blocks.py
+============================================================
+from __future__ import annotations
+from typing import Optional
+from lexer.tokens import TokenType
+from parser.ra_ast import Node, PrintBlockNode, InputBlockNode
+from EHub.PE.parser_environment import ParserEnvironment
+from EHub.PE.parser_registry import ParserRegistry
+from parser.ra_ast import LiteralNode, IdentifierNode
+from parser.parser import ParseError
+
+============================================================
+FILE: EHub\PE\parser_decision.py
+============================================================
+from __future__ import annotations
+from typing import Optional
+from lexer.tokens import Token, TokenType
+from parser.ra_ast import (
+from EHub.PE.parser_environment import ParserEnvironment
+from EHub.PE.parser_registry import ParserRegistry
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from EHub.PE.statement_parser import NestedBlockSyntaxError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+
+============================================================
+FILE: EHub\PE\parser_environment.py
+============================================================
+from __future__ import annotations
+from typing import Optional, Any
+from lexer.tokens import Token, TokenType
+from parser.ra_ast import Node
+from parser.source_location import SourceLocation
+from parser.parser import ParseError
+
+============================================================
+FILE: EHub\PE\parser_function.py
+============================================================
+from __future__ import annotations
+from typing import Optional
+from lexer.tokens import Token, TokenType
+from parser.ra_ast import (
+from EHub.PE.parser_environment import ParserEnvironment
+from EHub.PE.parser_registry import ParserRegistry
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from EHub.PE.statement_parser import NestedBlockSyntaxError
+from parser.parser import ParseError
+
+============================================================
+FILE: EHub\PE\parser_loop.py
+============================================================
+from __future__ import annotations
+from typing import Optional
+from lexer.tokens import Token, TokenType
+from parser.ra_ast import (
+from EHub.PE.parser_environment import ParserEnvironment
+from EHub.PE.parser_registry import ParserRegistry
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.ra_ast import Node
+from parser.parser import ParseError
+from parser.parser import ParseError
+from EHub.PE.statement_parser import NestedBlockSyntaxError
+from parser.parser import ParseError
+from EHub.PE.statement_parser import NestedBlockSyntaxError
+from parser.parser import ParseError
+from Type 2/3 range iteration at parse time — no more ambiguity
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+
+============================================================
+FILE: EHub\PE\parser_registry.py
+============================================================
+from __future__ import annotations
+from lexer.tokens import Token, TokenType
+
+============================================================
+FILE: EHub\PE\pf_parser_mixin.py
+============================================================
+from __future__ import annotations
+from typing import Optional
+from lexer.tokens import Token, TokenType
+from parser.ra_ast import (
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+
+============================================================
+FILE: EHub\PE\property_parser_mixin.py
+============================================================
+from __future__ import annotations
+from typing import Optional
+from lexer.tokens import Token, TokenType
+from parser.ra_ast import (
+from parser.parser import ParseError
+
+============================================================
+FILE: EHub\PE\statement_parser.py
+============================================================
+from __future__ import annotations
+from typing import Optional
+from lexer.tokens import Token, TokenType
+from parser.ra_ast import (
+from EHub.PE.parser_environment import ParserEnvironment
+from EHub.PE.parser_registry import ParserRegistry
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.ra_ast import HighlightNode
+from parser.parser import ParseError
+from parser.parser import ParseError
+from compiler.oop.class_parser import ClassParserMixin
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.ra_ast import ListNode
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+from parser.parser import ParseError
+
+============================================================
+FILE: EHub\PE\utility_parser.py
+============================================================
+from __future__ import annotations
+from typing import Optional
+from lexer.tokens import Token, TokenType
+from EHub.PE.parser_environment import ParserEnvironment
+from EHub.PE.parser_registry import ParserRegistry
+from parser.ra_ast import Node
+
+============================================================
+FILE: lexer\tokenizer.py
+============================================================
+from __future__ import annotations
+from typing import Any
+from lexer.tokens import KEYWORDS, SYMBOLS, Token, TokenType
+import sys
+from pathlib import Path
+
+============================================================
+FILE: lexer\tokens.py
+============================================================
+from __future__ import annotations
+from dataclasses import dataclass, field
+from enum import Enum, auto
+from typing import Any, Optional
+from parser.source_location import SourceLocation
+from a numeric literal with a measurement suffix
+
+============================================================
+FILE: parser\ast_core.py
+============================================================
+from __future__ import annotations
+from abc import ABC, abstractmethod
+from dataclasses import dataclass, field
+from typing import Any, Optional
+from parser.source_location import SourceLocation
+
+============================================================
+FILE: parser\parser.py
+============================================================
+from __future__ import annotations
+from typing import Optional
+from lexer.tokens import Token, TokenType
+from parser.source_location import SourceLocation
+from EHub.PE.parser_environment import ParserEnvironment
+from parser.ra_ast import (
+from compiler.oop.class_parser import ClassParserMixin
+from compiler.oop.object_parser import ObjectParserMixin
+from compiler.oop.method_parser import MethodParserMixin
+from compiler.oop.constructor_parser import ConstructorParserMixin
+from compiler.oop.inheritance_parser import InheritanceParserMixin
+from EHub.PE.loop_parser_mixin import LoopParserMixin  # import kept for backward compat; no longer in inheritance chain
+from EHub.PE.property_parser_mixin import PropertyParserMixin
+from EHub.PE.pf_parser_mixin import PFParserMixin
+from EHub.PE.parser_blocks import BlockParser
+from EHub.PE.parser_decision import DecisionParser
+from EHub.PE.parser_environment import ParserEnvironment
+from EHub.PE.parser_registry import ParserRegistry
+from EHub.PE.expression_parser import ExpressionParser
+from EHub.PE.statement_parser import StatementParser
+from EHub.PE.declaration_parser import DeclarationParser
+from EHub.PE.database_parser import DatabaseParser
+from EHub.PE.utility_parser import UtilityParser
+from EHub.PE.parser_blocks import BlockParser
+from EHub.PE.parser_decision import DecisionParser
+from EHub.PE.parser_loop import LoopParser
+from EHub.PE.parser_function import FunctionParser
+from parser.parser import ParseError
+
+============================================================
+FILE: parser\ra_ast.py
+============================================================
+from __future__ import annotations
+from dataclasses import dataclass, field
+from typing import Any, Optional
+from lexer.tokens import TokenType
+from parser.ast_core import Node, NodeVisitor
+from parser.source_location import SourceLocation
+from compiler.oop.ast import (
+from parser.ra_ast import ElseIfNode
+
+============================================================
+FILE: parser\source_location.py
+============================================================
+from __future__ import annotations
+from dataclasses import dataclass
+
+============================================================
+FILE: semantic\diagnostic.py
+============================================================
+from __future__ import annotations
+from dataclasses import dataclass
+from enum import Enum
+
+============================================================
+FILE: semantic\family.py
+============================================================
+No Python imports found
+
+============================================================
+FILE: semantic\oop\__init__.py
+============================================================
+from semantic.oop.class_validator import ClassValidatorMixin, ClassSymbolBuilderMixin
+from semantic.oop.object_validator import ObjectValidatorMixin, ObjectSymbolBuilderMixin
+from semantic.oop.method_validator import MethodValidatorMixin, MethodSymbolBuilderMixin
+from semantic.oop.inheritance_validator import InheritanceValidatorMixin
+
+============================================================
+FILE: semantic\oop\class_validator.py
+============================================================
+from __future__ import annotations
+from typing import TYPE_CHECKING, Any, Optional
+from parser.ra_ast import ClassNode
+from semantic.scope import ClassScope
+from semantic.symbol import ClassSymbol
+from semantic.symbol_table import SymbolTable
+
+============================================================
+FILE: semantic\oop\inheritance_validator.py
+============================================================
+from __future__ import annotations
+
+============================================================
+FILE: semantic\oop\method_validator.py
+============================================================
+from __future__ import annotations
+from parser.ra_ast import MethodNode
+from semantic.scope import ClassScope, MethodScope
+from semantic.symbol import MethodSymbol
+
+============================================================
+FILE: semantic\oop\object_validator.py
+============================================================
+from __future__ import annotations
+from parser.ra_ast import MethodInvokeNode, ObjectDeclarationNode
+from semantic.symbol import ClassSymbol, ObjectSymbol
+
+============================================================
+FILE: semantic\scope.py
+============================================================
+from __future__ import annotations
+from dataclasses import dataclass, field
+from typing import Any, Optional
+
+============================================================
+FILE: semantic\semantic_analyzer.py
+============================================================
+from __future__ import annotations
+from typing import Any, Optional
+from parser.ra_ast import (
+from semantic.diagnostic import Diagnostic, Severity
+from semantic.oop.class_validator import ClassValidatorMixin
+from semantic.oop.method_validator import MethodValidatorMixin
+from semantic.oop.object_validator import ObjectValidatorMixin
+from semantic.family import type_family
+from semantic.scope import ClassScope, MethodScope, Scope
+from semantic.symbol import ClassSymbol, ObjectSymbol, PackageSymbol, VariableSymbol
+from semantic.symbol_table import SymbolTable
+from runtime.function_registry import FunctionRegistry, FunctionRegistryError
+from compiler.internal import PackageRegistry
+from parser.ra_ast import LiteralNode, IdentifierNode, BinaryOpNode
+from parser.ra_ast import LiteralNode, IdentifierNode, BinaryOpNode
+from semantic.family import type_family
+from semantic.family import type_family
+
+============================================================
+FILE: semantic\symbol.py
+============================================================
+from __future__ import annotations
+from dataclasses import dataclass, field
+from typing import Any, Optional
+
+============================================================
+FILE: semantic\symbol_builder.py
+============================================================
+from __future__ import annotations
+from typing import Optional
+from parser.ra_ast import (
+from semantic.oop.class_validator import ClassSymbolBuilderMixin
+from semantic.oop.method_validator import MethodSymbolBuilderMixin
+from semantic.oop.object_validator import ObjectSymbolBuilderMixin
+from semantic.scope import (
+from semantic.symbol import (
+from semantic.symbol_table import SymbolTable
+
+============================================================
+FILE: semantic\symbol_table.py
+============================================================
+from __future__ import annotations
+from dataclasses import dataclass, field
+from typing import Any
+from semantic.scope import GlobalScope

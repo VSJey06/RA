@@ -1,0 +1,24 @@
+﻿# RA Programming Language â€” Cargo workspace root.
+#
+# Each module under `software/` is its own crate; add new modules to the
+# `members` list as they are implemented (development order: common,
+# persistence, syss, bootstrap, memory, runtime, compiler, interpreter, ide,
+# debugger).
+
+[workspace]
+resolver = "2"
+members = [
+    "software",
+    "software/common",
+    "software/persistence",
+    "software/syss",
+    "software/bootstrap",
+    "software/memory",
+    "software/gateway",
+    "software/runtime",
+    "software/memory-gateway",
+    "software/memory-gateway-adapter",
+    "software/ra-base",
+]
+
+
